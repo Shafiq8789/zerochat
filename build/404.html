@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Ailand - Tailwind CSS AI writing tool</title>
+  <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
+  <body
+    x-data="{ page: '404', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+  >
+    <!-- ===== Preloader Start ===== -->
+    <div
+  x-show="loaded"
+  x-init="window.addEventListener('DOMContentLoaded', () => {setTimeout(() => loaded = false, 500)})"
+  class="j x ja nf se ej _a sc ph qh"
+>
+  <div
+    class="bd af ih si yi _i cj dj"
+  ></div>
+</div>
+
+    <!-- ===== Preloader End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <header
+  class="j x ja mf za xk xr"
+  :class="{ 'ej/70 sn fn dk rr tn ao ip mp lp jp kp np' : stickyMenu }"
+  @scroll.window="stickyMenu = (window.scrollY > 0) ? true : false"
+>
+  <div
+    class="rf ab ik qq rs gr ph rh l"
+  >
+    <div
+      class="mf jr/4 sc ph rh"
+    >
+      <a href="index.html">
+        <img src="images/logo.svg" alt="Logo" />
+      </a>
+
+      <!-- Hamburger Toggle BTN -->
+      <button
+        class="hr pc"
+        @click="navigationOpen = !navigationOpen"
+      >
+        <span class="pc l jh if jd">
+          <span class="du-block k da mf re">
+            <span
+              class="pc l ja x kj vi xe zc bb go bo _n"
+              :class="{ 'we yn': !navigationOpen }"
+            ></span>
+            <span
+              class="pc l ja x kj vi xe zc bb go bo wn"
+              :class="{ 'we it': !navigationOpen }"
+            ></span>
+            <span
+              class="pc l ja x kj vi xe zc bb go bo xn"
+              :class="{ 'we zn': !navigationOpen }"
+            ></span>
+          </span>
+          <span
+            class="du-block k da mf re fh"
+          >
+            <span
+              class="pc kj vi go bo yn k _ ja ye re"
+              :class="{ 'wc _n': !navigationOpen }"
+            ></span>
+            <span
+              class="pc kj vi go bo it k x na mf zc"
+              :class="{ 'wc jt': !navigationOpen }"
+            ></span>
+          </span>
+        </span>
+      </button>
+      <!-- Hamburger Toggle BTN -->
+    </div>
+
+    <div
+      class="mf kr/4 yc ir i br gr ph rh"
+      :class="{ 'h ej kt xc te mi ui kc ck': navigationOpen }"
+    >
+      <nav>
+        <ul
+          class="sc nr nh mr bi qr"
+        >
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#home"
+              class="l zm/80 om ok ik xi bj sp _p"
+              :class="{'xm ro' :page === 'home'}"
+              >Home</a
+            >
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#features"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Features</a
+            >
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#pricing"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Pricing</a
+            >
+          </li>
+          <li
+            class="b l as"
+            :class="{ 'sr' : stickyMenu }"
+            x-data="{ dropdown: false }"
+          >
+            <a
+              href="#"
+              class="l zm/80 om ok ik xi bj sp _p sc ph rh yh"
+              @click.prevent="dropdown = !dropdown"
+              :class="{ 'xm ro': page === 'about' || page === 'pricing' || page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+            >
+              Pages
+
+              <svg
+                class="wj ff gd jh"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                />
+              </svg>
+            </a>
+
+            <!-- Dropdown Start -->
+            <ul class="a" :class="{ 'sc': dropdown }">
+              <li>
+                <a
+                  href="about.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'about' }"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pricing.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'pricing' }"
+                  >Pricing Table</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-grid.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'blog-grid' }"
+                  >Blog Grid</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-single.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'blog-single' }"
+                  >Blog Single</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signin.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'signin' }"
+                  >Sign In</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signup.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'signup' }"
+                  >Sign Up</a
+                >
+              </li>
+              <li>
+                <a
+                  href="404.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === '404' }"
+                  >Error Page</a
+                >
+              </li>
+            </ul>
+            <!-- Dropdown End -->
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#support"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Support</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sc ph ci oc er">
+        <a
+          href="signin.html"
+          class="zm om tp"
+          >Sign in</a
+        >
+
+        <a
+          href="signup.html"
+          class="jo l ti zm om sc ph th sk jk gn yp xp ks ms ls"
+        >
+          Sign up
+
+          <svg
+            class="ec"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.4002 7.60002L9.2252 2.35002C9.0002 2.12502 8.6502 2.12502 8.4252 2.35002C8.2002 2.57502 8.2002 2.92502 8.4252 3.15002L12.6252 7.42502H2.0002C1.7002 7.42502 1.4502 7.67502 1.4502 7.97502C1.4502 8.27502 1.7002 8.55003 2.0002 8.55003H12.6752L8.4252 12.875C8.2002 13.1 8.2002 13.45 8.4252 13.675C8.5252 13.775 8.6752 13.825 8.8252 13.825C8.9752 13.825 9.1252 13.775 9.2252 13.65L14.4002 8.40002C14.6252 8.17502 14.6252 7.82503 14.4002 7.60002Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Breadcrumb Section Start ===== -->
+      <section
+        class="l wa _l js et gl"
+      >
+        <!-- bg shapes -->
+        <div
+          class="k pa x mf sc nh yh -ud-z-1 en"
+        >
+          <div class="mf od fp"></div>
+          <div class="mf vd fp"></div>
+          <div class="mf zd fp"></div>
+          <div class="mf de fp"></div>
+          <div class="mf he fp"></div>
+          <div class="mf le fp"></div>
+          <div class="mf ne fp"></div>
+          <div class="mf pe fp"></div>
+          <div class="mf rd fp"></div>
+        </div>
+        <div
+          class="k p x mf dd lj qj/0 uj -ud-z-1"
+        ></div>
+
+        <div class="cm ik">
+          <h1
+            class="sm im zm vb"
+          >
+            Error Page
+          </h1>
+          <ul class="sc ph qh wh">
+            <li class="tm"><a href="index.html">Home</a></li>
+            <li class="tm">/ Error Page</li>
+          </ul>
+        </div>
+      </section>
+      <!-- ===== Breadcrumb Section End ===== -->
+
+      <!-- ===== 404 Start ===== -->
+      <section
+        class="vl fs bt hl ds _s 2xl:ud-pb-[150px]"
+      >
+        <div
+          class="animate_top ab mf qg cm ik qq tr"
+        >
+          <img src="images/404.svg" alt="404" class="ab ib" />
+          <h2 class="vb jm rm zm">
+            Oops! Page Not Found.
+          </h2>
+          <p class="tm ac">
+            The page you are looking for is not available or has been moved. Try
+            a different page or go to homepage with the button below.
+          </p>
+          <a
+            href="index.html"
+            class="lo tc ti uk lk zm tm fo co vp"
+          >
+            Go To Home
+          </a>
+        </div>
+      </section>
+      <!-- ===== 404 End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <!-- ====== Footer Section Start -->
+<footer class="l wa fl cs zs">
+  <!-- bg shapes -->
+  <div
+    class="k p x mf sc nh yh -ud-z-1 en"
+  >
+    <div class="mf od fp"></div>
+    <div class="mf vd fp"></div>
+    <div class="mf zd fp"></div>
+    <div class="mf de fp"></div>
+    <div class="mf he fp"></div>
+    <div class="mf le fp"></div>
+    <div class="mf ne fp"></div>
+    <div class="mf pe fp"></div>
+    <div class="mf rd fp"></div>
+  </div>
+
+  <div
+    class="rf ab ik qq rs l vl"
+  >
+    <div
+      class="mf ud ep k ja x"
+    ></div>
+
+    <div class="sc oh rh">
+      <div class="gb og mf">
+        <a class="_b qc" href="index.html">
+          <img src="images/logo.svg" alt="Logo" />
+        </a>
+
+        <p class="hb os/5">
+          AI writing tool is designed to empower you with exceptional writing
+          capabilities.
+        </p>
+
+        <div class="sc ph bi">
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 21.9506C18.0533 21.4489 22 17.1853 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 16.8379 5.43552 20.8734 10 21.8V16H7V13H10V9.79586C10 7.47449 11.9695 5.64064 14.285 5.80603L17 5.99996V8.99996H15C13.8954 8.99996 13 9.89539 13 11V13H17L16 16H13V21.9506Z"
+                fill=""
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.6125 21.5251C16.4625 21.5251 21.2625 14.2126 21.2625 7.87509C21.2625 7.72509 21.2625 7.46259 21.225 7.23759C22.1625 6.56259 22.9875 5.70009 23.625 4.76259C22.725 5.17509 21.825 5.40009 20.8875 5.51259C21.9 4.91259 22.65 3.97509 22.9875 2.8501C22.05 3.3751 21.075 3.78759 19.9125 4.01259C19.0125 3.0751 17.8125 2.4751 16.425 2.4751C13.7625 2.4751 11.5875 4.65009 11.5875 7.31259C11.5875 7.68759 11.625 8.06259 11.7 8.43759C7.8375 8.17509 4.3125 6.26259 1.9125 3.3751C1.5 4.12509 1.275 4.91259 1.275 5.77509C1.275 7.46259 2.1375 8.88759 3.45 9.75009C2.6625 9.71259 1.9125 9.48759 1.275 9.15009C1.275 9.18759 1.275 9.18759 1.275 9.18759C1.275 11.4751 2.925 13.4626 5.1 13.9126C4.6875 14.0251 4.2375 14.0626 3.9 14.0626C3.6 14.0626 3.2625 14.0251 3 13.9501C3.6375 15.8626 5.4 17.2501 7.5 17.2876C5.85 18.5626 3.7875 19.3501 1.575 19.3501C1.125 19.4251 0.75 19.3501 0.375 19.3126C2.4 20.7376 4.9125 21.5251 7.6125 21.5251Z"
+                fill=""
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_368_11839)">
+                <path
+                  d="M12 0.674805C5.625 0.674805 0.375 5.8498 0.375 12.2998C0.375 17.3998 3.7125 21.7498 8.3625 23.3248C8.9625 23.4373 9.15 23.0623 9.15 22.7998C9.15 22.5373 9.15 21.7873 9.1125 20.7748C5.8875 21.5248 5.2125 19.1998 5.2125 19.1998C4.6875 17.8873 3.9 17.5123 3.9 17.5123C2.85 16.7623 3.9375 16.7623 3.9375 16.7623C5.1 16.7998 5.7375 17.9623 5.7375 17.9623C6.75 19.7623 8.475 19.2373 9.1125 18.8998C9.225 18.1498 9.525 17.6248 9.8625 17.3248C7.3125 17.0623 4.575 16.0498 4.575 11.6248C4.575 10.3498 5.0625 9.3373 5.775 8.5498C5.6625 8.2873 5.25 7.0873 5.8875 5.4748C5.8875 5.4748 6.9 5.1748 9.1125 6.6748C10.05 6.4123 11.025 6.2623 12.0375 6.2623C13.05 6.2623 14.0625 6.3748 14.9625 6.6748C17.175 5.2123 18.15 5.4748 18.15 5.4748C18.7875 7.0498 18.4125 8.2873 18.2625 8.5498C19.0125 9.3373 19.4625 10.3873 19.4625 11.6248C19.4625 16.0498 16.725 17.0623 14.175 17.3248C14.5875 17.6998 14.9625 18.4498 14.9625 19.4998C14.9625 21.0748 14.925 22.3123 14.925 22.6873C14.925 22.9873 15.15 23.3248 15.7125 23.2123C20.2875 21.6748 23.625 17.3623 23.625 12.2248C23.5875 5.8498 18.375 0.674805 12 0.674805Z"
+                  fill=""
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_368_11839">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+
+        <p class="tm mc">
+          Ailand, LLC. All rights reserved.
+        </p>
+      </div>
+
+      <div class="og mf">
+        <div
+          class="sc nh mq nq uh"
+        >
+          <div>
+            <h5 class="um zm ub">Products</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Changelog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="um zm ub">Company</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Refund Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Community</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="um zm ub">Support</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Changelog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ====== Footer Section End -->
+
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <button
+  class="vc ph qh _e _c ri lt gj up j w fa ya"
+  @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+  @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+  :class="{ 'rc' : scrollTop }"
+>
+  <svg
+    class="xj hf id"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+  >
+    <path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+  </svg>
+</button>
+
+    <!-- ====== Back To Top End ===== -->
+  <script defer src="bundle.js"></script></body>
+</html>

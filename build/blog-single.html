@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details | Ailand - Tailwind CSS AI writing tool</title>
+  <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
+  <body
+    x-data="{ page: 'blog-single', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+  >
+    <!-- ===== Preloader Start ===== -->
+    <div
+  x-show="loaded"
+  x-init="window.addEventListener('DOMContentLoaded', () => {setTimeout(() => loaded = false, 500)})"
+  class="j x ja nf se ej _a sc ph qh"
+>
+  <div
+    class="bd af ih si yi _i cj dj"
+  ></div>
+</div>
+
+    <!-- ===== Preloader End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <header
+  class="j x ja mf za xk xr"
+  :class="{ 'ej/70 sn fn dk rr tn ao ip mp lp jp kp np' : stickyMenu }"
+  @scroll.window="stickyMenu = (window.scrollY > 0) ? true : false"
+>
+  <div
+    class="rf ab ik qq rs gr ph rh l"
+  >
+    <div
+      class="mf jr/4 sc ph rh"
+    >
+      <a href="index.html">
+        <img src="images/logo.svg" alt="Logo" />
+      </a>
+
+      <!-- Hamburger Toggle BTN -->
+      <button
+        class="hr pc"
+        @click="navigationOpen = !navigationOpen"
+      >
+        <span class="pc l jh if jd">
+          <span class="du-block k da mf re">
+            <span
+              class="pc l ja x kj vi xe zc bb go bo _n"
+              :class="{ 'we yn': !navigationOpen }"
+            ></span>
+            <span
+              class="pc l ja x kj vi xe zc bb go bo wn"
+              :class="{ 'we it': !navigationOpen }"
+            ></span>
+            <span
+              class="pc l ja x kj vi xe zc bb go bo xn"
+              :class="{ 'we zn': !navigationOpen }"
+            ></span>
+          </span>
+          <span
+            class="du-block k da mf re fh"
+          >
+            <span
+              class="pc kj vi go bo yn k _ ja ye re"
+              :class="{ 'wc _n': !navigationOpen }"
+            ></span>
+            <span
+              class="pc kj vi go bo it k x na mf zc"
+              :class="{ 'wc jt': !navigationOpen }"
+            ></span>
+          </span>
+        </span>
+      </button>
+      <!-- Hamburger Toggle BTN -->
+    </div>
+
+    <div
+      class="mf kr/4 yc ir i br gr ph rh"
+      :class="{ 'h ej kt xc te mi ui kc ck': navigationOpen }"
+    >
+      <nav>
+        <ul
+          class="sc nr nh mr bi qr"
+        >
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#home"
+              class="l zm/80 om ok ik xi bj sp _p"
+              :class="{'xm ro' :page === 'home'}"
+              >Home</a
+            >
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#features"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Features</a
+            >
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#pricing"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Pricing</a
+            >
+          </li>
+          <li
+            class="b l as"
+            :class="{ 'sr' : stickyMenu }"
+            x-data="{ dropdown: false }"
+          >
+            <a
+              href="#"
+              class="l zm/80 om ok ik xi bj sp _p sc ph rh yh"
+              @click.prevent="dropdown = !dropdown"
+              :class="{ 'xm ro': page === 'about' || page === 'pricing' || page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+            >
+              Pages
+
+              <svg
+                class="wj ff gd jh"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                />
+              </svg>
+            </a>
+
+            <!-- Dropdown Start -->
+            <ul class="a" :class="{ 'sc': dropdown }">
+              <li>
+                <a
+                  href="about.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'about' }"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pricing.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'pricing' }"
+                  >Pricing Table</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-grid.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'blog-grid' }"
+                  >Blog Grid</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-single.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'blog-single' }"
+                  >Blog Single</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signin.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'signin' }"
+                  >Sign In</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signup.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'signup' }"
+                  >Sign Up</a
+                >
+              </li>
+              <li>
+                <a
+                  href="404.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === '404' }"
+                  >Error Page</a
+                >
+              </li>
+            </ul>
+            <!-- Dropdown End -->
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#support"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Support</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sc ph ci oc er">
+        <a
+          href="signin.html"
+          class="zm om tp"
+          >Sign in</a
+        >
+
+        <a
+          href="signup.html"
+          class="jo l ti zm om sc ph th sk jk gn yp xp ks ms ls"
+        >
+          Sign up
+
+          <svg
+            class="ec"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.4002 7.60002L9.2252 2.35002C9.0002 2.12502 8.6502 2.12502 8.4252 2.35002C8.2002 2.57502 8.2002 2.92502 8.4252 3.15002L12.6252 7.42502H2.0002C1.7002 7.42502 1.4502 7.67502 1.4502 7.97502C1.4502 8.27502 1.7002 8.55003 2.0002 8.55003H12.6752L8.4252 12.875C8.2002 13.1 8.2002 13.45 8.4252 13.675C8.5252 13.775 8.6752 13.825 8.8252 13.825C8.9752 13.825 9.1252 13.775 9.2252 13.65L14.4002 8.40002C14.6252 8.17502 14.6252 7.82503 14.4002 7.60002Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Breadcrumb Section Start ===== -->
+      <section
+        class="l wa _l js et gl"
+      >
+        <!-- bg shapes -->
+        <div
+          class="k pa x mf sc nh yh -ud-z-1 en"
+        >
+          <div class="mf od fp"></div>
+          <div class="mf vd fp"></div>
+          <div class="mf zd fp"></div>
+          <div class="mf de fp"></div>
+          <div class="mf he fp"></div>
+          <div class="mf le fp"></div>
+          <div class="mf ne fp"></div>
+          <div class="mf pe fp"></div>
+          <div class="mf rd fp"></div>
+        </div>
+        <div
+          class="k p x mf dd lj qj/0 uj -ud-z-1"
+        ></div>
+
+        <div class="cm ik">
+          <h1
+            class="sm im zm vb"
+          >
+            Blog Details
+          </h1>
+          <ul class="sc ph qh wh">
+            <li class="tm"><a href="index.html">Home</a></li>
+            <li class="tm">/ Blog Details</li>
+          </ul>
+        </div>
+      </section>
+      <!-- ===== Breadcrumb Section End ===== -->
+
+      <!-- ===== Blog Single Start ===== -->
+      <section
+        class="wl gs fl cs zs"
+      >
+        <div class="rf ab ik qq rs">
+          <img src="images/blog-big.png" alt="blog" class="gb" />
+
+          <div class="_g ab">
+            <div
+              class="sc oh ph bi rh yb"
+            >
+              <div class="sc oh xh ph">
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Products
+                </span>
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Blog and articles
+                </span>
+              </div>
+
+              <div class="sc ph ai oh">
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
+                      fill=""
+                    />
+                    <path
+                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">Piter Mecraow</span>
+                </div>
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">10 Jan, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <h2
+              class="um zm gm wm pg yb"
+            >
+              Revolution in Content Creation and Communication
+            </h2>
+            <p class="tm wb">
+              The inability to write. Everyone has been there. Even the most
+              seasoned and well-versed writers and content producers endure
+              mental gaps. Nulla Lorem mollit cupidatat irure. Laborum magna
+              nulla duis ullamco cillum dolor. Voluptate exercitation incididunt
+              aliquip deserunt reprehenderit elit laborum.
+            </p>
+
+            <p class="tm yb">
+              significant role in determining their overall well-being,
+              including their physical and mental health, as well as their
+              happiness and satisfaction with life. A healthy lifestyle, which
+              includes a balanced diet, regular exercise, and a healthy sleep
+              pattern,
+            </p>
+
+            <h3 class="sm dm zm wb">
+              how I churn out 2000 words in 20 minutes
+            </h3>
+            <p class="tm wb">
+              Everyone has been there. Even the most seasoned and well-versed
+              writers and content producers endure mental gaps. Nulla Lorem
+              mollit cupidatat irure. Laborum magna nulla duis ullamco cillum
+              dolor. Voluptate anyone exercitation incididunt aliquip deserunt
+              reprehenderit elit laborum.
+            </p>
+            <p class="tm ib">
+              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt
+              qui esse pariatur duis deserunt mollit dolore cillum minim tempor
+              enim. Elit aute irure tempor cupidatat incididunt.
+            </p>
+
+            <div class="sc ph _h">
+              <p class="tm">Share This Post:</p>
+              <div class="sc ph bi">
+                <a
+                  href="#"
+                  class="sp fo co"
+                >
+                  <svg
+                    class="wj"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13 21.9506C18.0533 21.4489 22 17.1853 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 16.8379 5.43552 20.8734 10 21.8V16H7V13H10V9.79586C10 7.47449 11.9695 5.64064 14.285 5.80603L17 5.99996V8.99996H15C13.8954 8.99996 13 9.89539 13 11V13H17L16 16H13V21.9506Z"
+                      fill=""
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  class="sp fo co"
+                >
+                  <svg
+                    class="wj"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.6125 21.5249C16.4625 21.5249 21.2625 14.2123 21.2625 7.87485C21.2625 7.72485 21.2625 7.46235 21.225 7.23735C22.1625 6.56235 22.9875 5.69985 23.625 4.76235C22.725 5.17485 21.825 5.39985 20.8875 5.51235C21.9 4.91235 22.65 3.97485 22.9875 2.84985C22.05 3.37485 21.075 3.78735 19.9125 4.01235C19.0125 3.07485 17.8125 2.47485 16.425 2.47485C13.7625 2.47485 11.5875 4.64985 11.5875 7.31235C11.5875 7.68735 11.625 8.06235 11.7 8.43735C7.8375 8.17485 4.3125 6.26235 1.9125 3.37485C1.5 4.12485 1.275 4.91235 1.275 5.77485C1.275 7.46235 2.1375 8.88735 3.45 9.74985C2.6625 9.71235 1.9125 9.48735 1.275 9.14985C1.275 9.18735 1.275 9.18735 1.275 9.18735C1.275 11.4748 2.925 13.4624 5.1 13.9124C4.6875 14.0249 4.2375 14.0623 3.9 14.0623C3.6 14.0623 3.2625 14.0248 3 13.9499C3.6375 15.8624 5.4 17.2499 7.5 17.2874C5.85 18.5624 3.7875 19.3498 1.575 19.3498C1.125 19.4249 0.75 19.3498 0.375 19.3123C2.4 20.7374 4.9125 21.5249 7.6125 21.5249Z"
+                      fill="#"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  class="sp fo co"
+                >
+                  <svg
+                    class="wj"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_141_17422)">
+                      <path
+                        d="M21.9381 0.375H2.10059C1.16309 0.375 0.413086 1.125 0.413086 2.0625V21.9375C0.413086 22.8375 1.16309 23.625 2.10059 23.625H21.8631C22.8006 23.625 23.5506 22.875 23.5506 21.9375V2.025C23.6256 1.125 22.8756 0.375 21.9381 0.375ZM7.2756 20.1375H3.8631V9.075H7.2756V20.1375ZM5.5506 7.5375C4.4256 7.5375 3.56309 6.6375 3.56309 5.55C3.56309 4.4625 4.4631 3.5625 5.5506 3.5625C6.6381 3.5625 7.5381 4.4625 7.5381 5.55C7.5381 6.6375 6.7131 7.5375 5.5506 7.5375ZM20.2131 20.1375H16.8006V14.775C16.8006 13.5 16.7631 11.8125 15.0006 11.8125C13.2006 11.8125 12.9381 13.2375 12.9381 14.6625V20.1375H9.5256V9.075H12.8631V10.6125H12.9006C13.3881 9.7125 14.4756 8.8125 16.1631 8.8125C19.6506 8.8125 20.2881 11.0625 20.2881 14.1375V20.1375H20.2131Z"
+                        fill=""
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_141_17422">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- related post -->
+          <h2
+            class="um zm gm wm pg gb ic"
+          >
+            Related Articles
+          </h2>
+
+          <div
+            class="uc mh lq lr ei"
+          >
+            <!-- blog item -->
+            <div class="animate_top b">
+              <div class="wb li wi">
+                <img
+                  src="images/blog-01.png"
+                  alt="image"
+                  class="ho do hh cq"
+                />
+              </div>
+
+              <div
+                class="sc oh xh ph tb"
+              >
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Design
+                </span>
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Engineering
+                </span>
+              </div>
+
+              <h4>
+                <a
+                  href="blog-single.html"
+                  class="zm um pm fo co vp"
+                >
+                  Revolution in Content Creation and Communication
+                </a>
+              </h4>
+              <p class="font-medium kc">
+                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna oliumosd
+                aliqua...
+              </p>
+
+              <div
+                class="sc ph ai oh nc"
+              >
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
+                      fill=""
+                    />
+                    <path
+                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">Alex Demo</span>
+                </div>
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">25 Mar, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- blog item -->
+            <div class="animate_top b">
+              <div class="wb li wi">
+                <img
+                  src="images/blog-02.png"
+                  alt="image"
+                  class="ho do hh cq"
+                />
+              </div>
+
+              <div
+                class="sc oh xh ph tb"
+              >
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Development
+                </span>
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Security
+                </span>
+              </div>
+
+              <h4>
+                <a
+                  href="blog-single.html"
+                  class="zm um pm fo co vp"
+                >
+                  How AI Writing Tools Empower Writers to Speed up there Writing
+                </a>
+              </h4>
+              <p class="font-medium kc">
+                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna oliumosd
+                aliqua...
+              </p>
+
+              <div
+                class="sc ph ai oh nc"
+              >
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
+                      fill=""
+                    />
+                    <path
+                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">Hendary Jonson</span>
+                </div>
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">12 Feb, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- blog item -->
+            <div class="animate_top b">
+              <div class="wb li wi">
+                <img
+                  src="images/blog-03.png"
+                  alt="image"
+                  class="ho do hh cq"
+                />
+              </div>
+
+              <div
+                class="sc oh xh ph tb"
+              >
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Products
+                </span>
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Blog and articles
+                </span>
+              </div>
+
+              <h4>
+                <a
+                  href="blog-single.html"
+                  class="zm um pm fo co vp"
+                >
+                  Revolution in Content Creation and Communication
+                </a>
+              </h4>
+              <p class="font-medium kc">
+                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna oliumosd
+                aliqua...
+              </p>
+
+              <div
+                class="sc ph ai oh nc"
+              >
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
+                      fill=""
+                    />
+                    <path
+                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">Piter Mecraow</span>
+                </div>
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">10 Jan, 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Blog Single End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <!-- ====== Footer Section Start -->
+<footer class="l wa fl cs zs">
+  <!-- bg shapes -->
+  <div
+    class="k p x mf sc nh yh -ud-z-1 en"
+  >
+    <div class="mf od fp"></div>
+    <div class="mf vd fp"></div>
+    <div class="mf zd fp"></div>
+    <div class="mf de fp"></div>
+    <div class="mf he fp"></div>
+    <div class="mf le fp"></div>
+    <div class="mf ne fp"></div>
+    <div class="mf pe fp"></div>
+    <div class="mf rd fp"></div>
+  </div>
+
+  <div
+    class="rf ab ik qq rs l vl"
+  >
+    <div
+      class="mf ud ep k ja x"
+    ></div>
+
+    <div class="sc oh rh">
+      <div class="gb og mf">
+        <a class="_b qc" href="index.html">
+          <img src="images/logo.svg" alt="Logo" />
+        </a>
+
+        <p class="hb os/5">
+          AI writing tool is designed to empower you with exceptional writing
+          capabilities.
+        </p>
+
+        <div class="sc ph bi">
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 21.9506C18.0533 21.4489 22 17.1853 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 16.8379 5.43552 20.8734 10 21.8V16H7V13H10V9.79586C10 7.47449 11.9695 5.64064 14.285 5.80603L17 5.99996V8.99996H15C13.8954 8.99996 13 9.89539 13 11V13H17L16 16H13V21.9506Z"
+                fill=""
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.6125 21.5251C16.4625 21.5251 21.2625 14.2126 21.2625 7.87509C21.2625 7.72509 21.2625 7.46259 21.225 7.23759C22.1625 6.56259 22.9875 5.70009 23.625 4.76259C22.725 5.17509 21.825 5.40009 20.8875 5.51259C21.9 4.91259 22.65 3.97509 22.9875 2.8501C22.05 3.3751 21.075 3.78759 19.9125 4.01259C19.0125 3.0751 17.8125 2.4751 16.425 2.4751C13.7625 2.4751 11.5875 4.65009 11.5875 7.31259C11.5875 7.68759 11.625 8.06259 11.7 8.43759C7.8375 8.17509 4.3125 6.26259 1.9125 3.3751C1.5 4.12509 1.275 4.91259 1.275 5.77509C1.275 7.46259 2.1375 8.88759 3.45 9.75009C2.6625 9.71259 1.9125 9.48759 1.275 9.15009C1.275 9.18759 1.275 9.18759 1.275 9.18759C1.275 11.4751 2.925 13.4626 5.1 13.9126C4.6875 14.0251 4.2375 14.0626 3.9 14.0626C3.6 14.0626 3.2625 14.0251 3 13.9501C3.6375 15.8626 5.4 17.2501 7.5 17.2876C5.85 18.5626 3.7875 19.3501 1.575 19.3501C1.125 19.4251 0.75 19.3501 0.375 19.3126C2.4 20.7376 4.9125 21.5251 7.6125 21.5251Z"
+                fill=""
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_368_11839)">
+                <path
+                  d="M12 0.674805C5.625 0.674805 0.375 5.8498 0.375 12.2998C0.375 17.3998 3.7125 21.7498 8.3625 23.3248C8.9625 23.4373 9.15 23.0623 9.15 22.7998C9.15 22.5373 9.15 21.7873 9.1125 20.7748C5.8875 21.5248 5.2125 19.1998 5.2125 19.1998C4.6875 17.8873 3.9 17.5123 3.9 17.5123C2.85 16.7623 3.9375 16.7623 3.9375 16.7623C5.1 16.7998 5.7375 17.9623 5.7375 17.9623C6.75 19.7623 8.475 19.2373 9.1125 18.8998C9.225 18.1498 9.525 17.6248 9.8625 17.3248C7.3125 17.0623 4.575 16.0498 4.575 11.6248C4.575 10.3498 5.0625 9.3373 5.775 8.5498C5.6625 8.2873 5.25 7.0873 5.8875 5.4748C5.8875 5.4748 6.9 5.1748 9.1125 6.6748C10.05 6.4123 11.025 6.2623 12.0375 6.2623C13.05 6.2623 14.0625 6.3748 14.9625 6.6748C17.175 5.2123 18.15 5.4748 18.15 5.4748C18.7875 7.0498 18.4125 8.2873 18.2625 8.5498C19.0125 9.3373 19.4625 10.3873 19.4625 11.6248C19.4625 16.0498 16.725 17.0623 14.175 17.3248C14.5875 17.6998 14.9625 18.4498 14.9625 19.4998C14.9625 21.0748 14.925 22.3123 14.925 22.6873C14.925 22.9873 15.15 23.3248 15.7125 23.2123C20.2875 21.6748 23.625 17.3623 23.625 12.2248C23.5875 5.8498 18.375 0.674805 12 0.674805Z"
+                  fill=""
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_368_11839">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+
+        <p class="tm mc">
+          Ailand, LLC. All rights reserved.
+        </p>
+      </div>
+
+      <div class="og mf">
+        <div
+          class="sc nh mq nq uh"
+        >
+          <div>
+            <h5 class="um zm ub">Products</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Changelog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="um zm ub">Company</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Refund Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Community</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="um zm ub">Support</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Changelog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ====== Footer Section End -->
+
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <button
+  class="vc ph qh _e _c ri lt gj up j w fa ya"
+  @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+  @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+  :class="{ 'rc' : scrollTop }"
+>
+  <svg
+    class="xj hf id"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+  >
+    <path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+  </svg>
+</button>
+
+    <!-- ====== Back To Top End ===== -->
+  <script defer src="bundle.js"></script></body>
+</html>

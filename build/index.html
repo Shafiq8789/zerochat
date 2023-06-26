@@ -1,0 +1,3551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ailand - Tailwind CSS AI writing tool</title>
+  <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
+
+  <body
+    x-data="{ page: 'home', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+  >
+    <!-- ===== Preloader Start ===== -->
+    <div
+  x-show="loaded"
+  x-init="window.addEventListener('DOMContentLoaded', () => {setTimeout(() => loaded = false, 500)})"
+  class="j x ja nf se ej _a sc ph qh"
+>
+  <div
+    class="bd af ih si yi _i cj dj"
+  ></div>
+</div>
+
+    <!-- ===== Preloader End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <header
+  class="j x ja mf za xk xr"
+  :class="{ 'ej/70 sn fn dk rr tn ao ip mp lp jp kp np' : stickyMenu }"
+  @scroll.window="stickyMenu = (window.scrollY > 0) ? true : false"
+>
+  <div
+    class="rf ab ik qq rs gr ph rh l"
+  >
+    <div
+      class="mf jr/4 sc ph rh"
+    >
+      <a href="index.html">
+        <img src="images/logo.svg" alt="Logo" />
+      </a>
+
+      <!-- Hamburger Toggle BTN -->
+      <button
+        class="hr pc"
+        @click="navigationOpen = !navigationOpen"
+      >
+        <span class="pc l jh if jd">
+          <span class="du-block k da mf re">
+            <span
+              class="pc l ja x kj vi xe zc bb go bo _n"
+              :class="{ 'we yn': !navigationOpen }"
+            ></span>
+            <span
+              class="pc l ja x kj vi xe zc bb go bo wn"
+              :class="{ 'we it': !navigationOpen }"
+            ></span>
+            <span
+              class="pc l ja x kj vi xe zc bb go bo xn"
+              :class="{ 'we zn': !navigationOpen }"
+            ></span>
+          </span>
+          <span
+            class="du-block k da mf re fh"
+          >
+            <span
+              class="pc kj vi go bo yn k _ ja ye re"
+              :class="{ 'wc _n': !navigationOpen }"
+            ></span>
+            <span
+              class="pc kj vi go bo it k x na mf zc"
+              :class="{ 'wc jt': !navigationOpen }"
+            ></span>
+          </span>
+        </span>
+      </button>
+      <!-- Hamburger Toggle BTN -->
+    </div>
+
+    <div
+      class="mf kr/4 yc ir i br gr ph rh"
+      :class="{ 'h ej kt xc te mi ui kc ck': navigationOpen }"
+    >
+      <nav>
+        <ul
+          class="sc nr nh mr bi qr"
+        >
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#home"
+              class="l zm/80 om ok ik xi bj sp _p"
+              :class="{'xm ro' :page === 'home'}"
+              >Home</a
+            >
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#features"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Features</a
+            >
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#pricing"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Pricing</a
+            >
+          </li>
+          <li
+            class="b l as"
+            :class="{ 'sr' : stickyMenu }"
+            x-data="{ dropdown: false }"
+          >
+            <a
+              href="#"
+              class="l zm/80 om ok ik xi bj sp _p sc ph rh yh"
+              @click.prevent="dropdown = !dropdown"
+              :class="{ 'xm ro': page === 'about' || page === 'pricing' || page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+            >
+              Pages
+
+              <svg
+                class="wj ff gd jh"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                />
+              </svg>
+            </a>
+
+            <!-- Dropdown Start -->
+            <ul class="a" :class="{ 'sc': dropdown }">
+              <li>
+                <a
+                  href="about.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'about' }"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pricing.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'pricing' }"
+                  >Pricing Table</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-grid.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'blog-grid' }"
+                  >Blog Grid</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog-single.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'blog-single' }"
+                  >Blog Single</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signin.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'signin' }"
+                  >Sign In</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signup.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === 'signup' }"
+                  >Sign Up</a
+                >
+              </li>
+              <li>
+                <a
+                  href="404.html"
+                  class="sc om zm/70 sp sk ik ui rp/5"
+                  :class="{ 'xm kj/5': page === '404' }"
+                  >Error Page</a
+                >
+              </li>
+            </ul>
+            <!-- Dropdown End -->
+          </li>
+          <li
+            class="nav__menu as"
+            :class="{ 'sr' : stickyMenu }"
+          >
+            <a
+              href="/#support"
+              class="l zm/80 om ok ik xi bj sp _p"
+              >Support</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sc ph ci oc er">
+        <a
+          href="signin.html"
+          class="zm om tp"
+          >Sign in</a
+        >
+
+        <a
+          href="signup.html"
+          class="jo l ti zm om sc ph th sk jk gn yp xp ks ms ls"
+        >
+          Sign up
+
+          <svg
+            class="ec"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.4002 7.60002L9.2252 2.35002C9.0002 2.12502 8.6502 2.12502 8.4252 2.35002C8.2002 2.57502 8.2002 2.92502 8.4252 3.15002L12.6252 7.42502H2.0002C1.7002 7.42502 1.4502 7.67502 1.4502 7.97502C1.4502 8.27502 1.7002 8.55003 2.0002 8.55003H12.6752L8.4252 12.875C8.2002 13.1 8.2002 13.45 8.4252 13.675C8.5252 13.775 8.6752 13.825 8.8252 13.825C8.9752 13.825 9.1252 13.775 9.2252 13.65L14.4002 8.40002C14.6252 8.17502 14.6252 7.82503 14.4002 7.60002Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Hero Section Start ===== -->
+      <section
+        id="home"
+        class="l li wa bm _q ft"
+      >
+        <!-- Hero Bg Shapes -->
+        <div>
+          <div
+            class="k -ud-z-1 -ud-top-[128%] sm:-ud-top-[107%] xl:-ud-top-[73%] y/2 -ud-translate-x-1/2 -u-z-10 no mf qd si tf"
+          ></div>
+          <div
+            class="k -ud-z-1 -ud-top-[112%] sm:-ud-top-[93%] xl:-ud-top-[62%] y/2 -ud-translate-x-1/2 -u-z-10 no mf pd si pf"
+          ></div>
+          <div
+            class="k -ud-top-[60%] y/2 -ud-translate-x-1/2 -u-z-10 hj mn bn mf je si sg"
+          ></div>
+          <div
+            class="k -ud-top-[110%] y/2 -ud-translate-x-1/2 -u-z-10 gj nn cn mf qd si tf"
+          ></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="ab ah ik qq rs">
+          <div class="animate_top cm">
+            <a
+              href="/#"
+              class="mo zp l ub tm om tc ph wh sk jk si"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.22801 5.05899C5.35579 4.71367 5.84421 4.71367 5.97199 5.05899L7.2508 8.51488C7.29096 8.62344 7.37656 8.70904 7.48512 8.7492L10.941 10.028C11.2863 10.1558 11.2863 10.6442 10.941 10.772L7.48512 12.0508C7.37656 12.091 7.29096 12.1766 7.2508 12.2851L5.97199 15.741C5.84421 16.0863 5.35579 16.0863 5.22801 15.741L3.94921 12.2851C3.90904 12.1766 3.82344 12.091 3.71487 12.0508L0.25899 10.772C-0.08633 10.6442 -0.08633 10.1558 0.25899 10.028L3.71487 8.7492C3.82344 8.70904 3.90904 8.62344 3.94921 8.51488L5.22801 5.05899Z"
+                  fill="url(#paint0_linear_99_13148)"
+                />
+                <path
+                  d="M5.22801 5.05899C5.35579 4.71367 5.84421 4.71367 5.97199 5.05899L7.2508 8.51488C7.29096 8.62344 7.37656 8.70904 7.48512 8.7492L10.941 10.028C11.2863 10.1558 11.2863 10.6442 10.941 10.772L7.48512 12.0508C7.37656 12.091 7.29096 12.1766 7.2508 12.2851L5.97199 15.741C5.84421 16.0863 5.35579 16.0863 5.22801 15.741L3.94921 12.2851C3.90904 12.1766 3.82344 12.091 3.71487 12.0508L0.25899 10.772C-0.08633 10.6442 -0.08633 10.1558 0.25899 10.028L3.71487 8.7492C3.82344 8.70904 3.90904 8.62344 3.94921 8.51488L5.22801 5.05899Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M9.23216 0.256128C9.35848 -0.085376 9.84152 -0.085376 9.96784 0.256128L10.385 1.38329C10.4247 1.49066 10.5094 1.5753 10.6167 1.61504L11.7438 2.03212C12.0854 2.15849 12.0854 2.64151 11.7438 2.76788L10.6167 3.18496C10.5094 3.2247 10.4247 3.30934 10.385 3.41671L9.96784 4.54387C9.84152 4.88538 9.35848 4.88538 9.23216 4.54387L8.81504 3.41671C8.77528 3.30934 8.69064 3.2247 8.58328 3.18496L7.45616 2.76788C7.11464 2.64151 7.11464 2.15849 7.45616 2.03212L8.58328 1.61504C8.69064 1.5753 8.77528 1.49066 8.81504 1.38329L9.23216 0.256128Z"
+                  fill="url(#paint1_linear_99_13148)"
+                />
+                <path
+                  d="M9.23216 0.256128C9.35848 -0.085376 9.84152 -0.085376 9.96784 0.256128L10.385 1.38329C10.4247 1.49066 10.5094 1.5753 10.6167 1.61504L11.7438 2.03212C12.0854 2.15849 12.0854 2.64151 11.7438 2.76788L10.6167 3.18496C10.5094 3.2247 10.4247 3.30934 10.385 3.41671L9.96784 4.54387C9.84152 4.88538 9.35848 4.88538 9.23216 4.54387L8.81504 3.41671C8.77528 3.30934 8.69064 3.2247 8.58328 3.18496L7.45616 2.76788C7.11464 2.64151 7.11464 2.15849 7.45616 2.03212L8.58328 1.61504C8.69064 1.5753 8.77528 1.49066 8.81504 1.38329L9.23216 0.256128Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M14.1547 5.77075C14.239 5.54308 14.561 5.54308 14.6453 5.77075L14.9233 6.52216C14.9498 6.59376 15.0062 6.65024 15.0778 6.67672L15.8293 6.95472C16.0569 7.03896 16.0569 7.36104 15.8293 7.44528L15.0778 7.72328C15.0062 7.74976 14.9498 7.80624 14.9233 7.87784L14.6453 8.62928C14.561 8.85688 14.239 8.85688 14.1547 8.62928L13.8767 7.87784C13.8502 7.80624 13.7938 7.74976 13.7222 7.72328L12.9707 7.44528C12.7431 7.36104 12.7431 7.03896 12.9707 6.95472L13.7222 6.67672C13.7938 6.65024 13.8502 6.59376 13.8767 6.52216L14.1547 5.77075Z"
+                  fill="url(#paint2_linear_99_13148)"
+                />
+                <path
+                  d="M14.1547 5.77075C14.239 5.54308 14.561 5.54308 14.6453 5.77075L14.9233 6.52216C14.9498 6.59376 15.0062 6.65024 15.0778 6.67672L15.8293 6.95472C16.0569 7.03896 16.0569 7.36104 15.8293 7.44528L15.0778 7.72328C15.0062 7.74976 14.9498 7.80624 14.9233 7.87784L14.6453 8.62928C14.561 8.85688 14.239 8.85688 14.1547 8.62928L13.8767 7.87784C13.8502 7.80624 13.7938 7.74976 13.7222 7.72328L12.9707 7.44528C12.7431 7.36104 12.7431 7.03896 12.9707 6.95472L13.7222 6.67672C13.7938 6.65024 13.8502 6.59376 13.8767 6.52216L14.1547 5.77075Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_99_13148"
+                    x1="0"
+                    y1="0"
+                    x2="16.0002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_99_13148"
+                    x1="0"
+                    y1="0"
+                    x2="16.0002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_99_13148"
+                    x1="0"
+                    y1="0"
+                    x2="16.0002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <span class="ko">
+                Your Ultimate Creative Companion!
+              </span>
+            </a>
+            <h1
+              class="zm wb em sm yq gt"
+            >
+              Elevate Your Content with Our AI-Powered Writing Tool
+            </h1>
+            <p
+              class="jg ab ac tm ar"
+            >
+              Experience a groundbreaking leap in content creation with our
+              cutting-edge AI writing tool.
+            </p>
+
+            <a
+              href="#"
+              class="lo tc ti uk lk zm tm fo co vp"
+            >
+              Start Your Free Trial
+            </a>
+          </div>
+        </div>
+
+        <div class="animate_top gc">
+          <img class="ab" src="images/hero.svg" alt="hero" />
+        </div>
+      </section>
+      <!-- ===== Hero Section End ===== -->
+
+      <!-- ===== features grid Section Start ===== -->
+      <section
+        id="features"
+        class="li vl fs bt lh"
+      >
+        <div class="sf ab ik qq rs">
+          <!-- Section Title -->
+          <div class="animate_top cm">
+            <span
+              class="mo l sb tm om tc ph wh sk jk si"
+            >
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="url(#paint0_linear_221_5398)"
+                />
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="url(#paint1_linear_221_5398)"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="url(#paint2_linear_221_5398)"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_221_5398"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_221_5398"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_221_5398"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <span class="ko"> Some of Main Features </span>
+            </span>
+            <h2
+              class="zm tb dm sm xq ht"
+            >
+              Key Features of Our Tool
+            </h2>
+            <p class="vg ab ub tm">
+              Our AI writing tool is designed to empower you with exceptional
+              writing capabilities, making the writing process more efficient,
+              accurate, and enjoyable.
+            </p>
+          </div>
+
+          <div class="l">
+            <div
+              class="oo gh ze/2 ud k ka/2 y/2 -ud-translate-y-1/2 lg:-ud-translate-x-1/3 cr/4 vc fr"
+            ></div>
+            <div
+              class="oo gh ze/2 ud k ka/2 ea/2 -ud-translate-y-1/2 dr vc fr"
+            ></div>
+
+            <!--=== Features Row ===-->
+            <div class="sc oh qh">
+              <!-- Features Item -->
+              <div class="mf jq/2 jr/3">
+                <div
+                  class="b l li cm yk rq vs ik wr ts"
+                >
+                  <span
+                    class="dq an po k mf re x ja -ud-z-1"
+                  ></span>
+                  <span
+                    class="qo l yg mf cd si tc ph qh zb ab"
+                  >
+                    <img src="images/icon-01.svg" alt="icon" />
+                  </span>
+                  <h4 class="um nm zm sb">
+                    Intelligent Writing Assistance
+                  </h4>
+                  <p class="tm">
+                    Our AI writing tool analyzes your content, suggests
+                    improvements,
+                  </p>
+                </div>
+              </div>
+
+              <!-- Features Item -->
+              <div class="mf jq/2 jr/3">
+                <div
+                  class="b l li cm yk rq vs ik wr ts"
+                >
+                  <span
+                    class="dq an po k mf re x ja -ud-z-1"
+                  ></span>
+                  <span
+                    class="qo l yg mf cd si tc ph qh zb ab"
+                  >
+                    <img src="images/icon-02.svg" alt="icon" />
+                  </span>
+                  <h4 class="um nm zm sb">
+                    Grammar and Spell Check
+                  </h4>
+                  <p class="tm">
+                    Say goodbye to embarrassing typos and grammar mistakes
+                  </p>
+                </div>
+              </div>
+
+              <!-- Features Item -->
+              <div class="mf jq/2 jr/3">
+                <div
+                  class="b l li cm yk rq vs ik wr ts"
+                >
+                  <span
+                    class="dq an po k mf re x ja -ud-z-1"
+                  ></span>
+                  <span
+                    class="qo l yg mf cd si tc ph qh zb ab"
+                  >
+                    <img src="images/icon-03.svg" alt="icon" />
+                  </span>
+                  <h4 class="um nm zm sb">
+                    Plagiarism Detection
+                  </h4>
+                  <p class="tm">
+                    Originality is key, and our AI writing tool helps you
+                    maintain it
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="oo mf ud"></div>
+
+            <!--=== Features Row ===-->
+            <div class="sc oh qh">
+              <!-- Features Item -->
+              <div class="mf jq/2 jr/3">
+                <div
+                  class="b l li cm yk rq vs ik wr ts"
+                >
+                  <span
+                    class="dq an po k mf re x ja -ud-z-1 eh"
+                  ></span>
+                  <span
+                    class="qo l yg mf cd si tc ph qh zb ab"
+                  >
+                    <img src="images/icon-04.svg" alt="icon" />
+                  </span>
+                  <h4 class="um nm zm sb">
+                    Voice to Text Conversion
+                  </h4>
+                  <p class="tm">
+                    Transform your spoken words into written text easily &
+                    effortlessly
+                  </p>
+                </div>
+              </div>
+
+              <!-- Features Item -->
+              <div class="mf jq/2 jr/3">
+                <div
+                  class="b l li cm yk rq vs ik wr ts"
+                >
+                  <span
+                    class="dq an po k mf re x ja -ud-z-1 eh"
+                  ></span>
+                  <span
+                    class="qo l yg mf cd si tc ph qh zb ab"
+                  >
+                    <img src="images/icon-05.svg" alt="icon" />
+                  </span>
+                  <h4 class="um nm zm sb">
+                    Style and Tone Adaptation
+                  </h4>
+                  <p class="tm">
+                    Whether you need a professional, or positive tone it has
+                    everyone
+                  </p>
+                </div>
+              </div>
+
+              <!-- Features Item -->
+              <div class="mf jq/2 jr/3">
+                <div
+                  class="b l li cm yk rq vs ik wr ts"
+                >
+                  <span
+                    class="dq an po k mf re x ja -ud-z-1 eh"
+                  ></span>
+                  <span
+                    class="qo l yg mf cd si tc ph qh zb ab"
+                  >
+                    <img src="images/icon-06.svg" alt="icon" />
+                  </span>
+                  <h4 class="um nm zm sb">
+                    Content Generation
+                  </h4>
+                  <p class="tm">
+                    Need inspiration or assistance with generating content?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== features grid Section End ===== -->
+
+      <!-- ===== features list Section Start ===== -->
+      <section class="tl">
+        <div class="rf ab ik qq rs">
+          <div class="uc kq ei" data-highlighter>
+            <!-- features item -->
+            <div class="fq">
+              <div class="l ni so">
+                <div
+                  class="l li ni yj qs c"
+                >
+                  <div
+                    class="sc ph rh l xa"
+                  >
+                    <div class="fg mf">
+                      <span
+                        class="mo l sb tm om tc ph wh sk jk si"
+                      >
+                        <svg
+                          width="19"
+                          height="16"
+                          viewBox="0 0 19 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 2.5C6 2.32741 5.86009 2.1875 5.6875 2.1875C4.65196 2.1875 3.8125 1.34804 3.8125 0.3125C3.8125 0.13991 3.67259 0 3.5 0C3.32741 0 3.1875 0.13991 3.1875 0.3125C3.1875 1.34804 2.34804 2.1875 1.3125 2.1875C1.13991 2.1875 1 2.32741 1 2.5C1 2.67259 1.13991 2.8125 1.3125 2.8125C2.34804 2.8125 3.1875 3.65196 3.1875 4.6875C3.1875 4.86009 3.32741 5 3.5 5C3.67259 5 3.8125 4.86009 3.8125 4.6875C3.8125 3.65196 4.65196 2.8125 5.6875 2.8125C5.86009 2.8125 6 2.67259 6 2.5Z"
+                            fill="url(#paint0_linear_44_11468)"
+                          />
+                          <path
+                            d="M6 2.5C6 2.32741 5.86009 2.1875 5.6875 2.1875C4.65196 2.1875 3.8125 1.34804 3.8125 0.3125C3.8125 0.13991 3.67259 0 3.5 0C3.32741 0 3.1875 0.13991 3.1875 0.3125C3.1875 1.34804 2.34804 2.1875 1.3125 2.1875C1.13991 2.1875 1 2.32741 1 2.5C1 2.67259 1.13991 2.8125 1.3125 2.8125C2.34804 2.8125 3.1875 3.65196 3.1875 4.6875C3.1875 4.86009 3.32741 5 3.5 5C3.67259 5 3.8125 4.86009 3.8125 4.6875C3.8125 3.65196 4.65196 2.8125 5.6875 2.8125C5.86009 2.8125 6 2.67259 6 2.5Z"
+                            fill="white"
+                            fill-opacity="0.4"
+                          />
+                          <path
+                            d="M13.5 2C13.5 1.72386 13.2761 1.5 13 1.5C12.7239 1.5 12.5 1.72386 12.5 2C12.5 4.48488 10.4852 6.5 8 6.5C7.7239 6.5 7.5 6.7239 7.5 7C7.5 7.2761 7.7239 7.5 8 7.5C10.4853 7.5 12.5 9.5142 12.5 12C12.5 12.2761 12.7239 12.5 13 12.5C13.2761 12.5 13.5 12.2761 13.5 12C13.5 9.5141 15.5141 7.5 18 7.5C18.2761 7.5 18.5 7.2761 18.5 7C18.5 6.7239 18.2761 6.5 18 6.5C15.5142 6.5 13.5 4.48492 13.5 2Z"
+                            fill="url(#paint1_linear_44_11468)"
+                          />
+                          <path
+                            d="M13.5 2C13.5 1.72386 13.2761 1.5 13 1.5C12.7239 1.5 12.5 1.72386 12.5 2C12.5 4.48488 10.4852 6.5 8 6.5C7.7239 6.5 7.5 6.7239 7.5 7C7.5 7.2761 7.7239 7.5 8 7.5C10.4853 7.5 12.5 9.5142 12.5 12C12.5 12.2761 12.7239 12.5 13 12.5C13.2761 12.5 13.5 12.2761 13.5 12C13.5 9.5141 15.5141 7.5 18 7.5C18.2761 7.5 18.5 7.2761 18.5 7C18.5 6.7239 18.2761 6.5 18 6.5C15.5142 6.5 13.5 4.48492 13.5 2Z"
+                            fill="white"
+                            fill-opacity="0.4"
+                          />
+                          <path
+                            d="M4.5 8.5C4.5 8.2239 4.27614 8 4 8C3.72386 8 3.5 8.2239 3.5 8.5C3.5 10.1569 2.15686 11.5 0.5 11.5C0.22386 11.5 0 11.7239 0 12C0 12.2761 0.22386 12.5 0.5 12.5C2.15686 12.5 3.5 13.8431 3.5 15.5C3.5 15.7761 3.72386 16 4 16C4.27614 16 4.5 15.7761 4.5 15.5C4.5 13.8431 5.84314 12.5 7.5 12.5C7.7761 12.5 8 12.2761 8 12C8 11.7239 7.7761 11.5 7.5 11.5C5.84314 11.5 4.5 10.1569 4.5 8.5Z"
+                            fill="url(#paint2_linear_44_11468)"
+                          />
+                          <path
+                            d="M4.5 8.5C4.5 8.2239 4.27614 8 4 8C3.72386 8 3.5 8.2239 3.5 8.5C3.5 10.1569 2.15686 11.5 0.5 11.5C0.22386 11.5 0 11.7239 0 12C0 12.2761 0.22386 12.5 0.5 12.5C2.15686 12.5 3.5 13.8431 3.5 15.5C3.5 15.7761 3.72386 16 4 16C4.27614 16 4.5 15.7761 4.5 15.5C4.5 13.8431 5.84314 12.5 7.5 12.5C7.7761 12.5 8 12.2761 8 12C8 11.7239 7.7761 11.5 7.5 11.5C5.84314 11.5 4.5 10.1569 4.5 8.5Z"
+                            fill="white"
+                            fill-opacity="0.4"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_44_11468"
+                              x1="0"
+                              y1="0"
+                              x2="18.5002"
+                              y2="0.000275541"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop offset="0.0001" stop-color="#E59CFF" />
+                              <stop offset="0.5001" stop-color="#BA9CFF" />
+                              <stop offset="1" stop-color="#9CB2FF" />
+                            </linearGradient>
+                            <linearGradient
+                              id="paint1_linear_44_11468"
+                              x1="0"
+                              y1="0"
+                              x2="18.5002"
+                              y2="0.000275541"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop offset="0.0001" stop-color="#E59CFF" />
+                              <stop offset="0.5001" stop-color="#BA9CFF" />
+                              <stop offset="1" stop-color="#9CB2FF" />
+                            </linearGradient>
+                            <linearGradient
+                              id="paint2_linear_44_11468"
+                              x1="0"
+                              y1="0"
+                              x2="18.5002"
+                              y2="0.000275541"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop offset="0.0001" stop-color="#E59CFF" />
+                              <stop offset="0.5001" stop-color="#BA9CFF" />
+                              <stop offset="1" stop-color="#9CB2FF" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+
+                        <span class="ko">
+                          AI-Powered Writing Tool
+                        </span>
+                      </span>
+                      <h3
+                        class="zm tb rm km"
+                      >
+                        Intelligent Writing Assistance
+                      </h3>
+                      <p class="font-medium gb">
+                        Our AI writing tool is designed to empower you with
+                        exceptional writing capabilities, making the writing
+                        process...
+                      </p>
+                      <a
+                        href="#"
+                        class="to l tc ph th si uk kk zm om fo co wp"
+                      >
+                        Learn more
+                        <svg
+                          width="14"
+                          height="12"
+                          viewBox="0 0 14 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.3992 5.60002L8.22422 0.350024C7.99922 0.125024 7.64922 0.125024 7.42422 0.350024C7.19922 0.575024 7.19922 0.925025 7.42422 1.15002L11.6242 5.42503H0.999219C0.699219 5.42503 0.449219 5.67502 0.449219 5.97502C0.449219 6.27502 0.699219 6.55003 0.999219 6.55003H11.6742L7.42422 10.875C7.19922 11.1 7.19922 11.45 7.42422 11.675C7.52422 11.775 7.67422 11.825 7.82422 11.825C7.97422 11.825 8.12422 11.775 8.22422 11.65L13.3992 6.40002C13.6242 6.17502 13.6242 5.82502 13.3992 5.60002Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div
+                      class="eg mf vc iq"
+                    >
+                      <img src="images/big-icon.svg" alt="icon" />
+                    </div>
+                  </div>
+
+                  <!-- bg shapes -->
+                  <div>
+                    <span class="k da p"
+                      ><img src="images/shape-01.png" alt="shape"
+                    /></span>
+                    <span class="k x ja"
+                      ><img src="images/shape-02.svg" alt="shape"
+                    /></span>
+                    <span
+                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-2/3 xg mf me si gj/25 nn"
+                    ></span>
+                    <span
+                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-[40%] ng mf ge si hj/20 mn"
+                    ></span>
+                    <span
+                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-[18%] xf mf wd si kj/20 pn"
+                    ></span>
+                    <span
+                      class="k da ja ln"
+                      ><img src="images/shape-03.svg" alt="shape"
+                    /></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- features item -->
+            <div class="hq">
+              <div class="l ni so">
+                <div
+                  class="l li ni fk tl dl c d"
+                >
+                  <div class="l xa">
+                    <span
+                      class="qo l yg mf cd si tc ph qh kb ab"
+                    >
+                      <img src="images/icon-05.svg" alt="icon" />
+                    </span>
+
+                    <h3
+                      class="zm tb um mm"
+                    >
+                      Empowering Writing Excellence
+                    </h3>
+                    <p class="font-medium">
+                      Our AI writing tool is designed to empower you with
+                      exceptional writing capabilities, making the writing
+                      process...
+                    </p>
+                  </div>
+
+                  <!-- bg shapes -->
+                  <div>
+                    <span
+                      class="k -ud-left-[36%] -ud-bottom-[82%] lg mf fe si gj/25 nn"
+                    ></span>
+                    <span
+                      class="k -ud-right-[22%] -ud-top-[27%] zf mf yd si gj/25 nn"
+                    ></span>
+                    <span
+                      class="k ia sa kn"
+                      ><img src="images/shape-04.svg" alt="shape"
+                    /></span>
+                    <span
+                      class="k -ud-left-[26%] -ud-bottom-[46%] bg mf ae si hj/20 mn"
+                    ></span>
+                    <span
+                      class="k -ud-left-[6%] -ud-bottom-[12%] vf mf sd si hj/20 pn"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- features item -->
+            <div class="gq">
+              <div class="l ni so">
+                <div
+                  class="l li ni fk tl dl c d"
+                >
+                  <div class="l xa">
+                    <span
+                      class="qo l yg mf cd si tc ph qh kb ab"
+                    >
+                      <img src="images/icon-07.svg" alt="icon" />
+                    </span>
+
+                    <h3
+                      class="zm tb um mm"
+                    >
+                      Grammar and Spell Check
+                    </h3>
+                    <p class="font-medium">
+                      Our AI writing tool is designed to empower you with
+                      exceptional writing capabilities.
+                    </p>
+                  </div>
+
+                  <!-- bg shapes -->
+                  <div>
+                    <span
+                      class="k ha sa qn"
+                      ><img src="images/shape-05.svg" alt="shape"
+                    /></span>
+                    <span
+                      class="k -ud-left-[30%] -ud-bottom-[53%] ag mf _d si gj/25 nn"
+                    ></span>
+                    <span
+                      class="k -ud-right-[48%] -ud-top-[23%] bg mf ae si hj/20 mn"
+                    ></span>
+                    <span
+                      class="k -ud-right-[28%] ja vf mf sd si hj/20 pn"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== features list Section End ===== -->
+
+      <!-- ====== Pricing Section Start -->
+      <section
+        id="pricing"
+        class="l xa li yl is dt lh"
+      >
+        <div class="rf ab ik qq rs">
+          <!-- bg circles -->
+          <div class="l la">
+            <div
+              class="cg mf be si gj/25 mn k y/2 -ud-translate-x-1/2 ja"
+            ></div>
+            <div
+              class="gg mf ee si fj/40 on k y/2 -ud-translate-x-1/2 ja"
+            ></div>
+            <div
+              class="wf mf td si ij/30 jn k y/2 -ud-translate-x-1/2 ja"
+            ></div>
+            <div
+              class="zg mf oe si ej k y/2 -ud-translate-x-1/2 ja wo"
+            ></div>
+
+            <div
+              class="hg mf ld li k -ud-z-1 -ud-top-30 y/2 -ud-translate-x-1/2"
+            >
+              <div class="stars"></div>
+              <div class="stars2"></div>
+            </div>
+          </div>
+
+          <!-- grid row -->
+          <div class="sc qh ei l -ud-z-1">
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+            <div
+              class="kg mf xd l uo vo"
+            ></div>
+          </div>
+
+          <!-- section title -->
+          <div class="animate_top ob -ud-mt-24 cm">
+            <span
+              class="mo l sb tm om tc ph wh sk jk si"
+            >
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="url(#paint0_linear_272_12356)"
+                />
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="url(#paint1_linear_272_12356)"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="url(#paint2_linear_272_12356)"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <span class="ko"> Get access </span>
+            </span>
+            <h2
+              class="zm tb dm sm xq ht"
+            >
+              Our Pricing Plan
+            </h2>
+            <p class="vg ab tm">
+              Our AI writing tool is designed to empower you with exceptional
+              writing capabilities, making the writing process more efficient,
+              accurate, and enjoyable.
+            </p>
+          </div>
+
+          <div
+            class="uc mh lq lr ei"
+          >
+            <!-- Pricing item -->
+            <div
+              class="animate_top ni ej l li tl bl mk ss xo"
+            >
+              <span class="k ga ra"
+                ><img src="images/pricing-icon-01.svg" alt="icon"
+              /></span>
+
+              <h3
+                class="um mm zm vb"
+              >
+                Starter
+              </h3>
+
+              <div class="sc ph zh">
+                <h2
+                  class="rm hm yo"
+                >
+                  $10
+                </h2>
+
+                <p class="tm">
+                  /month <br />
+                  (billed annually)
+                </p>
+              </div>
+
+              <div
+                class="cb mf ud zo"
+              ></div>
+
+              <ul class="sc nh _h">
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Subscription with levels</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Advanced features included</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Shared workspaces & tools</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium"
+                    >Premium versions functionality</span
+                  >
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Customizing the outputs</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Priority customer support</span>
+                </li>
+              </ul>
+
+              <a
+                href="/#"
+                class="fc sc ph qh th tm zm zj ti un go co l _o wp"
+              >
+                Get the plan
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+
+              <p class="kc om cm">
+                No extra hidden charge
+              </p>
+
+              <!-- bg shapes -->
+              <span
+                class="rg mf ie si mn gj/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
+              ></span>
+              <span
+                class="rg mf ie si mn gj/25 k -ud-z-1 ia -ud-top-[89%]"
+              ></span>
+            </div>
+
+            <!-- Pricing item -->
+            <div
+              class="animate_top ni ej l li tl bl mk ss xo"
+            >
+              <span class="k ga ra"
+                ><img src="images/pricing-icon-02.svg" alt="icon"
+              /></span>
+
+              <h3
+                class="um mm zm vb"
+              >
+                Medium
+              </h3>
+
+              <div class="sc ph zh">
+                <h2
+                  class="rm hm yo"
+                >
+                  $59
+                </h2>
+
+                <p class="tm">
+                  /month <br />
+                  (billed annually)
+                </p>
+              </div>
+
+              <div
+                class="cb mf ud zo"
+              ></div>
+
+              <ul class="sc nh _h">
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Subscription with levels</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Advanced features included</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Shared workspaces & tools</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium"
+                    >Premium versions functionality</span
+                  >
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Customizing the outputs</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Priority customer support</span>
+                </li>
+              </ul>
+
+              <a
+                href="/#"
+                class="fc sc ph qh th tm zm zj ti un go co l _o wp"
+              >
+                Get the plan
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+
+              <p class="kc om cm">
+                No extra hidden charge
+              </p>
+
+              <!-- bg shapes -->
+              <span
+                class="rg mf ie si mn gj/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
+              ></span>
+              <span
+                class="rg mf ie si mn gj/25 k -ud-z-1 ia -ud-top-[89%]"
+              ></span>
+            </div>
+
+            <!-- Pricing item -->
+            <div
+              class="animate_top ni ej l li tl bl mk ss xo"
+            >
+              <span class="k ga ra"
+                ><img src="images/pricing-icon-03.svg" alt="icon"
+              /></span>
+
+              <h3
+                class="um mm zm vb"
+              >
+                Business
+              </h3>
+
+              <div class="sc ph zh">
+                <h2
+                  class="rm hm yo"
+                >
+                  $289
+                </h2>
+
+                <p class="tm">
+                  /month <br />
+                  (billed annually)
+                </p>
+              </div>
+
+              <div
+                class="cb mf ud zo"
+              ></div>
+
+              <ul class="sc nh _h">
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Subscription with levels</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Advanced features included</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Shared workspaces & tools</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium"
+                    >Premium versions functionality</span
+                  >
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Customizing the outputs</span>
+                </li>
+                <li class="sc ph bi">
+                  <img src="images/pricing-icon-04.svg" alt="icon" />
+                  <span class="font-medium">Priority customer support</span>
+                </li>
+              </ul>
+
+              <a
+                href="/#"
+                class="fc sc ph qh th tm zm zj ti un go co l _o wp"
+              >
+                Get the plan
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+
+              <p class="kc om cm">
+                No extra hidden charge
+              </p>
+
+              <!-- bg shapes -->
+              <span
+                class="rg mf ie si mn gj/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
+              ></span>
+              <span
+                class="rg mf ie si mn gj/25 k -ud-z-1 ia -ud-top-[89%]"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== Pricing Section End -->
+
+      <!-- ====== User Section Start -->
+      <section
+        x-data="{ 'showContent': false, 'scrollContent': false, }"
+        class="l xa li yl is dt 2xl:ud-pt-45 hl"
+      >
+        <div class="rf ab ik qq rs">
+          <!-- section title -->
+          <div class="animate_top lb cm">
+            <span
+              class="mo l sb tm om tc ph wh sk jk si"
+            >
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="url(#paint0_linear_272_12356)"
+                />
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="url(#paint1_linear_272_12356)"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="url(#paint2_linear_272_12356)"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <span class="ko"> Wall of love </span>
+            </span>
+            <h2
+              class="zm tb dm sm xq ht"
+            >
+              What Our User Says
+            </h2>
+            <p class="vg ab tm">
+              Our AI writing tool is designed to empower you with exceptional
+              writing capabilities, making the writing process more efficient,
+              accurate, and enjoyable.
+            </p>
+          </div>
+
+          <div
+            @scroll.window="scrollContent = (scrollY > $el.offsetTop - 500) ? true : false"
+            :class="{ 'ue li' :!showContent }"
+            class="uc mh lq lr ei"
+          >
+            <!-- user column -->
+            <div class="ki">
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-01.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Machel Pildium
+                    </h5>
+                    <p class="tm om">@machel</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-02.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Wilson Bator
+                    </h5>
+                    <p class="tm om">@wilson</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-03.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Roger George
+                    </h5>
+                    <p class="tm om">@roger</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-04.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Adison Dias
+                    </h5>
+                    <p class="tm om">@adison</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-05.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Abram Lipshutz
+                    </h5>
+                    <p class="tm om">@abram</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-06.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Jaylon Press
+                    </h5>
+                    <p class="tm om">@jaylon</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-07.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Zain Franci
+                    </h5>
+                    <p class="tm om">@zain</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-08.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Cristofer Carder
+                    </h5>
+                    <p class="tm om">@cristofer</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-09.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Dulce Rosser
+                    </h5>
+                    <p class="tm om">@dulce</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+            </div>
+
+            <!-- user column -->
+            <div class="ki vc iq">
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-04.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Adison Dias
+                    </h5>
+                    <p class="tm om">@adison</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-05.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Abram Lipshutz
+                    </h5>
+                    <p class="tm om">@abram</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-06.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Jaylon Press
+                    </h5>
+                    <p class="tm om">@jaylon</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-07.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Zain Franci
+                    </h5>
+                    <p class="tm om">@zain</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-08.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Cristofer Carder
+                    </h5>
+                    <p class="tm om">@cristofer</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-09.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Dulce Rosser
+                    </h5>
+                    <p class="tm om">@dulce</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-01.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Machel Pildium
+                    </h5>
+                    <p class="tm om">@machel</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-02.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Wilson Bator
+                    </h5>
+                    <p class="tm om">@wilson</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-03.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Roger George
+                    </h5>
+                    <p class="tm om">@roger</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+            </div>
+
+            <!-- user column -->
+            <div class="ki vc fr">
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-07.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Zain Franci
+                    </h5>
+                    <p class="tm om">@zain</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-08.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Cristofer Carder
+                    </h5>
+                    <p class="tm om">@cristofer</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-09.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Dulce Rosser
+                    </h5>
+                    <p class="tm om">@dulce</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-01.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Machel Pildium
+                    </h5>
+                    <p class="tm om">@machel</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-02.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Wilson Bator
+                    </h5>
+                    <p class="tm om">@wilson</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-03.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Roger George
+                    </h5>
+                    <p class="tm om">@roger</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-04.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Adison Dias
+                    </h5>
+                    <p class="tm om">@adison</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <p class="nc">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-05.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Abram Lipshutz
+                    </h5>
+                    <p class="tm om">@abram</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+
+              <!-- user item -->
+              <div
+                class="ap l li mk zk oi"
+              >
+                <div class="sc ph ai">
+                  <div
+                    class="ig mf ad si"
+                  >
+                    <img src="images/user-06.png" alt="user" />
+                  </div>
+                  <div>
+                    <h5 class="zm om tm">
+                      Jaylon Press
+                    </h5>
+                    <p class="tm om">@jaylon</p>
+                  </div>
+                </div>
+
+                <div
+                  class="bp l db mf ud"
+                ></div>
+
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's.
+                </p>
+
+                <!-- bg shapes -->
+                <span
+                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            :class="[ showContent ? 'm -u-mt-52 vn co an' : '', scrollContent ? '_m' : '' ]"
+            class="o s sc qh oj qj am jl f k"
+          >
+            <button
+              :class="[ showContent ? 'transition-transform dh' : '', scrollContent ? 'ch' : '' ]"
+              @click="showContent = !showContent"
+              type="button"
+              class="jo yp l oa om zm font-semibold jk uk ti g sc ab -ud-mt-7.5 fo co"
+            >
+              <span
+                x-text="showContent ? 'Okay, I get the point' : 'Show more...'"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ====== User Section End -->
+
+      <!-- ====== Clients Section Start -->
+      <section class="rk">
+        <div class="qf ab ik qq rs">
+          <div class="l li wa">
+            <span
+              class="uf mf ce pc n f k wa x ka/2 -ud-translate-y-1/2 mj qj/0 uj/100"
+            ></span>
+            <span
+              class="uf mf ce pc n f k wa ca ka/2 -ud-translate-y-1/2 nj qj/0 uj/100"
+            ></span>
+            <div class="swiper clients-carousel">
+              <div
+                class="swiper-wrapper ph kh eo"
+              >
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-01.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-02.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-03.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-04.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-05.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-06.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img
+                      class="jc"
+                      src="images/client-07.svg"
+                      alt="client"
+                    />
+                  </a>
+                </div>
+
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-01.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-02.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-03.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-04.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-05.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-06.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img
+                      class="jc"
+                      src="images/client-07.svg"
+                      alt="client"
+                    />
+                  </a>
+                </div>
+
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-01.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-02.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-03.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-04.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-05.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img src="images/client-06.svg" alt="client" />
+                  </a>
+                </div>
+                <div class="swiper-slide ve">
+                  <a href="/#">
+                    <img
+                      class="jc"
+                      src="images/client-07.svg"
+                      alt="client"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== Clients Section End -->
+
+      <!-- ====== Support Section Start -->
+      <section id="support" class="lh">
+        <div class="qf ab ik qq rs">
+          <div
+            class="l ya li qi ej zl mk pq vr"
+          >
+            <!-- grid row -->
+            <div
+              class="sc qh ei k y/2 -ud-translate-x-1/2 -ud-top-[16%] ug mf -ud-z-1 dn"
+            >
+              <div
+                class="kg mf xd l uo vo q"
+              ></div>
+              <div
+                class="kg mf xd l uo vo v"
+              ></div>
+              <div
+                class="kg mf xd l uo vo t"
+              ></div>
+              <div
+                class="kg mf xd l uo vo"
+              ></div>
+              <div
+                class="kg mf xd l uo vo"
+              ></div>
+              <div
+                class="kg mf xd l uo vo"
+              ></div>
+              <div
+                class="kg mf xd l uo vo r"
+              ></div>
+              <div
+                class="kg mf xd l uo vo u"
+              ></div>
+              <div
+                class="kg mf xd l uo vo w"
+              ></div>
+            </div>
+
+            <!-- stars -->
+            <div
+              class="hg mf ld li k -ud-z-1 -ud-top-30 y/2 -ud-translate-x-1/2"
+            >
+              <div class="stars"></div>
+              <div class="stars2"></div>
+            </div>
+
+            <!-- bg shapes -->
+            <span
+              class="bh mf qe si pc va k y/2 -ud-top-[42%] -ud-translate-x-1/2 gj/25 nn"
+            ></span>
+            <span
+              class="tg mf ke si pc k y/2 -ud-top-[38%] -ud-translate-x-1/2 hj/20 mn"
+            ></span>
+            <span
+              class="xf mf wd si pc k y/2 -ud-top-[10%] -ud-translate-x-1/2 kj/20 pn"
+            ></span>
+
+            <!-- section title -->
+            <div
+              class="animate_top mb cm l ya"
+            >
+              <span
+                class="mo l sb tm om tc ph wh sk jk si"
+              >
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                    fill="url(#paint0_linear_272_12356)"
+                  />
+                  <path
+                    d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                    fill="white"
+                    fill-opacity="0.4"
+                  />
+                  <path
+                    d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                    fill="url(#paint1_linear_272_12356)"
+                  />
+                  <path
+                    d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                    fill="white"
+                    fill-opacity="0.4"
+                  />
+                  <path
+                    d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                    fill="url(#paint2_linear_272_12356)"
+                  />
+                  <path
+                    d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                    fill="white"
+                    fill-opacity="0.4"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_272_12356"
+                      x1="0.5"
+                      y1="0"
+                      x2="16.5002"
+                      y2="0.000206102"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.0001" stop-color="#E59CFF" />
+                      <stop offset="0.5001" stop-color="#BA9CFF" />
+                      <stop offset="1" stop-color="#9CB2FF" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_272_12356"
+                      x1="0.5"
+                      y1="0"
+                      x2="16.5002"
+                      y2="0.000206102"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.0001" stop-color="#E59CFF" />
+                      <stop offset="0.5001" stop-color="#BA9CFF" />
+                      <stop offset="1" stop-color="#9CB2FF" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint2_linear_272_12356"
+                      x1="0.5"
+                      y1="0"
+                      x2="16.5002"
+                      y2="0.000206102"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.0001" stop-color="#E59CFF" />
+                      <stop offset="0.5001" stop-color="#BA9CFF" />
+                      <stop offset="1" stop-color="#9CB2FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <span class="ko"> Need Any Help? </span>
+              </span>
+              <h2
+                class="zm tb dm sm xq ht"
+              >
+                Contact With Us
+              </h2>
+              <p class="vg ab tm">
+                Our AI writing tool is designed to empower you with exceptional
+                writing capabilities, making the writing process more efficient,
+                accurate, and enjoyable.
+              </p>
+            </div>
+
+            <!-- support form -->
+            <div
+              class="cp l li pi ej ak oq qs"
+            >
+              <form class="l wa">
+                <div class="-ud-mx-4 xl:-ud-mx-10 sc oh">
+                  <div class="mf ik us zq/2">
+                    <div class="bc">
+                      <label
+                        for="name"
+                        class="zm qb pc tm"
+                      >
+                        Name
+                      </label>
+                      <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Enter your Name"
+                        class="ti xi cj/[0.12] kj/[0.05] aq mf uk kk in"
+                      />
+                    </div>
+                  </div>
+                  <div class="mf ik us zq/2">
+                    <div class="bc">
+                      <label
+                        for="email"
+                        class="zm qb pc tm"
+                      >
+                        Email
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Enter your Email"
+                        class="ti xi cj/[0.12] kj/[0.05] aq mf uk kk in"
+                      />
+                    </div>
+                  </div>
+                  <div class="mf ik us">
+                    <div class="gb">
+                      <label
+                        for="message"
+                        class="zm qb pc tm"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Type your message"
+                        rows="6"
+                        class="ti xi cj/[0.12] kj/[0.05] aq mf wk kk in"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="mf ik us">
+                    <div class="cm">
+                      <a
+                        href="#"
+                        class="lo tc ti uk lk zm tm fo co vp"
+                      >
+                        Send Message
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== Support Section End -->
+
+      <!-- ====== Blog Section Start -->
+      <section class="tk _r">
+        <div class="rf ab ik qq rs">
+          <!-- section title -->
+          <div class="animate_top mb cm">
+            <span
+              class="mo l sb tm om tc ph wh sk jk si"
+            >
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="url(#paint0_linear_272_12356)"
+                />
+                <path
+                  d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="url(#paint1_linear_272_12356)"
+                />
+                <path
+                  d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="url(#paint2_linear_272_12356)"
+                />
+                <path
+                  d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                  fill="white"
+                  fill-opacity="0.4"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_272_12356"
+                    x1="0.5"
+                    y1="0"
+                    x2="16.5002"
+                    y2="0.000206102"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.0001" stop-color="#E59CFF" />
+                    <stop offset="0.5001" stop-color="#BA9CFF" />
+                    <stop offset="1" stop-color="#9CB2FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <span class="ko"> Read Our Latest Blogs </span>
+            </span>
+            <h2
+              class="zm tb dm sm xq ht"
+            >
+              Latest Blogs & News
+            </h2>
+            <p class="vg ab tm">
+              Our AI writing tool is designed to empower you with exceptional
+              writing capabilities, making the writing process more efficient,
+              accurate, and enjoyable.
+            </p>
+          </div>
+
+          <div
+            class="uc mh lq lr ei"
+          >
+            <!-- blog item -->
+            <div class="animate_top b">
+              <div class="wb li wi">
+                <img
+                  src="images/blog-01.png"
+                  alt="image"
+                  class="ho do hh cq"
+                />
+              </div>
+
+              <div
+                class="sc oh xh ph tb"
+              >
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Design
+                </span>
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Engineering
+                </span>
+              </div>
+
+              <h4>
+                <a
+                  href="blog-single.html"
+                  class="zm um pm fo co vp"
+                >
+                  Revolution in Content Creation and Communication
+                </a>
+              </h4>
+              <p class="font-medium kc">
+                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna oliumosd
+                aliqua...
+              </p>
+
+              <div
+                class="sc ph ai oh nc"
+              >
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
+                      fill=""
+                    />
+                    <path
+                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">Alex Demo</span>
+                </div>
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">25 Mar, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- blog item -->
+            <div class="animate_top b">
+              <div class="wb li wi">
+                <img
+                  src="images/blog-02.png"
+                  alt="image"
+                  class="ho do hh cq"
+                />
+              </div>
+
+              <div
+                class="sc oh xh ph tb"
+              >
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Development
+                </span>
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Security
+                </span>
+              </div>
+
+              <h4>
+                <a
+                  href="blog-single.html"
+                  class="zm um pm fo co vp"
+                >
+                  How AI Writing Tools Empower Writers to Speed up there Writing
+                </a>
+              </h4>
+              <p class="font-medium kc">
+                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna oliumosd
+                aliqua...
+              </p>
+
+              <div
+                class="sc ph ai oh nc"
+              >
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
+                      fill=""
+                    />
+                    <path
+                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">Hendary Jonson</span>
+                </div>
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">12 Feb, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- blog item -->
+            <div class="animate_top b">
+              <div class="wb li wi">
+                <img
+                  src="images/blog-03.png"
+                  alt="image"
+                  class="ho do hh cq"
+                />
+              </div>
+
+              <div
+                class="sc oh xh ph tb"
+              >
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Products
+                </span>
+                <span
+                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                >
+                  Blog and articles
+                </span>
+              </div>
+
+              <h4>
+                <a
+                  href="blog-single.html"
+                  class="zm um pm fo co vp"
+                >
+                  Revolution in Content Creation and Communication
+                </a>
+              </h4>
+              <p class="font-medium kc">
+                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna oliumosd
+                aliqua...
+              </p>
+
+              <div
+                class="sc ph ai oh nc"
+              >
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
+                      fill=""
+                    />
+                    <path
+                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">Piter Mecraow</span>
+                </div>
+                <div
+                  class="sc ph wh oh jh fo co sp"
+                >
+                  <svg
+                    class="wj"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span class="om tm">10 Jan, 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== Blog Section End -->
+
+      <!-- ====== CTA Section Start -->
+      <section>
+        <div class="rf ab ik qq rs">
+          <div
+            class="dp ej qi l li ik tk _r ya"
+          >
+            <!-- bg shapes -->
+            <span class="k p x -ud-z-1"
+              ><img src="images/grid.svg" alt="grid"
+            /></span>
+            <span
+              class="bh mf qe si pc -ud-z-1 k y/2 qa -ud-translate-x-1/2 gj/25 nn"
+            ></span>
+            <span
+              class="tg mf ke si pc -ud-z-1 k y/2 ta -ud-translate-x-1/2 hj/20 mn"
+            ></span>
+            <span
+              class="xf mf wd si pc -ud-z-1 k y/2 -ud-bottom-[28%] -ud-translate-x-1/2 kj/20 pn"
+            ></span>
+
+            <!-- stars -->
+            <div
+              class="hg mf ld li k -ud-z-1 -ud-bottom-25 y/2 -ud-translate-x-1/2"
+            >
+              <div class="stars"></div>
+              <div class="stars2"></div>
+            </div>
+
+            <div class="animate_top cm">
+              <span
+                class="mo l sb tm om tc ph wh sk jk si"
+              >
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                    fill="url(#paint0_linear_272_12356)"
+                  />
+                  <path
+                    d="M5.72801 5.05899C5.85579 4.71367 6.34421 4.71367 6.47199 5.05899L7.7508 8.51488C7.79096 8.62344 7.87656 8.70904 7.98512 8.7492L11.441 10.028C11.7863 10.1558 11.7863 10.6442 11.441 10.772L7.98512 12.0508C7.87656 12.091 7.79096 12.1766 7.7508 12.2851L6.47199 15.741C6.34421 16.0863 5.85579 16.0863 5.72801 15.741L4.44921 12.2851C4.40904 12.1766 4.32344 12.091 4.21487 12.0508L0.75899 10.772C0.41367 10.6442 0.41367 10.1558 0.75899 10.028L4.21487 8.7492C4.32344 8.70904 4.40904 8.62344 4.44921 8.51488L5.72801 5.05899Z"
+                    fill="white"
+                    fill-opacity="0.4"
+                  />
+                  <path
+                    d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                    fill="url(#paint1_linear_272_12356)"
+                  />
+                  <path
+                    d="M9.73216 0.256128C9.85848 -0.085376 10.3415 -0.085376 10.4678 0.256128L10.885 1.38329C10.9247 1.49066 11.0094 1.5753 11.1167 1.61504L12.2438 2.03212C12.5854 2.15849 12.5854 2.64151 12.2438 2.76788L11.1167 3.18496C11.0094 3.2247 10.9247 3.30934 10.885 3.41671L10.4678 4.54387C10.3415 4.88538 9.85848 4.88538 9.73216 4.54387L9.31504 3.41671C9.27528 3.30934 9.19064 3.2247 9.08328 3.18496L7.95616 2.76788C7.61464 2.64151 7.61464 2.15849 7.95616 2.03212L9.08328 1.61504C9.19064 1.5753 9.27528 1.49066 9.31504 1.38329L9.73216 0.256128Z"
+                    fill="white"
+                    fill-opacity="0.4"
+                  />
+                  <path
+                    d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                    fill="url(#paint2_linear_272_12356)"
+                  />
+                  <path
+                    d="M14.6547 5.77075C14.739 5.54308 15.061 5.54308 15.1453 5.77075L15.4233 6.52216C15.4498 6.59376 15.5062 6.65024 15.5778 6.67672L16.3293 6.95472C16.5569 7.03896 16.5569 7.36104 16.3293 7.44528L15.5778 7.72328C15.5062 7.74976 15.4498 7.80624 15.4233 7.87784L15.1453 8.62928C15.061 8.85688 14.739 8.85688 14.6547 8.62928L14.3767 7.87784C14.3502 7.80624 14.2938 7.74976 14.2222 7.72328L13.4707 7.44528C13.2431 7.36104 13.2431 7.03896 13.4707 6.95472L14.2222 6.67672C14.2938 6.65024 14.3502 6.59376 14.3767 6.52216L14.6547 5.77075Z"
+                    fill="white"
+                    fill-opacity="0.4"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_272_12356"
+                      x1="0.5"
+                      y1="0"
+                      x2="16.5002"
+                      y2="0.000206102"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.0001" stop-color="#E59CFF" />
+                      <stop offset="0.5001" stop-color="#BA9CFF" />
+                      <stop offset="1" stop-color="#9CB2FF" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_272_12356"
+                      x1="0.5"
+                      y1="0"
+                      x2="16.5002"
+                      y2="0.000206102"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.0001" stop-color="#E59CFF" />
+                      <stop offset="0.5001" stop-color="#BA9CFF" />
+                      <stop offset="1" stop-color="#9CB2FF" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint2_linear_272_12356"
+                      x1="0.5"
+                      y1="0"
+                      x2="16.5002"
+                      y2="0.000206102"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.0001" stop-color="#E59CFF" />
+                      <stop offset="0.5001" stop-color="#BA9CFF" />
+                      <stop offset="1" stop-color="#9CB2FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <span class="ko">
+                  Try our tool for Free
+                </span>
+              </span>
+              <h2
+                class="zm tb dm sm xq ht"
+              >
+                What are you waiting for?
+              </h2>
+              <p class="vg ab tm ac">
+                Our AI writing tool is designed to empower you with exceptional
+                writing capabilities, making the writing process more efficient,
+                accurate, and enjoyable.
+              </p>
+
+              <a
+                href="#"
+                class="lo tc ti uk lk zm tm fo co vp"
+              >
+                Get Started for Free
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== CTA Section End -->
+
+      <!-- ====== Newsletter Section Start -->
+      <section class="vl wq bt cl">
+        <div class="rf ab ik qq rs">
+          <div
+            class="sc oh ph rh uh"
+          >
+            <div class="_f mf">
+              <h3
+                class="um lm zm pb"
+              >
+                News & Update
+              </h3>
+              <p class="tm">
+                Keep up to date with everything about our tool
+              </p>
+            </div>
+            <div class="mg mf">
+              <form>
+                <div class="sc ph _h">
+                  <div class="dg mf">
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Enter your Email"
+                      class="ti xi cj/[0.12] kj/[0.05] aq mf uk kk in"
+                    />
+                  </div>
+                  <a
+                    href="/#"
+                    class="jo l ti zm om sc ph th vk lk gn yp xp"
+                  >
+                    Subscribe
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== Newsletter Section End -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <!-- ====== Footer Section Start -->
+<footer class="l wa fl cs zs">
+  <!-- bg shapes -->
+  <div
+    class="k p x mf sc nh yh -ud-z-1 en"
+  >
+    <div class="mf od fp"></div>
+    <div class="mf vd fp"></div>
+    <div class="mf zd fp"></div>
+    <div class="mf de fp"></div>
+    <div class="mf he fp"></div>
+    <div class="mf le fp"></div>
+    <div class="mf ne fp"></div>
+    <div class="mf pe fp"></div>
+    <div class="mf rd fp"></div>
+  </div>
+
+  <div
+    class="rf ab ik qq rs l vl"
+  >
+    <div
+      class="mf ud ep k ja x"
+    ></div>
+
+    <div class="sc oh rh">
+      <div class="gb og mf">
+        <a class="_b qc" href="index.html">
+          <img src="images/logo.svg" alt="Logo" />
+        </a>
+
+        <p class="hb os/5">
+          AI writing tool is designed to empower you with exceptional writing
+          capabilities.
+        </p>
+
+        <div class="sc ph bi">
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 21.9506C18.0533 21.4489 22 17.1853 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 16.8379 5.43552 20.8734 10 21.8V16H7V13H10V9.79586C10 7.47449 11.9695 5.64064 14.285 5.80603L17 5.99996V8.99996H15C13.8954 8.99996 13 9.89539 13 11V13H17L16 16H13V21.9506Z"
+                fill=""
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.6125 21.5251C16.4625 21.5251 21.2625 14.2126 21.2625 7.87509C21.2625 7.72509 21.2625 7.46259 21.225 7.23759C22.1625 6.56259 22.9875 5.70009 23.625 4.76259C22.725 5.17509 21.825 5.40009 20.8875 5.51259C21.9 4.91259 22.65 3.97509 22.9875 2.8501C22.05 3.3751 21.075 3.78759 19.9125 4.01259C19.0125 3.0751 17.8125 2.4751 16.425 2.4751C13.7625 2.4751 11.5875 4.65009 11.5875 7.31259C11.5875 7.68759 11.625 8.06259 11.7 8.43759C7.8375 8.17509 4.3125 6.26259 1.9125 3.3751C1.5 4.12509 1.275 4.91259 1.275 5.77509C1.275 7.46259 2.1375 8.88759 3.45 9.75009C2.6625 9.71259 1.9125 9.48759 1.275 9.15009C1.275 9.18759 1.275 9.18759 1.275 9.18759C1.275 11.4751 2.925 13.4626 5.1 13.9126C4.6875 14.0251 4.2375 14.0626 3.9 14.0626C3.6 14.0626 3.2625 14.0251 3 13.9501C3.6375 15.8626 5.4 17.2501 7.5 17.2876C5.85 18.5626 3.7875 19.3501 1.575 19.3501C1.125 19.4251 0.75 19.3501 0.375 19.3126C2.4 20.7376 4.9125 21.5251 7.6125 21.5251Z"
+                fill=""
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="sp fo co">
+            <svg
+              class="wj"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_368_11839)">
+                <path
+                  d="M12 0.674805C5.625 0.674805 0.375 5.8498 0.375 12.2998C0.375 17.3998 3.7125 21.7498 8.3625 23.3248C8.9625 23.4373 9.15 23.0623 9.15 22.7998C9.15 22.5373 9.15 21.7873 9.1125 20.7748C5.8875 21.5248 5.2125 19.1998 5.2125 19.1998C4.6875 17.8873 3.9 17.5123 3.9 17.5123C2.85 16.7623 3.9375 16.7623 3.9375 16.7623C5.1 16.7998 5.7375 17.9623 5.7375 17.9623C6.75 19.7623 8.475 19.2373 9.1125 18.8998C9.225 18.1498 9.525 17.6248 9.8625 17.3248C7.3125 17.0623 4.575 16.0498 4.575 11.6248C4.575 10.3498 5.0625 9.3373 5.775 8.5498C5.6625 8.2873 5.25 7.0873 5.8875 5.4748C5.8875 5.4748 6.9 5.1748 9.1125 6.6748C10.05 6.4123 11.025 6.2623 12.0375 6.2623C13.05 6.2623 14.0625 6.3748 14.9625 6.6748C17.175 5.2123 18.15 5.4748 18.15 5.4748C18.7875 7.0498 18.4125 8.2873 18.2625 8.5498C19.0125 9.3373 19.4625 10.3873 19.4625 11.6248C19.4625 16.0498 16.725 17.0623 14.175 17.3248C14.5875 17.6998 14.9625 18.4498 14.9625 19.4998C14.9625 21.0748 14.925 22.3123 14.925 22.6873C14.925 22.9873 15.15 23.3248 15.7125 23.2123C20.2875 21.6748 23.625 17.3623 23.625 12.2248C23.5875 5.8498 18.375 0.674805 12 0.674805Z"
+                  fill=""
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_368_11839">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+
+        <p class="tm mc">
+          Ailand, LLC. All rights reserved.
+        </p>
+      </div>
+
+      <div class="og mf">
+        <div
+          class="sc nh mq nq uh"
+        >
+          <div>
+            <h5 class="um zm ub">Products</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Changelog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="um zm ub">Company</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Refund Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Community</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="um zm ub">Support</h5>
+
+            <ul class="sc nh zh">
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Integrations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Changelog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/#"
+                  class="tm fo co sp"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ====== Footer Section End -->
+
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <button
+  class="vc ph qh _e _c ri lt gj up j w fa ya"
+  @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+  @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+  :class="{ 'rc' : scrollTop }"
+>
+  <svg
+    class="xj hf id"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+  >
+    <path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+  </svg>
+</button>
+
+    <!-- ====== Back To Top End ===== -->
+  <script defer src="bundle.js"></script></body>
+</html>
