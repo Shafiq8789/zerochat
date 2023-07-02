@@ -9,10 +9,6 @@
 </head>
 
 <body x-data="{ page: 'home', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }">
-  <!-- ===== Preloader Start ===== -->
-  <include src="./partials/preloader.html"></include>
-  <!-- ===== Preloader End ===== -->
-
   <!-- ===== Header Start ===== -->
   <include src="./partials/header.html" />
   <!-- ===== Header End ===== -->
@@ -38,7 +34,7 @@
 
       <!-- Hero Content -->
       <div class="mx-auto max-w-[900px] px-4 sm:px-8 xl:px-0">
-        <div class="animate_top text-center">
+        <div class="wow fadeInUp text-center">
           <a href="/#"
             class="hero-subtitle-gradient hover:hero-subtitle-hover relative mb-5 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +97,7 @@
         </div>
       </div>
 
-      <div class="animate_top mt-17">
+      <div class="wow fadeInUp mt-17" data-wow-delay="0.1s">
         <img class="mx-auto" src="./images/hero/hero.svg" alt="hero" />
       </div>
     </section>
@@ -111,7 +107,7 @@
     <section id="features" class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17">
       <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- Section Title -->
-        <div class="animate_top text-center">
+        <div class="wow fadeInUp text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -510,7 +506,7 @@
         </div>
 
         <!-- section title -->
-        <div class="animate_top mb-17.5 -mt-24 text-center">
+        <div class="wow fadeInUp mb-17.5 -mt-24 text-center z-10 relative">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -569,7 +565,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
           <!-- Pricing item -->
           <div
-            class="animate_top rounded-3xl bg-dark relative overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+            class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
             <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-01.svg" alt="icon" /></span>
 
             <h3 class="font-semibold text-heading-6 text-white mb-5.5">
@@ -639,7 +635,7 @@
 
           <!-- Pricing item -->
           <div
-            class="animate_top rounded-3xl bg-dark relative overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+            class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
             <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-02.svg" alt="icon" /></span>
 
             <h3 class="font-semibold text-heading-6 text-white mb-5.5">
@@ -709,7 +705,7 @@
 
           <!-- Pricing item -->
           <div
-            class="animate_top rounded-3xl bg-dark relative overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+            class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
             <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-03.svg" alt="icon" /></span>
 
             <h3 class="font-semibold text-heading-6 text-white mb-5.5">
@@ -786,7 +782,7 @@
       class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 2xl:pt-45 pb-20">
       <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- section title -->
-        <div class="animate_top mb-15 text-center">
+        <div class="wow fadeInUp mb-15 text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1773,7 +1769,7 @@
             class="max-w-[224px] w-full h-[224px] rounded-full block absolute left-1/2 -top-[10%] -translate-x-1/2 bg-white/20 blur-[76.5px]"></span>
 
           <!-- section title -->
-          <div class="animate_top mb-16 text-center relative z-999">
+          <div class="wow fadeInUp mb-16 text-center relative z-999">
             <span
               class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
               <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1880,7 +1876,7 @@
     <section class="py-20 lg:py-25">
       <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- section title -->
-        <div class="animate_top mb-16 text-center">
+        <div class="wow fadeInUp mb-16 text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1938,7 +1934,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
           <!-- blog item -->
-          <div class="animate_top group">
+          <div class="wow fadeInUp group">
             <div class="mb-6 overflow-hidden rounded-xl">
               <img src="./images/blog/blog-01.png" alt="image"
                 class="ease-linear duration-500 scale-100 group-hover:scale-125" />
@@ -1994,7 +1990,7 @@
           </div>
 
           <!-- blog item -->
-          <div class="animate_top group">
+          <div class="wow fadeInUp group">
             <div class="mb-6 overflow-hidden rounded-xl">
               <img src="./images/blog/blog-02.png" alt="image"
                 class="ease-linear duration-500 scale-100 group-hover:scale-125" />
@@ -2050,7 +2046,7 @@
           </div>
 
           <!-- blog item -->
-          <div class="animate_top group">
+          <div class="wow fadeInUp group">
             <div class="mb-6 overflow-hidden rounded-xl">
               <img src="./images/blog/blog-03.png" alt="image"
                 class="ease-linear duration-500 scale-100 group-hover:scale-125" />
@@ -2128,7 +2124,7 @@
             <div class="stars2"></div>
           </div>
 
-          <div class="animate_top text-center">
+          <div class="wow fadeInUp text-center">
             <span
               class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
               <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">

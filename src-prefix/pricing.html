@@ -9,10 +9,6 @@
   <body
     x-data="{ page: 'pricing', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
   >
-    <!-- ===== Preloader Start ===== -->
-    <include src="./partials/preloader.html"></include>
-    <!-- ===== Preloader End ===== -->
-
     <!-- ===== Header Start ===== -->
     <include src="./partials/header.html" />
     <!-- ===== Header End ===== -->
@@ -60,7 +56,7 @@
       >
         <div class="ud-max-w-[1170px] ud-mx-auto ud-px-4 sm:ud-px-8 xl:ud-px-0">
           <!-- section title -->
-          <div class="animate_top ud-mb-17.5 ud-text-center">
+          <div class="wow fadeInUp ud-mb-17.5 ud-text-center">
             <span
               class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
             >
@@ -157,7 +153,7 @@
           >
             <!-- Pricing item -->
             <div
-              class="animate_top ud-rounded-3xl ud-bg-dark ud-relative ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-10 ud-pricing-item-border"
+              class="wow fadeInUp ud-rounded-3xl ud-bg-dark ud-relative ud-z-20 ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-10 ud-pricing-item-border"
             >
               <span class="ud-absolute ud-right-9 ud-top-9"
                 ><img src="./images/pricing/pricing-icon-01.svg" alt="icon"
@@ -249,7 +245,7 @@
 
             <!-- Pricing item -->
             <div
-              class="animate_top ud-rounded-3xl ud-bg-dark ud-relative ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-10 ud-pricing-item-border"
+              class="wow fadeInUp ud-rounded-3xl ud-bg-dark ud-relative ud-z-20 ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-10 ud-pricing-item-border"
             >
               <span class="ud-absolute ud-right-9 ud-top-9"
                 ><img src="./images/pricing/pricing-icon-02.svg" alt="icon"
@@ -341,7 +337,7 @@
 
             <!-- Pricing item -->
             <div
-              class="animate_top ud-rounded-3xl ud-bg-dark ud-relative ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-10 ud-pricing-item-border"
+              class="wow fadeInUp ud-rounded-3xl ud-bg-dark ud-relative ud-z-20 ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-10 ud-pricing-item-border"
             >
               <span class="ud-absolute ud-right-9 ud-top-9"
                 ><img src="./images/pricing/pricing-icon-03.svg" alt="icon"
@@ -446,7 +442,7 @@
 
         <div class="ud-max-w-[770px] ud-mx-auto ud-px-4 sm:ud-px-8 xl:ud-px-0">
           <!-- section title -->
-          <div class="animate_top ud-mb-20 ud-text-center">
+          <div class="wow fadeInUp ud-mb-20 ud-text-center">
             <span
               class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
             >
@@ -540,7 +536,7 @@
             </p>
           </div>
 
-          <div class="animate_top">
+          <div class="wow fadeInUp">
             <div x-data="{selected:0}">
               <!-- faq item -->
               <div

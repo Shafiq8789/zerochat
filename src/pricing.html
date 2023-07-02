@@ -9,10 +9,6 @@
 </head>
 
 <body x-data="{ page: 'pricing', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }">
-  <!-- ===== Preloader Start ===== -->
-  <include src="./partials/preloader.html"></include>
-  <!-- ===== Preloader End ===== -->
-
   <!-- ===== Header Start ===== -->
   <include src="./partials/header.html" />
   <!-- ===== Header End ===== -->
@@ -50,7 +46,7 @@
     <section class="pt-17.5 lg:pt-22.5 xl:pt-27.5 pb-20 lg:pb-25">
       <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- section title -->
-        <div class="animate_top mb-17.5 text-center">
+        <div class="wow fadeInUp mb-17.5 text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +104,8 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
           <!-- Pricing item -->
-          <div class="animate_top rounded-3xl bg-dark relative overflow-hidden pt-12.5 pb-10 px-10 pricing-item-border">
+          <div
+            class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-10 pricing-item-border">
             <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-01.svg" alt="icon" /></span>
 
             <h3 class="font-semibold text-heading-6 text-white mb-5.5">
@@ -177,7 +174,8 @@
           </div>
 
           <!-- Pricing item -->
-          <div class="animate_top rounded-3xl bg-dark relative overflow-hidden pt-12.5 pb-10 px-10 pricing-item-border">
+          <div
+            class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-10 pricing-item-border">
             <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-02.svg" alt="icon" /></span>
 
             <h3 class="font-semibold text-heading-6 text-white mb-5.5">
@@ -246,7 +244,8 @@
           </div>
 
           <!-- Pricing item -->
-          <div class="animate_top rounded-3xl bg-dark relative overflow-hidden pt-12.5 pb-10 px-10 pricing-item-border">
+          <div
+            class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-10 pricing-item-border">
             <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-03.svg" alt="icon" /></span>
 
             <h3 class="font-semibold text-heading-6 text-white mb-5.5">
@@ -325,7 +324,7 @@
 
       <div class="max-w-[770px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- section title -->
-        <div class="animate_top mb-20 text-center">
+        <div class="wow fadeInUp mb-20 text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -383,7 +382,7 @@
           </p>
         </div>
 
-        <div class="animate_top">
+        <div class="wow fadeInUp">
           <div x-data="{selected:0}">
             <!-- faq item -->
             <div class="flex flex-col border-b border-white/[0.15]">

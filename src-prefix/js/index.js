@@ -1,13 +1,13 @@
 import "../css/style.css";
 import "../css/star.css";
+import '../css/animate.css'
 // import Swiper styles
 import "swiper/css";
 
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
 
-// import ScrollReveal
-import ScrollReveal from "scrollreveal";
+import WOW from 'wowjs'
 
 // import Swiper JS
 import Swiper, { Autoplay } from "swiper";
@@ -20,27 +20,13 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-/*========== SCROLL REVEAL ANIMATION ==========*/
-window.sr = ScrollReveal({
-  distance: "60px",
-  duration: 2800,
-  reset: false,
-});
+window.wow = new WOW.WOW({
+  live: false,
+})
 
-sr.reveal(`.animate_top`, {
-  origin: "top",
-  interval: 100,
-});
-
-sr.reveal(`.animate_left`, {
-  origin: "left",
-  interval: 100,
-});
-
-sr.reveal(`.animate_right`, {
-  origin: "right",
-  interval: 100,
-});
+window.wow.init({
+  offset: 50,
+})
 
 /*========== SCROLL SECTIONS ACTIVE LINK ==========*/
 const sections = document.querySelectorAll("section[id]");

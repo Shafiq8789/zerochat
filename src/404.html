@@ -9,10 +9,6 @@
 </head>
 
 <body x-data="{ page: '404', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }">
-  <!-- ===== Preloader Start ===== -->
-  <include src="./partials/preloader.html"></include>
-  <!-- ===== Preloader End ===== -->
-
   <!-- ===== Header Start ===== -->
   <include src="./partials/header.html" />
   <!-- ===== Header End ===== -->
@@ -48,7 +44,7 @@
 
     <!-- ===== 404 Start ===== -->
     <section class="pt-17.5 lg:pt-22.5 xl:pt-27.5 pb-20 lg:pb-25 xl:pb-30 2xl:pb-[150px]">
-      <div class="animate_top mx-auto w-full max-w-[597px] text-center px-4 sm:px-8 lg:px-0">
+      <div class="wow fadeInUp mx-auto w-full max-w-[597px] text-center px-4 sm:px-8 lg:px-0" data-wow-delay="0.1s">
         <img src="./images/404.svg" alt="404" class="mx-auto mb-12.5" />
         <h2 class="mb-5.5 text-heading-3 font-bold text-white">
           Oops! Page Not Found.

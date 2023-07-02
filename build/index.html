@@ -10,30 +10,17 @@
   <body
     x-data="{ page: 'home', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
   >
-    <!-- ===== Preloader Start ===== -->
-    <div
-  x-show="loaded"
-  x-init="window.addEventListener('DOMContentLoaded', () => {setTimeout(() => loaded = false, 500)})"
-  class="j x ja nf se ej _a sc ph qh"
->
-  <div
-    class="bd af ih si yi _i cj dj"
-  ></div>
-</div>
-
-    <!-- ===== Preloader End ===== -->
-
     <!-- ===== Header Start ===== -->
     <header
-  class="j x ja mf za xk xr"
-  :class="{ 'ej/70 sn fn dk rr tn ao ip mp lp jp kp np' : stickyMenu }"
+  class="j x ja if za ok or"
+  :class="{ 'wi/70 jn xm vj ir kn sn _o dp cp ap bp ep' : stickyMenu }"
   @scroll.window="stickyMenu = (window.scrollY > 0) ? true : false"
 >
   <div
-    class="rf ab ik qq rs gr ph rh l"
+    class="mf _a _j hq is yq jh lh l"
   >
     <div
-      class="mf jr/4 sc ph rh"
+      class="if ar/4 rc jh lh"
     >
       <a href="index.html">
         <img src="images/logo.svg" alt="Logo" />
@@ -41,34 +28,34 @@
 
       <!-- Hamburger Toggle BTN -->
       <button
-        class="hr pc"
+        class="zq oc"
         @click="navigationOpen = !navigationOpen"
       >
-        <span class="pc l jh if jd">
-          <span class="du-block k da mf re">
+        <span class="oc l dh ef hd">
+          <span class="du-block k da if pe">
             <span
-              class="pc l ja x kj vi xe zc bb go bo _n"
-              :class="{ 'we yn': !navigationOpen }"
+              class="oc l ja x bj pi ue yc ab yn tn rn"
+              :class="{ 'te pn': !navigationOpen }"
             ></span>
             <span
-              class="pc l ja x kj vi xe zc bb go bo wn"
-              :class="{ 'we it': !navigationOpen }"
+              class="oc l ja x bj pi ue yc ab yn tn nn"
+              :class="{ 'te _s': !navigationOpen }"
             ></span>
             <span
-              class="pc l ja x kj vi xe zc bb go bo xn"
-              :class="{ 'we zn': !navigationOpen }"
+              class="oc l ja x bj pi ue yc ab yn tn on"
+              :class="{ 'te qn': !navigationOpen }"
             ></span>
           </span>
           <span
-            class="du-block k da mf re fh"
+            class="du-block k da if pe ah"
           >
             <span
-              class="pc kj vi go bo yn k _ ja ye re"
-              :class="{ 'wc _n': !navigationOpen }"
+              class="oc bj pi yn tn pn k _ ja ve pe"
+              :class="{ 'vc rn': !navigationOpen }"
             ></span>
             <span
-              class="pc kj vi go bo it k x na mf zc"
-              :class="{ 'wc jt': !navigationOpen }"
+              class="oc bj pi yn tn _s k x na if yc"
+              :class="{ 'vc at': !navigationOpen }"
             ></span>
           </span>
         </span>
@@ -77,59 +64,59 @@
     </div>
 
     <div
-      class="mf kr/4 yc ir i br gr ph rh"
-      :class="{ 'h ej kt xc te mi ui kc ck': navigationOpen }"
+      class="if br/4 xc _q i tq yq jh lh"
+      :class="{ 'h wi bt wc qe gi oi jc uj': navigationOpen }"
     >
       <nav>
         <ul
-          class="sc nr nh mr bi qr"
+          class="rc er hh dr wh hr"
         >
           <li
-            class="nav__menu as"
-            :class="{ 'sr' : stickyMenu }"
+            class="nav__menu sr"
+            :class="{ 'jr' : stickyMenu }"
           >
             <a
               href="/#home"
-              class="l zm/80 om ok ik xi bj sp _p"
-              :class="{'xm ro' :page === 'home'}"
+              class="l qm/80 fm fk _j ri ui jp rp"
+              :class="{'om io' :page === 'home'}"
               >Home</a
             >
           </li>
           <li
-            class="nav__menu as"
-            :class="{ 'sr' : stickyMenu }"
+            class="nav__menu sr"
+            :class="{ 'jr' : stickyMenu }"
           >
             <a
               href="/#features"
-              class="l zm/80 om ok ik xi bj sp _p"
+              class="l qm/80 fm fk _j ri ui jp rp"
               >Features</a
             >
           </li>
           <li
-            class="nav__menu as"
-            :class="{ 'sr' : stickyMenu }"
+            class="nav__menu sr"
+            :class="{ 'jr' : stickyMenu }"
           >
             <a
               href="/#pricing"
-              class="l zm/80 om ok ik xi bj sp _p"
+              class="l qm/80 fm fk _j ri ui jp rp"
               >Pricing</a
             >
           </li>
           <li
-            class="b l as"
-            :class="{ 'sr' : stickyMenu }"
+            class="b l sr"
+            :class="{ 'jr' : stickyMenu }"
             x-data="{ dropdown: false }"
           >
             <a
               href="#"
-              class="l zm/80 om ok ik xi bj sp _p sc ph rh yh"
+              class="l qm/80 fm fk _j ri ui jp rp rc jh lh sh"
               @click.prevent="dropdown = !dropdown"
-              :class="{ 'xm ro': page === 'about' || page === 'pricing' || page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+              :class="{ 'om io': page === 'about' || page === 'pricing' || page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
             >
               Pages
 
               <svg
-                class="wj ff gd jh"
+                class="nj bf ed dh"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
               >
@@ -140,60 +127,60 @@
             </a>
 
             <!-- Dropdown Start -->
-            <ul class="a" :class="{ 'sc': dropdown }">
+            <ul class="a" :class="{ 'rc': dropdown }">
               <li>
                 <a
                   href="about.html"
-                  class="sc om zm/70 sp sk ik ui rp/5"
-                  :class="{ 'xm kj/5': page === 'about' }"
+                  class="rc fm qm/70 jp jk _j oi ip/5"
+                  :class="{ 'om bj/5': page === 'about' }"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
                   href="pricing.html"
-                  class="sc om zm/70 sp sk ik ui rp/5"
-                  :class="{ 'xm kj/5': page === 'pricing' }"
+                  class="rc fm qm/70 jp jk _j oi ip/5"
+                  :class="{ 'om bj/5': page === 'pricing' }"
                   >Pricing Table</a
                 >
               </li>
               <li>
                 <a
                   href="blog-grid.html"
-                  class="sc om zm/70 sp sk ik ui rp/5"
-                  :class="{ 'xm kj/5': page === 'blog-grid' }"
+                  class="rc fm qm/70 jp jk _j oi ip/5"
+                  :class="{ 'om bj/5': page === 'blog-grid' }"
                   >Blog Grid</a
                 >
               </li>
               <li>
                 <a
                   href="blog-single.html"
-                  class="sc om zm/70 sp sk ik ui rp/5"
-                  :class="{ 'xm kj/5': page === 'blog-single' }"
+                  class="rc fm qm/70 jp jk _j oi ip/5"
+                  :class="{ 'om bj/5': page === 'blog-single' }"
                   >Blog Single</a
                 >
               </li>
               <li>
                 <a
                   href="signin.html"
-                  class="sc om zm/70 sp sk ik ui rp/5"
-                  :class="{ 'xm kj/5': page === 'signin' }"
+                  class="rc fm qm/70 jp jk _j oi ip/5"
+                  :class="{ 'om bj/5': page === 'signin' }"
                   >Sign In</a
                 >
               </li>
               <li>
                 <a
                   href="signup.html"
-                  class="sc om zm/70 sp sk ik ui rp/5"
-                  :class="{ 'xm kj/5': page === 'signup' }"
+                  class="rc fm qm/70 jp jk _j oi ip/5"
+                  :class="{ 'om bj/5': page === 'signup' }"
                   >Sign Up</a
                 >
               </li>
               <li>
                 <a
                   href="404.html"
-                  class="sc om zm/70 sp sk ik ui rp/5"
-                  :class="{ 'xm kj/5': page === '404' }"
+                  class="rc fm qm/70 jp jk _j oi ip/5"
+                  :class="{ 'om bj/5': page === '404' }"
                   >Error Page</a
                 >
               </li>
@@ -201,33 +188,33 @@
             <!-- Dropdown End -->
           </li>
           <li
-            class="nav__menu as"
-            :class="{ 'sr' : stickyMenu }"
+            class="nav__menu sr"
+            :class="{ 'jr' : stickyMenu }"
           >
             <a
               href="/#support"
-              class="l zm/80 om ok ik xi bj sp _p"
+              class="l qm/80 fm fk _j ri ui jp rp"
               >Support</a
             >
           </li>
         </ul>
       </nav>
 
-      <div class="sc ph ci oc er">
+      <div class="rc jh xh nc wq">
         <a
           href="signin.html"
-          class="zm om tp"
+          class="qm fm kp"
           >Sign in</a
         >
 
         <a
           href="signup.html"
-          class="jo l ti zm om sc ph th sk jk gn yp xp ks ms ls"
+          class="ao l ni qm fm rc jh nh jk ak ym pp op bs ds cs"
         >
           Sign up
 
           <svg
-            class="ec"
+            class="dc"
             width="16"
             height="16"
             viewBox="0 0 16 16"
@@ -251,30 +238,30 @@
       <!-- ===== Hero Section Start ===== -->
       <section
         id="home"
-        class="l li wa bm _q ft"
+        class="l fi wa tl rq xs"
       >
         <!-- Hero Bg Shapes -->
         <div>
           <div
-            class="k -ud-z-1 -ud-top-[128%] sm:-ud-top-[107%] xl:-ud-top-[73%] y/2 -ud-translate-x-1/2 -u-z-10 no mf qd si tf"
+            class="k -ud-z-1 -ud-top-[128%] sm:-ud-top-[107%] xl:-ud-top-[73%] y/2 -ud-translate-x-1/2 -u-z-10 eo if od mi of"
           ></div>
           <div
-            class="k -ud-z-1 -ud-top-[112%] sm:-ud-top-[93%] xl:-ud-top-[62%] y/2 -ud-translate-x-1/2 -u-z-10 no mf pd si pf"
+            class="k -ud-z-1 -ud-top-[112%] sm:-ud-top-[93%] xl:-ud-top-[62%] y/2 -ud-translate-x-1/2 -u-z-10 eo if nd mi kf"
           ></div>
           <div
-            class="k -ud-top-[60%] y/2 -ud-translate-x-1/2 -u-z-10 hj mn bn mf je si sg"
+            class="k -ud-top-[60%] y/2 -ud-translate-x-1/2 -u-z-10 zi dn tm if he mi ng"
           ></div>
           <div
-            class="k -ud-top-[110%] y/2 -ud-translate-x-1/2 -u-z-10 gj nn cn mf qd si tf"
+            class="k -ud-top-[110%] y/2 -ud-translate-x-1/2 -u-z-10 yi en um if od mi of"
           ></div>
         </div>
 
         <!-- Hero Content -->
-        <div class="ab ah ik qq rs">
-          <div class="animate_top cm">
+        <div class="_a wg _j hq is">
+          <div class="wow fadeInUp ul">
             <a
               href="/#"
-              class="mo zp l ub tm om tc ph wh sk jk si"
+              class="do qp l tb km fm sc jh qh jk ak mi"
             >
               <svg
                 width="16"
@@ -350,17 +337,17 @@
                 </defs>
               </svg>
 
-              <span class="ko">
+              <span class="bo">
                 Your Ultimate Creative Companion!
               </span>
             </a>
             <h1
-              class="zm wb em sm yq gt"
+              class="qm vb wl jm pq ys"
             >
               Elevate Your Content with Our AI-Powered Writing Tool
             </h1>
             <p
-              class="jg ab ac tm ar"
+              class="eg _a _b km sq"
             >
               Experience a groundbreaking leap in content creation with our
               cutting-edge AI writing tool.
@@ -368,15 +355,15 @@
 
             <a
               href="#"
-              class="lo tc ti uk lk zm tm fo co vp"
+              class="co sc ni lk ck qm km xn un mp"
             >
               Start Your Free Trial
             </a>
           </div>
         </div>
 
-        <div class="animate_top gc">
-          <img class="ab" src="images/hero.svg" alt="hero" />
+        <div class="wow fadeInUp fc" data-wow-delay="0.1s">
+          <img class="_a" src="images/hero.svg" alt="hero" />
         </div>
       </section>
       <!-- ===== Hero Section End ===== -->
@@ -384,13 +371,13 @@
       <!-- ===== features grid Section Start ===== -->
       <section
         id="features"
-        class="li vl fs bt lh"
+        class="fi ml xr ts fh"
       >
-        <div class="sf ab ik qq rs">
+        <div class="nf _a _j hq is">
           <!-- Section Title -->
-          <div class="animate_top cm">
+          <div class="wow fadeInUp ul">
             <span
-              class="mo l sb tm om tc ph wh sk jk si"
+              class="do l rb km fm sc jh qh jk ak mi"
             >
               <svg
                 width="17"
@@ -466,14 +453,14 @@
                 </defs>
               </svg>
 
-              <span class="ko"> Some of Main Features </span>
+              <span class="bo"> Some of Main Features </span>
             </span>
             <h2
-              class="zm tb dm sm xq ht"
+              class="qm sb vl jm oq zs"
             >
               Key Features of Our Tool
             </h2>
-            <p class="vg ab ub tm">
+            <p class="qg _a tb km">
               Our AI writing tool is designed to empower you with exceptional
               writing capabilities, making the writing process more efficient,
               accurate, and enjoyable.
@@ -482,31 +469,31 @@
 
           <div class="l">
             <div
-              class="oo gh ze/2 ud k ka/2 y/2 -ud-translate-y-1/2 lg:-ud-translate-x-1/3 cr/4 vc fr"
+              class="fo bh we/2 sd k ka/2 y/2 -ud-translate-y-1/2 lg:-ud-translate-x-1/3 uq/4 uc xq"
             ></div>
             <div
-              class="oo gh ze/2 ud k ka/2 ea/2 -ud-translate-y-1/2 dr vc fr"
+              class="fo bh we/2 sd k ka/2 ea/2 -ud-translate-y-1/2 vq uc xq"
             ></div>
 
             <!--=== Features Row ===-->
-            <div class="sc oh qh">
+            <div class="rc ih kh">
               <!-- Features Item -->
-              <div class="mf jq/2 jr/3">
+              <div class="if aq/2 ar/3">
                 <div
-                  class="b l li cm yk rq vs ik wr ts"
+                  class="b l fi ul pk iq ms _j nr ks"
                 >
                   <span
-                    class="dq an po k mf re x ja -ud-z-1"
+                    class="vp sm go k if pe x ja -ud-z-1"
                   ></span>
                   <span
-                    class="qo l yg mf cd si tc ph qh zb ab"
+                    class="ho l tg if ad mi sc jh kh yb _a"
                   >
                     <img src="images/icon-01.svg" alt="icon" />
                   </span>
-                  <h4 class="um nm zm sb">
+                  <h4 class="lm em qm rb">
                     Intelligent Writing Assistance
                   </h4>
-                  <p class="tm">
+                  <p class="km">
                     Our AI writing tool analyzes your content, suggests
                     improvements,
                   </p>
@@ -514,44 +501,44 @@
               </div>
 
               <!-- Features Item -->
-              <div class="mf jq/2 jr/3">
+              <div class="if aq/2 ar/3">
                 <div
-                  class="b l li cm yk rq vs ik wr ts"
+                  class="b l fi ul pk iq ms _j nr ks"
                 >
                   <span
-                    class="dq an po k mf re x ja -ud-z-1"
+                    class="vp sm go k if pe x ja -ud-z-1"
                   ></span>
                   <span
-                    class="qo l yg mf cd si tc ph qh zb ab"
+                    class="ho l tg if ad mi sc jh kh yb _a"
                   >
                     <img src="images/icon-02.svg" alt="icon" />
                   </span>
-                  <h4 class="um nm zm sb">
+                  <h4 class="lm em qm rb">
                     Grammar and Spell Check
                   </h4>
-                  <p class="tm">
+                  <p class="km">
                     Say goodbye to embarrassing typos and grammar mistakes
                   </p>
                 </div>
               </div>
 
               <!-- Features Item -->
-              <div class="mf jq/2 jr/3">
+              <div class="if aq/2 ar/3">
                 <div
-                  class="b l li cm yk rq vs ik wr ts"
+                  class="b l fi ul pk iq ms _j nr ks"
                 >
                   <span
-                    class="dq an po k mf re x ja -ud-z-1"
+                    class="vp sm go k if pe x ja -ud-z-1"
                   ></span>
                   <span
-                    class="qo l yg mf cd si tc ph qh zb ab"
+                    class="ho l tg if ad mi sc jh kh yb _a"
                   >
                     <img src="images/icon-03.svg" alt="icon" />
                   </span>
-                  <h4 class="um nm zm sb">
+                  <h4 class="lm em qm rb">
                     Plagiarism Detection
                   </h4>
-                  <p class="tm">
+                  <p class="km">
                     Originality is key, and our AI writing tool helps you
                     maintain it
                   </p>
@@ -559,27 +546,27 @@
               </div>
             </div>
 
-            <div class="oo mf ud"></div>
+            <div class="fo if sd"></div>
 
             <!--=== Features Row ===-->
-            <div class="sc oh qh">
+            <div class="rc ih kh">
               <!-- Features Item -->
-              <div class="mf jq/2 jr/3">
+              <div class="if aq/2 ar/3">
                 <div
-                  class="b l li cm yk rq vs ik wr ts"
+                  class="b l fi ul pk iq ms _j nr ks"
                 >
                   <span
-                    class="dq an po k mf re x ja -ud-z-1 eh"
+                    class="vp sm go k if pe x ja -ud-z-1 _g"
                   ></span>
                   <span
-                    class="qo l yg mf cd si tc ph qh zb ab"
+                    class="ho l tg if ad mi sc jh kh yb _a"
                   >
                     <img src="images/icon-04.svg" alt="icon" />
                   </span>
-                  <h4 class="um nm zm sb">
+                  <h4 class="lm em qm rb">
                     Voice to Text Conversion
                   </h4>
-                  <p class="tm">
+                  <p class="km">
                     Transform your spoken words into written text easily &
                     effortlessly
                   </p>
@@ -587,22 +574,22 @@
               </div>
 
               <!-- Features Item -->
-              <div class="mf jq/2 jr/3">
+              <div class="if aq/2 ar/3">
                 <div
-                  class="b l li cm yk rq vs ik wr ts"
+                  class="b l fi ul pk iq ms _j nr ks"
                 >
                   <span
-                    class="dq an po k mf re x ja -ud-z-1 eh"
+                    class="vp sm go k if pe x ja -ud-z-1 _g"
                   ></span>
                   <span
-                    class="qo l yg mf cd si tc ph qh zb ab"
+                    class="ho l tg if ad mi sc jh kh yb _a"
                   >
                     <img src="images/icon-05.svg" alt="icon" />
                   </span>
-                  <h4 class="um nm zm sb">
+                  <h4 class="lm em qm rb">
                     Style and Tone Adaptation
                   </h4>
-                  <p class="tm">
+                  <p class="km">
                     Whether you need a professional, or positive tone it has
                     everyone
                   </p>
@@ -610,22 +597,22 @@
               </div>
 
               <!-- Features Item -->
-              <div class="mf jq/2 jr/3">
+              <div class="if aq/2 ar/3">
                 <div
-                  class="b l li cm yk rq vs ik wr ts"
+                  class="b l fi ul pk iq ms _j nr ks"
                 >
                   <span
-                    class="dq an po k mf re x ja -ud-z-1 eh"
+                    class="vp sm go k if pe x ja -ud-z-1 _g"
                   ></span>
                   <span
-                    class="qo l yg mf cd si tc ph qh zb ab"
+                    class="ho l tg if ad mi sc jh kh yb _a"
                   >
                     <img src="images/icon-06.svg" alt="icon" />
                   </span>
-                  <h4 class="um nm zm sb">
+                  <h4 class="lm em qm rb">
                     Content Generation
                   </h4>
-                  <p class="tm">
+                  <p class="km">
                     Need inspiration or assistance with generating content?
                   </p>
                 </div>
@@ -637,21 +624,21 @@
       <!-- ===== features grid Section End ===== -->
 
       <!-- ===== features list Section Start ===== -->
-      <section class="tl">
-        <div class="rf ab ik qq rs">
-          <div class="uc kq ei" data-highlighter>
+      <section class="kl">
+        <div class="mf _a _j hq is">
+          <div class="tc bq zh" data-highlighter>
             <!-- features item -->
-            <div class="fq">
-              <div class="l ni so">
+            <div class="xp">
+              <div class="l hi jo">
                 <div
-                  class="l li ni yj qs c"
+                  class="l fi hi pj hs c"
                 >
                   <div
-                    class="sc ph rh l xa"
+                    class="rc jh lh l xa"
                   >
-                    <div class="fg mf">
+                    <div class="ag if">
                       <span
-                        class="mo l sb tm om tc ph wh sk jk si"
+                        class="do l rb km fm sc jh qh jk ak mi"
                       >
                         <svg
                           width="19"
@@ -727,23 +714,23 @@
                           </defs>
                         </svg>
 
-                        <span class="ko">
+                        <span class="bo">
                           AI-Powered Writing Tool
                         </span>
                       </span>
                       <h3
-                        class="zm tb rm km"
+                        class="qm sb im bm"
                       >
                         Intelligent Writing Assistance
                       </h3>
-                      <p class="font-medium gb">
+                      <p class="font-medium fb">
                         Our AI writing tool is designed to empower you with
                         exceptional writing capabilities, making the writing
                         process...
                       </p>
                       <a
                         href="#"
-                        class="to l tc ph th si uk kk zm om fo co wp"
+                        class="ko l sc jh nh mi lk bk qm fm xn un np"
                       >
                         Learn more
                         <svg
@@ -762,7 +749,7 @@
                     </div>
 
                     <div
-                      class="eg mf vc iq"
+                      class="_f if uc _p"
                     >
                       <img src="images/big-icon.svg" alt="icon" />
                     </div>
@@ -777,16 +764,16 @@
                       ><img src="images/shape-02.svg" alt="shape"
                     /></span>
                     <span
-                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-2/3 xg mf me si gj/25 nn"
+                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-2/3 sg if ke mi yi/25 en"
                     ></span>
                     <span
-                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-[40%] ng mf ge si hj/20 mn"
+                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-[40%] ig if ee mi zi/20 dn"
                     ></span>
                     <span
-                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-[18%] xf mf wd si kj/20 pn"
+                      class="k y/2 -ud-translate-x-1/2 -ud-bottom-[18%] sf if ud mi bj/20 gn"
                     ></span>
                     <span
-                      class="k da ja ln"
+                      class="k da ja cn"
                       ><img src="images/shape-03.svg" alt="shape"
                     /></span>
                   </div>
@@ -795,20 +782,20 @@
             </div>
 
             <!-- features item -->
-            <div class="hq">
-              <div class="l ni so">
+            <div class="zp">
+              <div class="l hi jo">
                 <div
-                  class="l li ni fk tl dl c d"
+                  class="l fi hi xj kl vk c d"
                 >
                   <div class="l xa">
                     <span
-                      class="qo l yg mf cd si tc ph qh kb ab"
+                      class="ho l tg if ad mi sc jh kh jb _a"
                     >
                       <img src="images/icon-05.svg" alt="icon" />
                     </span>
 
                     <h3
-                      class="zm tb um mm"
+                      class="qm sb lm dm"
                     >
                       Empowering Writing Excellence
                     </h3>
@@ -822,20 +809,20 @@
                   <!-- bg shapes -->
                   <div>
                     <span
-                      class="k -ud-left-[36%] -ud-bottom-[82%] lg mf fe si gj/25 nn"
+                      class="k -ud-left-[36%] -ud-bottom-[82%] gg if de mi yi/25 en"
                     ></span>
                     <span
-                      class="k -ud-right-[22%] -ud-top-[27%] zf mf yd si gj/25 nn"
+                      class="k -ud-right-[22%] -ud-top-[27%] uf if wd mi yi/25 en"
                     ></span>
                     <span
-                      class="k ia sa kn"
+                      class="k ia sa bn"
                       ><img src="images/shape-04.svg" alt="shape"
                     /></span>
                     <span
-                      class="k -ud-left-[26%] -ud-bottom-[46%] bg mf ae si hj/20 mn"
+                      class="k -ud-left-[26%] -ud-bottom-[46%] xf if zd mi zi/20 dn"
                     ></span>
                     <span
-                      class="k -ud-left-[6%] -ud-bottom-[12%] vf mf sd si hj/20 pn"
+                      class="k -ud-left-[6%] -ud-bottom-[12%] qf if qd mi zi/20 gn"
                     ></span>
                   </div>
                 </div>
@@ -843,20 +830,20 @@
             </div>
 
             <!-- features item -->
-            <div class="gq">
-              <div class="l ni so">
+            <div class="yp">
+              <div class="l hi jo">
                 <div
-                  class="l li ni fk tl dl c d"
+                  class="l fi hi xj kl vk c d"
                 >
                   <div class="l xa">
                     <span
-                      class="qo l yg mf cd si tc ph qh kb ab"
+                      class="ho l tg if ad mi sc jh kh jb _a"
                     >
                       <img src="images/icon-07.svg" alt="icon" />
                     </span>
 
                     <h3
-                      class="zm tb um mm"
+                      class="qm sb lm dm"
                     >
                       Grammar and Spell Check
                     </h3>
@@ -869,17 +856,17 @@
                   <!-- bg shapes -->
                   <div>
                     <span
-                      class="k ha sa qn"
+                      class="k ha sa hn"
                       ><img src="images/shape-05.svg" alt="shape"
                     /></span>
                     <span
-                      class="k -ud-left-[30%] -ud-bottom-[53%] ag mf _d si gj/25 nn"
+                      class="k -ud-left-[30%] -ud-bottom-[53%] wf if yd mi yi/25 en"
                     ></span>
                     <span
-                      class="k -ud-right-[48%] -ud-top-[23%] bg mf ae si hj/20 mn"
+                      class="k -ud-right-[48%] -ud-top-[23%] xf if zd mi zi/20 dn"
                     ></span>
                     <span
-                      class="k -ud-right-[28%] ja vf mf sd si hj/20 pn"
+                      class="k -ud-right-[28%] ja qf if qd mi zi/20 gn"
                     ></span>
                   </div>
                 </div>
@@ -893,26 +880,26 @@
       <!-- ====== Pricing Section Start -->
       <section
         id="pricing"
-        class="l xa li yl is dt lh"
+        class="l xa fi pl _r vs fh"
       >
-        <div class="rf ab ik qq rs">
+        <div class="mf _a _j hq is">
           <!-- bg circles -->
           <div class="l la">
             <div
-              class="cg mf be si gj/25 mn k y/2 -ud-translate-x-1/2 ja"
+              class="yf if _d mi yi/25 dn k y/2 -ud-translate-x-1/2 ja"
             ></div>
             <div
-              class="gg mf ee si fj/40 on k y/2 -ud-translate-x-1/2 ja"
+              class="bg if ce mi xi/40 fn k y/2 -ud-translate-x-1/2 ja"
             ></div>
             <div
-              class="wf mf td si ij/30 jn k y/2 -ud-translate-x-1/2 ja"
+              class="rf if rd mi _i/30 an k y/2 -ud-translate-x-1/2 ja"
             ></div>
             <div
-              class="zg mf oe si ej k y/2 -ud-translate-x-1/2 ja wo"
+              class="ug if me mi wi k y/2 -ud-translate-x-1/2 ja no"
             ></div>
 
             <div
-              class="hg mf ld li k -ud-z-1 -ud-top-30 y/2 -ud-translate-x-1/2"
+              class="cg if jd fi k -ud-z-1 -ud-top-30 y/2 -ud-translate-x-1/2"
             >
               <div class="stars"></div>
               <div class="stars2"></div>
@@ -920,37 +907,37 @@
           </div>
 
           <!-- grid row -->
-          <div class="sc qh ei l -ud-z-1">
+          <div class="rc kh zh l -ud-z-1">
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
             <div
-              class="kg mf xd l uo vo"
+              class="fg if vd l lo mo"
             ></div>
           </div>
 
           <!-- section title -->
-          <div class="animate_top ob -ud-mt-24 cm">
+          <div class="wow fadeInUp nb -ud-mt-24 ul wa l">
             <span
-              class="mo l sb tm om tc ph wh sk jk si"
+              class="do l rb km fm sc jh qh jk ak mi"
             >
               <svg
                 width="17"
@@ -1026,14 +1013,14 @@
                 </defs>
               </svg>
 
-              <span class="ko"> Get access </span>
+              <span class="bo"> Get access </span>
             </span>
             <h2
-              class="zm tb dm sm xq ht"
+              class="qm sb vl jm oq zs"
             >
               Our Pricing Plan
             </h2>
-            <p class="vg ab tm">
+            <p class="qg _a km">
               Our AI writing tool is designed to empower you with exceptional
               writing capabilities, making the writing process more efficient,
               accurate, and enjoyable.
@@ -1041,63 +1028,63 @@
           </div>
 
           <div
-            class="uc mh lq lr ei"
+            class="tc gh cq cr zh"
           >
             <!-- Pricing item -->
             <div
-              class="animate_top ni ej l li tl bl mk ss xo"
+              class="wow fadeInUp hi wi l xa fi kl tk dk js oo"
             >
               <span class="k ga ra"
                 ><img src="images/pricing-icon-01.svg" alt="icon"
               /></span>
 
               <h3
-                class="um mm zm vb"
+                class="lm dm qm ub"
               >
                 Starter
               </h3>
 
-              <div class="sc ph zh">
+              <div class="rc jh th">
                 <h2
-                  class="rm hm yo"
+                  class="im zl po"
                 >
                   $10
                 </h2>
 
-                <p class="tm">
+                <p class="km">
                   /month <br />
                   (billed annually)
                 </p>
               </div>
 
               <div
-                class="cb mf ud zo"
+                class="bb if sd qo"
               ></div>
 
-              <ul class="sc nh _h">
-                <li class="sc ph bi">
+              <ul class="rc hh uh">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Subscription with levels</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Advanced features included</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Shared workspaces & tools</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium"
                     >Premium versions functionality</span
                   >
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Customizing the outputs</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Priority customer support</span>
                 </li>
@@ -1105,7 +1092,7 @@
 
               <a
                 href="/#"
-                class="fc sc ph qh th tm zm zj ti un go co l _o wp"
+                class="ec rc jh kh nh km qm qj ni ln yn un l ro np"
               >
                 Get the plan
                 <svg
@@ -1122,74 +1109,74 @@
                 </svg>
               </a>
 
-              <p class="kc om cm">
+              <p class="jc fm ul">
                 No extra hidden charge
               </p>
 
               <!-- bg shapes -->
               <span
-                class="rg mf ie si mn gj/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
+                class="mg if ge mi dn yi/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
               ></span>
               <span
-                class="rg mf ie si mn gj/25 k -ud-z-1 ia -ud-top-[89%]"
+                class="mg if ge mi dn yi/25 k -ud-z-1 ia -ud-top-[89%]"
               ></span>
             </div>
 
             <!-- Pricing item -->
             <div
-              class="animate_top ni ej l li tl bl mk ss xo"
+              class="wow fadeInUp hi wi l xa fi kl tk dk js oo"
             >
               <span class="k ga ra"
                 ><img src="images/pricing-icon-02.svg" alt="icon"
               /></span>
 
               <h3
-                class="um mm zm vb"
+                class="lm dm qm ub"
               >
                 Medium
               </h3>
 
-              <div class="sc ph zh">
+              <div class="rc jh th">
                 <h2
-                  class="rm hm yo"
+                  class="im zl po"
                 >
                   $59
                 </h2>
 
-                <p class="tm">
+                <p class="km">
                   /month <br />
                   (billed annually)
                 </p>
               </div>
 
               <div
-                class="cb mf ud zo"
+                class="bb if sd qo"
               ></div>
 
-              <ul class="sc nh _h">
-                <li class="sc ph bi">
+              <ul class="rc hh uh">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Subscription with levels</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Advanced features included</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Shared workspaces & tools</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium"
                     >Premium versions functionality</span
                   >
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Customizing the outputs</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Priority customer support</span>
                 </li>
@@ -1197,7 +1184,7 @@
 
               <a
                 href="/#"
-                class="fc sc ph qh th tm zm zj ti un go co l _o wp"
+                class="ec rc jh kh nh km qm qj ni ln yn un l ro np"
               >
                 Get the plan
                 <svg
@@ -1214,74 +1201,74 @@
                 </svg>
               </a>
 
-              <p class="kc om cm">
+              <p class="jc fm ul">
                 No extra hidden charge
               </p>
 
               <!-- bg shapes -->
               <span
-                class="rg mf ie si mn gj/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
+                class="mg if ge mi dn yi/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
               ></span>
               <span
-                class="rg mf ie si mn gj/25 k -ud-z-1 ia -ud-top-[89%]"
+                class="mg if ge mi dn yi/25 k -ud-z-1 ia -ud-top-[89%]"
               ></span>
             </div>
 
             <!-- Pricing item -->
             <div
-              class="animate_top ni ej l li tl bl mk ss xo"
+              class="wow fadeInUp hi wi l xa fi kl tk dk js oo"
             >
               <span class="k ga ra"
                 ><img src="images/pricing-icon-03.svg" alt="icon"
               /></span>
 
               <h3
-                class="um mm zm vb"
+                class="lm dm qm ub"
               >
                 Business
               </h3>
 
-              <div class="sc ph zh">
+              <div class="rc jh th">
                 <h2
-                  class="rm hm yo"
+                  class="im zl po"
                 >
                   $289
                 </h2>
 
-                <p class="tm">
+                <p class="km">
                   /month <br />
                   (billed annually)
                 </p>
               </div>
 
               <div
-                class="cb mf ud zo"
+                class="bb if sd qo"
               ></div>
 
-              <ul class="sc nh _h">
-                <li class="sc ph bi">
+              <ul class="rc hh uh">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Subscription with levels</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Advanced features included</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Shared workspaces & tools</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium"
                     >Premium versions functionality</span
                   >
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Customizing the outputs</span>
                 </li>
-                <li class="sc ph bi">
+                <li class="rc jh wh">
                   <img src="images/pricing-icon-04.svg" alt="icon" />
                   <span class="font-medium">Priority customer support</span>
                 </li>
@@ -1289,7 +1276,7 @@
 
               <a
                 href="/#"
-                class="fc sc ph qh th tm zm zj ti un go co l _o wp"
+                class="ec rc jh kh nh km qm qj ni ln yn un l ro np"
               >
                 Get the plan
                 <svg
@@ -1306,16 +1293,16 @@
                 </svg>
               </a>
 
-              <p class="kc om cm">
+              <p class="jc fm ul">
                 No extra hidden charge
               </p>
 
               <!-- bg shapes -->
               <span
-                class="rg mf ie si mn gj/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
+                class="mg if ge mi dn yi/25 k -ud-z-1 -ud-right-[68%] -ud-bottom-[58%]"
               ></span>
               <span
-                class="rg mf ie si mn gj/25 k -ud-z-1 ia -ud-top-[89%]"
+                class="mg if ge mi dn yi/25 k -ud-z-1 ia -ud-top-[89%]"
               ></span>
             </div>
           </div>
@@ -1326,13 +1313,13 @@
       <!-- ====== User Section Start -->
       <section
         x-data="{ 'showContent': false, 'scrollContent': false, }"
-        class="l xa li yl is dt 2xl:ud-pt-45 hl"
+        class="l xa fi pl _r vs 2xl:ud-pt-45 zk"
       >
-        <div class="rf ab ik qq rs">
+        <div class="mf _a _j hq is">
           <!-- section title -->
-          <div class="animate_top lb cm">
+          <div class="wow fadeInUp kb ul">
             <span
-              class="mo l sb tm om tc ph wh sk jk si"
+              class="do l rb km fm sc jh qh jk ak mi"
             >
               <svg
                 width="17"
@@ -1408,14 +1395,14 @@
                 </defs>
               </svg>
 
-              <span class="ko"> Wall of love </span>
+              <span class="bo"> Wall of love </span>
             </span>
             <h2
-              class="zm tb dm sm xq ht"
+              class="qm sb vl jm oq zs"
             >
               What Our User Says
             </h2>
-            <p class="vg ab tm">
+            <p class="qg _a km">
               Our AI writing tool is designed to empower you with exceptional
               writing capabilities, making the writing process more efficient,
               accurate, and enjoyable.
@@ -1424,31 +1411,31 @@
 
           <div
             @scroll.window="scrollContent = (scrollY > $el.offsetTop - 500) ? true : false"
-            :class="{ 'ue li' :!showContent }"
-            class="uc mh lq lr ei"
+            :class="{ 're fi' :!showContent }"
+            class="tc gh cq cr zh"
           >
             <!-- user column -->
-            <div class="ki">
+            <div class="ei">
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-01.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Machel Pildium
                     </h5>
-                    <p class="tm om">@machel</p>
+                    <p class="km fm">@machel</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1458,30 +1445,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-02.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Wilson Bator
                     </h5>
-                    <p class="tm om">@wilson</p>
+                    <p class="km fm">@wilson</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1489,37 +1476,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-03.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Roger George
                     </h5>
-                    <p class="tm om">@roger</p>
+                    <p class="km fm">@roger</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1529,30 +1516,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-04.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Adison Dias
                     </h5>
-                    <p class="tm om">@adison</p>
+                    <p class="km fm">@adison</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1560,37 +1547,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-05.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Abram Lipshutz
                     </h5>
-                    <p class="tm om">@abram</p>
+                    <p class="km fm">@abram</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1600,30 +1587,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-06.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Jaylon Press
                     </h5>
-                    <p class="tm om">@jaylon</p>
+                    <p class="km fm">@jaylon</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1633,30 +1620,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-07.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Zain Franci
                     </h5>
-                    <p class="tm om">@zain</p>
+                    <p class="km fm">@zain</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1666,30 +1653,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-08.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Cristofer Carder
                     </h5>
-                    <p class="tm om">@cristofer</p>
+                    <p class="km fm">@cristofer</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1699,30 +1686,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-09.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Dulce Rosser
                     </h5>
-                    <p class="tm om">@dulce</p>
+                    <p class="km fm">@dulce</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1730,40 +1717,40 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
             </div>
 
             <!-- user column -->
-            <div class="ki vc iq">
+            <div class="ei uc _p">
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-04.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Adison Dias
                     </h5>
-                    <p class="tm om">@adison</p>
+                    <p class="km fm">@adison</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1771,37 +1758,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-05.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Abram Lipshutz
                     </h5>
-                    <p class="tm om">@abram</p>
+                    <p class="km fm">@abram</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1811,30 +1798,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-06.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Jaylon Press
                     </h5>
-                    <p class="tm om">@jaylon</p>
+                    <p class="km fm">@jaylon</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1844,30 +1831,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-07.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Zain Franci
                     </h5>
-                    <p class="tm om">@zain</p>
+                    <p class="km fm">@zain</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1877,30 +1864,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-08.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Cristofer Carder
                     </h5>
-                    <p class="tm om">@cristofer</p>
+                    <p class="km fm">@cristofer</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1910,30 +1897,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-09.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Dulce Rosser
                     </h5>
-                    <p class="tm om">@dulce</p>
+                    <p class="km fm">@dulce</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1941,37 +1928,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-01.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Machel Pildium
                     </h5>
-                    <p class="tm om">@machel</p>
+                    <p class="km fm">@machel</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -1981,30 +1968,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-02.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Wilson Bator
                     </h5>
-                    <p class="tm om">@wilson</p>
+                    <p class="km fm">@wilson</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2012,37 +1999,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-03.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Roger George
                     </h5>
-                    <p class="tm om">@roger</p>
+                    <p class="km fm">@roger</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2052,33 +2039,33 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
             </div>
 
             <!-- user column -->
-            <div class="ki vc fr">
+            <div class="ei uc xq">
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-07.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Zain Franci
                     </h5>
-                    <p class="tm om">@zain</p>
+                    <p class="km fm">@zain</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2088,30 +2075,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-08.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Cristofer Carder
                     </h5>
-                    <p class="tm om">@cristofer</p>
+                    <p class="km fm">@cristofer</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2121,30 +2108,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-09.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Dulce Rosser
                     </h5>
-                    <p class="tm om">@dulce</p>
+                    <p class="km fm">@dulce</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2152,37 +2139,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-01.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Machel Pildium
                     </h5>
-                    <p class="tm om">@machel</p>
+                    <p class="km fm">@machel</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2192,30 +2179,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-02.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Wilson Bator
                     </h5>
-                    <p class="tm om">@wilson</p>
+                    <p class="km fm">@wilson</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2223,37 +2210,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-03.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Roger George
                     </h5>
-                    <p class="tm om">@roger</p>
+                    <p class="km fm">@roger</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2263,30 +2250,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-04.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Adison Dias
                     </h5>
-                    <p class="tm om">@adison</p>
+                    <p class="km fm">@adison</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2294,37 +2281,37 @@
                   typesetting industry. Lorem Ipsum has been the industry's.
                 </p>
 
-                <p class="nc">
+                <p class="mc">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-05.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Abram Lipshutz
                     </h5>
-                    <p class="tm om">@abram</p>
+                    <p class="km fm">@abram</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2334,30 +2321,30 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
 
               <!-- user item -->
               <div
-                class="ap l li mk zk oi"
+                class="so l fi dk qk ii"
               >
-                <div class="sc ph ai">
+                <div class="rc jh vh">
                   <div
-                    class="ig mf ad si"
+                    class="dg if _c mi"
                   >
                     <img src="images/user-06.png" alt="user" />
                   </div>
                   <div>
-                    <h5 class="zm om tm">
+                    <h5 class="qm fm km">
                       Jaylon Press
                     </h5>
-                    <p class="tm om">@jaylon</p>
+                    <p class="km fm">@jaylon</p>
                   </div>
                 </div>
 
                 <div
-                  class="bp l db mf ud"
+                  class="to l cb if sd"
                 ></div>
 
                 <p>
@@ -2367,21 +2354,21 @@
 
                 <!-- bg shapes -->
                 <span
-                  class="rg mf ie si mn gj/[0.15] k -ud-z-1 ba ua"
+                  class="mg if ge mi dn yi/[0.15] k -ud-z-1 ba ua"
                 ></span>
               </div>
             </div>
           </div>
 
           <div
-            :class="[ showContent ? 'm -u-mt-52 vn co an' : '', scrollContent ? '_m' : '' ]"
-            class="o s sc qh oj qj am jl f k"
+            :class="[ showContent ? 'm -u-mt-52 mn un sm' : '', scrollContent ? 'rm' : '' ]"
+            class="o s rc kh fj hj sl al f k"
           >
             <button
-              :class="[ showContent ? 'transition-transform dh' : '', scrollContent ? 'ch' : '' ]"
+              :class="[ showContent ? 'transition-transform zg' : '', scrollContent ? 'yg' : '' ]"
               @click="showContent = !showContent"
               type="button"
-              class="jo yp l oa om zm font-semibold jk uk ti g sc ab -ud-mt-7.5 fo co"
+              class="ao pp l oa fm qm font-semibold ak lk ni g rc _a -ud-mt-7.5 xn un"
             >
               <span
                 x-text="showContent ? 'Okay, I get the point' : 'Show more...'"
@@ -2393,133 +2380,133 @@
       <!-- ====== User Section End -->
 
       <!-- ====== Clients Section Start -->
-      <section class="rk">
-        <div class="qf ab ik qq rs">
-          <div class="l li wa">
+      <section class="ik">
+        <div class="lf _a _j hq is">
+          <div class="l fi wa">
             <span
-              class="uf mf ce pc n f k wa x ka/2 -ud-translate-y-1/2 mj qj/0 uj/100"
+              class="pf if ae oc n f k wa x ka/2 -ud-translate-y-1/2 dj hj/0 lj/100"
             ></span>
             <span
-              class="uf mf ce pc n f k wa ca ka/2 -ud-translate-y-1/2 nj qj/0 uj/100"
+              class="pf if ae oc n f k wa ca ka/2 -ud-translate-y-1/2 ej hj/0 lj/100"
             ></span>
             <div class="swiper clients-carousel">
               <div
-                class="swiper-wrapper ph kh eo"
+                class="swiper-wrapper jh eh wn"
               >
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-01.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-02.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-03.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-04.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-05.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-06.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img
-                      class="jc"
+                      class="ic"
                       src="images/client-07.svg"
                       alt="client"
                     />
                   </a>
                 </div>
 
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-01.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-02.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-03.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-04.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-05.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-06.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img
-                      class="jc"
+                      class="ic"
                       src="images/client-07.svg"
                       alt="client"
                     />
                   </a>
                 </div>
 
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-01.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-02.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-03.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-04.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-05.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img src="images/client-06.svg" alt="client" />
                   </a>
                 </div>
-                <div class="swiper-slide ve">
+                <div class="swiper-slide se">
                   <a href="/#">
                     <img
-                      class="jc"
+                      class="ic"
                       src="images/client-07.svg"
                       alt="client"
                     />
@@ -2533,47 +2520,47 @@
       <!-- ====== Clients Section End -->
 
       <!-- ====== Support Section Start -->
-      <section id="support" class="lh">
-        <div class="qf ab ik qq rs">
+      <section id="support" class="fh">
+        <div class="lf _a _j hq is">
           <div
-            class="l ya li qi ej zl mk pq vr"
+            class="l ya fi ki wi ql dk gq mr"
           >
             <!-- grid row -->
             <div
-              class="sc qh ei k y/2 -ud-translate-x-1/2 -ud-top-[16%] ug mf -ud-z-1 dn"
+              class="rc kh zh k y/2 -ud-translate-x-1/2 -ud-top-[16%] pg if -ud-z-1 vm"
             >
               <div
-                class="kg mf xd l uo vo q"
+                class="fg if vd l lo mo q"
               ></div>
               <div
-                class="kg mf xd l uo vo v"
+                class="fg if vd l lo mo v"
               ></div>
               <div
-                class="kg mf xd l uo vo t"
+                class="fg if vd l lo mo t"
               ></div>
               <div
-                class="kg mf xd l uo vo"
+                class="fg if vd l lo mo"
               ></div>
               <div
-                class="kg mf xd l uo vo"
+                class="fg if vd l lo mo"
               ></div>
               <div
-                class="kg mf xd l uo vo"
+                class="fg if vd l lo mo"
               ></div>
               <div
-                class="kg mf xd l uo vo r"
+                class="fg if vd l lo mo r"
               ></div>
               <div
-                class="kg mf xd l uo vo u"
+                class="fg if vd l lo mo u"
               ></div>
               <div
-                class="kg mf xd l uo vo w"
+                class="fg if vd l lo mo w"
               ></div>
             </div>
 
             <!-- stars -->
             <div
-              class="hg mf ld li k -ud-z-1 -ud-top-30 y/2 -ud-translate-x-1/2"
+              class="cg if jd fi k -ud-z-1 -ud-top-30 y/2 -ud-translate-x-1/2"
             >
               <div class="stars"></div>
               <div class="stars2"></div>
@@ -2581,21 +2568,21 @@
 
             <!-- bg shapes -->
             <span
-              class="bh mf qe si pc va k y/2 -ud-top-[42%] -ud-translate-x-1/2 gj/25 nn"
+              class="xg if oe mi oc va k y/2 -ud-top-[42%] -ud-translate-x-1/2 yi/25 en"
             ></span>
             <span
-              class="tg mf ke si pc k y/2 -ud-top-[38%] -ud-translate-x-1/2 hj/20 mn"
+              class="og if ie mi oc k y/2 -ud-top-[38%] -ud-translate-x-1/2 zi/20 dn"
             ></span>
             <span
-              class="xf mf wd si pc k y/2 -ud-top-[10%] -ud-translate-x-1/2 kj/20 pn"
+              class="sf if ud mi oc k y/2 -ud-top-[10%] -ud-translate-x-1/2 bj/20 gn"
             ></span>
 
             <!-- section title -->
             <div
-              class="animate_top mb cm l ya"
+              class="wow fadeInUp lb ul l ya"
             >
               <span
-                class="mo l sb tm om tc ph wh sk jk si"
+                class="do l rb km fm sc jh qh jk ak mi"
               >
                 <svg
                   width="17"
@@ -2671,14 +2658,14 @@
                   </defs>
                 </svg>
 
-                <span class="ko"> Need Any Help? </span>
+                <span class="bo"> Need Any Help? </span>
               </span>
               <h2
-                class="zm tb dm sm xq ht"
+                class="qm sb vl jm oq zs"
               >
                 Contact With Us
               </h2>
-              <p class="vg ab tm">
+              <p class="qg _a km">
                 Our AI writing tool is designed to empower you with exceptional
                 writing capabilities, making the writing process more efficient,
                 accurate, and enjoyable.
@@ -2687,15 +2674,15 @@
 
             <!-- support form -->
             <div
-              class="cp l li pi ej ak oq qs"
+              class="uo l fi ji wi sj fq hs"
             >
               <form class="l wa">
-                <div class="-ud-mx-4 xl:-ud-mx-10 sc oh">
-                  <div class="mf ik us zq/2">
-                    <div class="bc">
+                <div class="-ud-mx-4 xl:-ud-mx-10 rc ih">
+                  <div class="if _j ls qq/2">
+                    <div class="ac">
                       <label
                         for="name"
-                        class="zm qb pc tm"
+                        class="qm pb oc km"
                       >
                         Name
                       </label>
@@ -2704,15 +2691,15 @@
                         type="text"
                         name="name"
                         placeholder="Enter your Name"
-                        class="ti xi cj/[0.12] kj/[0.05] aq mf uk kk in"
+                        class="ni ri vi/[0.12] bj/[0.05] sp if lk bk _m"
                       />
                     </div>
                   </div>
-                  <div class="mf ik us zq/2">
-                    <div class="bc">
+                  <div class="if _j ls qq/2">
+                    <div class="ac">
                       <label
                         for="email"
-                        class="zm qb pc tm"
+                        class="qm pb oc km"
                       >
                         Email
                       </label>
@@ -2721,15 +2708,15 @@
                         type="email"
                         name="email"
                         placeholder="Enter your Email"
-                        class="ti xi cj/[0.12] kj/[0.05] aq mf uk kk in"
+                        class="ni ri vi/[0.12] bj/[0.05] sp if lk bk _m"
                       />
                     </div>
                   </div>
-                  <div class="mf ik us">
-                    <div class="gb">
+                  <div class="if _j ls">
+                    <div class="fb">
                       <label
                         for="message"
-                        class="zm qb pc tm"
+                        class="qm pb oc km"
                       >
                         Message
                       </label>
@@ -2738,15 +2725,15 @@
                         name="message"
                         placeholder="Type your message"
                         rows="6"
-                        class="ti xi cj/[0.12] kj/[0.05] aq mf wk kk in"
+                        class="ni ri vi/[0.12] bj/[0.05] sp if nk bk _m"
                       ></textarea>
                     </div>
                   </div>
-                  <div class="mf ik us">
-                    <div class="cm">
+                  <div class="if _j ls">
+                    <div class="ul">
                       <a
                         href="#"
-                        class="lo tc ti uk lk zm tm fo co vp"
+                        class="co sc ni lk ck qm km xn un mp"
                       >
                         Send Message
                       </a>
@@ -2761,12 +2748,12 @@
       <!-- ====== Support Section End -->
 
       <!-- ====== Blog Section Start -->
-      <section class="tk _r">
-        <div class="rf ab ik qq rs">
+      <section class="kk rr">
+        <div class="mf _a _j hq is">
           <!-- section title -->
-          <div class="animate_top mb cm">
+          <div class="wow fadeInUp lb ul">
             <span
-              class="mo l sb tm om tc ph wh sk jk si"
+              class="do l rb km fm sc jh qh jk ak mi"
             >
               <svg
                 width="17"
@@ -2842,14 +2829,14 @@
                 </defs>
               </svg>
 
-              <span class="ko"> Read Our Latest Blogs </span>
+              <span class="bo"> Read Our Latest Blogs </span>
             </span>
             <h2
-              class="zm tb dm sm xq ht"
+              class="qm sb vl jm oq zs"
             >
               Latest Blogs & News
             </h2>
-            <p class="vg ab tm">
+            <p class="qg _a km">
               Our AI writing tool is designed to empower you with exceptional
               writing capabilities, making the writing process more efficient,
               accurate, and enjoyable.
@@ -2857,28 +2844,28 @@
           </div>
 
           <div
-            class="uc mh lq lr ei"
+            class="tc gh cq cr zh"
           >
             <!-- blog item -->
-            <div class="animate_top b">
-              <div class="wb li wi">
+            <div class="wow fadeInUp b">
+              <div class="vb fi qi">
                 <img
                   src="images/blog-01.png"
                   alt="image"
-                  class="ho do hh cq"
+                  class="zn vn ch up"
                 />
               </div>
 
               <div
-                class="sc oh xh ph tb"
+                class="rc ih rh jh sb"
               >
                 <span
-                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                  class="km hm jp dh rk zj mi bj/[0.07] ri vi/10 gp/25 _n un"
                 >
                   Design
                 </span>
                 <span
-                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                  class="km hm jp dh rk zj mi bj/[0.07] ri vi/10 gp/25 _n un"
                 >
                   Engineering
                 </span>
@@ -2887,25 +2874,25 @@
               <h4>
                 <a
                   href="blog-single.html"
-                  class="zm um pm fo co vp"
+                  class="qm lm gm xn un mp"
                 >
                   Revolution in Content Creation and Communication
                 </a>
               </h4>
-              <p class="font-medium kc">
+              <p class="font-medium jc">
                 Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
                 eiusmod tempor incididunt ut labore et dolore magna oliumosd
                 aliqua...
               </p>
 
               <div
-                class="sc ph ai oh nc"
+                class="rc jh vh ih mc"
               >
                 <div
-                  class="sc ph wh oh jh fo co sp"
+                  class="rc jh qh ih dh xn un jp"
                 >
                   <svg
-                    class="wj"
+                    class="nj"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -2922,13 +2909,13 @@
                     />
                   </svg>
 
-                  <span class="om tm">Alex Demo</span>
+                  <span class="fm km">Alex Demo</span>
                 </div>
                 <div
-                  class="sc ph wh oh jh fo co sp"
+                  class="rc jh qh ih dh xn un jp"
                 >
                   <svg
-                    class="wj"
+                    class="nj"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -2941,31 +2928,31 @@
                     />
                   </svg>
 
-                  <span class="om tm">25 Mar, 2025</span>
+                  <span class="fm km">25 Mar, 2025</span>
                 </div>
               </div>
             </div>
 
             <!-- blog item -->
-            <div class="animate_top b">
-              <div class="wb li wi">
+            <div class="wow fadeInUp b">
+              <div class="vb fi qi">
                 <img
                   src="images/blog-02.png"
                   alt="image"
-                  class="ho do hh cq"
+                  class="zn vn ch up"
                 />
               </div>
 
               <div
-                class="sc oh xh ph tb"
+                class="rc ih rh jh sb"
               >
                 <span
-                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                  class="km hm jp dh rk zj mi bj/[0.07] ri vi/10 gp/25 _n un"
                 >
                   Development
                 </span>
                 <span
-                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                  class="km hm jp dh rk zj mi bj/[0.07] ri vi/10 gp/25 _n un"
                 >
                   Security
                 </span>
@@ -2974,25 +2961,25 @@
               <h4>
                 <a
                   href="blog-single.html"
-                  class="zm um pm fo co vp"
+                  class="qm lm gm xn un mp"
                 >
                   How AI Writing Tools Empower Writers to Speed up there Writing
                 </a>
               </h4>
-              <p class="font-medium kc">
+              <p class="font-medium jc">
                 Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
                 eiusmod tempor incididunt ut labore et dolore magna oliumosd
                 aliqua...
               </p>
 
               <div
-                class="sc ph ai oh nc"
+                class="rc jh vh ih mc"
               >
                 <div
-                  class="sc ph wh oh jh fo co sp"
+                  class="rc jh qh ih dh xn un jp"
                 >
                   <svg
-                    class="wj"
+                    class="nj"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -3009,13 +2996,13 @@
                     />
                   </svg>
 
-                  <span class="om tm">Hendary Jonson</span>
+                  <span class="fm km">Hendary Jonson</span>
                 </div>
                 <div
-                  class="sc ph wh oh jh fo co sp"
+                  class="rc jh qh ih dh xn un jp"
                 >
                   <svg
-                    class="wj"
+                    class="nj"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -3028,31 +3015,31 @@
                     />
                   </svg>
 
-                  <span class="om tm">12 Feb, 2025</span>
+                  <span class="fm km">12 Feb, 2025</span>
                 </div>
               </div>
             </div>
 
             <!-- blog item -->
-            <div class="animate_top b">
-              <div class="wb li wi">
+            <div class="wow fadeInUp b">
+              <div class="vb fi qi">
                 <img
                   src="images/blog-03.png"
                   alt="image"
-                  class="ho do hh cq"
+                  class="zn vn ch up"
                 />
               </div>
 
               <div
-                class="sc oh xh ph tb"
+                class="rc ih rh jh sb"
               >
                 <span
-                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                  class="km hm jp dh rk zj mi bj/[0.07] ri vi/10 gp/25 _n un"
                 >
                   Products
                 </span>
                 <span
-                  class="tm qm sp jh _k hk si kj/[0.07] xi cj/10 pp/25 io co"
+                  class="km hm jp dh rk zj mi bj/[0.07] ri vi/10 gp/25 _n un"
                 >
                   Blog and articles
                 </span>
@@ -3061,25 +3048,25 @@
               <h4>
                 <a
                   href="blog-single.html"
-                  class="zm um pm fo co vp"
+                  class="qm lm gm xn un mp"
                 >
                   Revolution in Content Creation and Communication
                 </a>
               </h4>
-              <p class="font-medium kc">
+              <p class="font-medium jc">
                 Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
                 eiusmod tempor incididunt ut labore et dolore magna oliumosd
                 aliqua...
               </p>
 
               <div
-                class="sc ph ai oh nc"
+                class="rc jh vh ih mc"
               >
                 <div
-                  class="sc ph wh oh jh fo co sp"
+                  class="rc jh qh ih dh xn un jp"
                 >
                   <svg
-                    class="wj"
+                    class="nj"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -3096,13 +3083,13 @@
                     />
                   </svg>
 
-                  <span class="om tm">Piter Mecraow</span>
+                  <span class="fm km">Piter Mecraow</span>
                 </div>
                 <div
-                  class="sc ph wh oh jh fo co sp"
+                  class="rc jh qh ih dh xn un jp"
                 >
                   <svg
-                    class="wj"
+                    class="nj"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -3115,7 +3102,7 @@
                     />
                   </svg>
 
-                  <span class="om tm">10 Jan, 2025</span>
+                  <span class="fm km">10 Jan, 2025</span>
                 </div>
               </div>
             </div>
@@ -3126,35 +3113,35 @@
 
       <!-- ====== CTA Section Start -->
       <section>
-        <div class="rf ab ik qq rs">
+        <div class="mf _a _j hq is">
           <div
-            class="dp ej qi l li ik tk _r ya"
+            class="vo wi ki l fi _j kk rr ya"
           >
             <!-- bg shapes -->
             <span class="k p x -ud-z-1"
               ><img src="images/grid.svg" alt="grid"
             /></span>
             <span
-              class="bh mf qe si pc -ud-z-1 k y/2 qa -ud-translate-x-1/2 gj/25 nn"
+              class="xg if oe mi oc -ud-z-1 k y/2 qa -ud-translate-x-1/2 yi/25 en"
             ></span>
             <span
-              class="tg mf ke si pc -ud-z-1 k y/2 ta -ud-translate-x-1/2 hj/20 mn"
+              class="og if ie mi oc -ud-z-1 k y/2 ta -ud-translate-x-1/2 zi/20 dn"
             ></span>
             <span
-              class="xf mf wd si pc -ud-z-1 k y/2 -ud-bottom-[28%] -ud-translate-x-1/2 kj/20 pn"
+              class="sf if ud mi oc -ud-z-1 k y/2 -ud-bottom-[28%] -ud-translate-x-1/2 bj/20 gn"
             ></span>
 
             <!-- stars -->
             <div
-              class="hg mf ld li k -ud-z-1 -ud-bottom-25 y/2 -ud-translate-x-1/2"
+              class="cg if jd fi k -ud-z-1 -ud-bottom-25 y/2 -ud-translate-x-1/2"
             >
               <div class="stars"></div>
               <div class="stars2"></div>
             </div>
 
-            <div class="animate_top cm">
+            <div class="wow fadeInUp ul">
               <span
-                class="mo l sb tm om tc ph wh sk jk si"
+                class="do l rb km fm sc jh qh jk ak mi"
               >
                 <svg
                   width="17"
@@ -3230,16 +3217,16 @@
                   </defs>
                 </svg>
 
-                <span class="ko">
+                <span class="bo">
                   Try our tool for Free
                 </span>
               </span>
               <h2
-                class="zm tb dm sm xq ht"
+                class="qm sb vl jm oq zs"
               >
                 What are you waiting for?
               </h2>
-              <p class="vg ab tm ac">
+              <p class="qg _a km _b">
                 Our AI writing tool is designed to empower you with exceptional
                 writing capabilities, making the writing process more efficient,
                 accurate, and enjoyable.
@@ -3247,7 +3234,7 @@
 
               <a
                 href="#"
-                class="lo tc ti uk lk zm tm fo co vp"
+                class="co sc ni lk ck qm km xn un mp"
               >
                 Get Started for Free
               </a>
@@ -3258,36 +3245,36 @@
       <!-- ====== CTA Section End -->
 
       <!-- ====== Newsletter Section Start -->
-      <section class="vl wq bt cl">
-        <div class="rf ab ik qq rs">
+      <section class="ml nq ts uk">
+        <div class="mf _a _j hq is">
           <div
-            class="sc oh ph rh uh"
+            class="rc ih jh lh oh"
           >
-            <div class="_f mf">
+            <div class="vf if">
               <h3
-                class="um lm zm pb"
+                class="lm cm qm ob"
               >
                 News & Update
               </h3>
-              <p class="tm">
+              <p class="km">
                 Keep up to date with everything about our tool
               </p>
             </div>
-            <div class="mg mf">
+            <div class="hg if">
               <form>
-                <div class="sc ph _h">
-                  <div class="dg mf">
+                <div class="rc jh uh">
+                  <div class="zf if">
                     <input
                       id="email"
                       type="email"
                       name="email"
                       placeholder="Enter your Email"
-                      class="ti xi cj/[0.12] kj/[0.05] aq mf uk kk in"
+                      class="ni ri vi/[0.12] bj/[0.05] sp if lk bk _m"
                     />
                   </div>
                   <a
                     href="/#"
-                    class="jo l ti zm om sc ph th vk lk gn yp xp"
+                    class="ao l ni qm fm rc jh nh mk ck ym pp op"
                   >
                     Subscribe
                   </a>
@@ -3301,44 +3288,44 @@
     </main>
     <!-- ===== Footer Start ===== -->
     <!-- ====== Footer Section Start -->
-<footer class="l wa fl cs zs">
+<footer class="l wa xk ur qs">
   <!-- bg shapes -->
   <div
-    class="k p x mf sc nh yh -ud-z-1 en"
+    class="k p x if rc hh sh -ud-z-1 wm"
   >
-    <div class="mf od fp"></div>
-    <div class="mf vd fp"></div>
-    <div class="mf zd fp"></div>
-    <div class="mf de fp"></div>
-    <div class="mf he fp"></div>
-    <div class="mf le fp"></div>
-    <div class="mf ne fp"></div>
-    <div class="mf pe fp"></div>
-    <div class="mf rd fp"></div>
+    <div class="if md xo"></div>
+    <div class="if td xo"></div>
+    <div class="if xd xo"></div>
+    <div class="if be xo"></div>
+    <div class="if fe xo"></div>
+    <div class="if je xo"></div>
+    <div class="if le xo"></div>
+    <div class="if ne xo"></div>
+    <div class="if pd xo"></div>
   </div>
 
   <div
-    class="rf ab ik qq rs l vl"
+    class="mf _a _j hq is l ml"
   >
     <div
-      class="mf ud ep k ja x"
+      class="if sd wo k ja x"
     ></div>
 
-    <div class="sc oh rh">
-      <div class="gb og mf">
-        <a class="_b qc" href="index.html">
+    <div class="rc ih lh">
+      <div class="fb jg if">
+        <a class="zb pc" href="index.html">
           <img src="images/logo.svg" alt="Logo" />
         </a>
 
-        <p class="hb os/5">
+        <p class="gb fs/5">
           AI writing tool is designed to empower you with exceptional writing
           capabilities.
         </p>
 
-        <div class="sc ph bi">
-          <a href="#" class="sp fo co">
+        <div class="rc jh wh">
+          <a href="#" class="jp xn un">
             <svg
-              class="wj"
+              class="nj"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -3352,9 +3339,9 @@
             </svg>
           </a>
 
-          <a href="#" class="sp fo co">
+          <a href="#" class="jp xn un">
             <svg
-              class="wj"
+              class="nj"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -3368,9 +3355,9 @@
             </svg>
           </a>
 
-          <a href="#" class="sp fo co">
+          <a href="#" class="jp xn un">
             <svg
-              class="wj"
+              class="nj"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -3392,51 +3379,51 @@
           </a>
         </div>
 
-        <p class="tm mc">
+        <p class="km lc">
           Ailand, LLC. All rights reserved.
         </p>
       </div>
 
-      <div class="og mf">
+      <div class="jg if">
         <div
-          class="sc nh mq nq uh"
+          class="rc hh dq eq oh"
         >
           <div>
-            <h5 class="um zm ub">Products</h5>
+            <h5 class="lm qm tb">Products</h5>
 
-            <ul class="sc nh zh">
+            <ul class="rc hh th">
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Features</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Integrations</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Pricing</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Changelog</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Roadmap</a
                 >
               </li>
@@ -3444,34 +3431,34 @@
           </div>
 
           <div>
-            <h5 class="um zm ub">Company</h5>
+            <h5 class="lm qm tb">Company</h5>
 
-            <ul class="sc nh zh">
+            <ul class="rc hh th">
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Privacy Policy</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Refund Policy</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Support</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Community</a
                 >
               </li>
@@ -3479,41 +3466,41 @@
           </div>
 
           <div>
-            <h5 class="um zm ub">Support</h5>
+            <h5 class="lm qm tb">Support</h5>
 
-            <ul class="sc nh zh">
+            <ul class="rc hh th">
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Features</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Integrations</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Pricing</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Changelog</a
                 >
               </li>
               <li>
                 <a
                   href="/#"
-                  class="tm fo co sp"
+                  class="km xn un jp"
                   >Roadmap</a
                 >
               </li>
@@ -3530,13 +3517,13 @@
 
     <!-- ====== Back To Top Start ===== -->
     <button
-  class="vc ph qh _e _c ri lt gj up j w fa ya"
+  class="uc jh kh xe zc li ct yi lp j w fa ya"
   @click="window.scrollTo({top: 0, behavior: 'smooth'})"
   @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
-  :class="{ 'rc' : scrollTop }"
+  :class="{ 'qc' : scrollTop }"
 >
   <svg
-    class="xj hf id"
+    class="oj df gd"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
   >

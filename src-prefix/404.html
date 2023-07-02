@@ -9,10 +9,6 @@
   <body
     x-data="{ page: '404', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
   >
-    <!-- ===== Preloader Start ===== -->
-    <include src="./partials/preloader.html"></include>
-    <!-- ===== Preloader End ===== -->
-
     <!-- ===== Header Start ===== -->
     <include src="./partials/header.html" />
     <!-- ===== Header End ===== -->
@@ -59,7 +55,8 @@
         class="ud-pt-17.5 lg:ud-pt-22.5 xl:ud-pt-27.5 ud-pb-20 lg:ud-pb-25 xl:ud-pb-30 2xl:ud-pb-[150px]"
       >
         <div
-          class="animate_top ud-mx-auto ud-w-full ud-max-w-[597px] ud-text-center ud-px-4 sm:ud-px-8 lg:ud-px-0"
+          class="wow fadeInUp ud-mx-auto ud-w-full ud-max-w-[597px] ud-text-center ud-px-4 sm:ud-px-8 lg:ud-px-0"
+          data-wow-delay="0.1s"
         >
           <img src="./images/404.svg" alt="404" class="ud-mx-auto ud-mb-12.5" />
           <h2 class="ud-mb-5.5 ud-text-heading-3 ud-font-bold ud-text-white">

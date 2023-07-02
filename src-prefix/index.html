@@ -10,10 +10,6 @@
   <body
     x-data="{ page: 'home', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
   >
-    <!-- ===== Preloader Start ===== -->
-    <include src="./partials/preloader.html"></include>
-    <!-- ===== Preloader End ===== -->
-
     <!-- ===== Header Start ===== -->
     <include src="./partials/header.html" />
     <!-- ===== Header End ===== -->
@@ -42,7 +38,7 @@
 
         <!-- Hero Content -->
         <div class="ud-mx-auto ud-max-w-[900px] ud-px-4 sm:ud-px-8 xl:ud-px-0">
-          <div class="animate_top ud-text-center">
+          <div class="wow fadeInUp ud-text-center">
             <a
               href="/#"
               class="ud-hero-subtitle-gradient hover:ud-hero-subtitle-hover ud-relative ud-mb-5 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
@@ -146,7 +142,7 @@
           </div>
         </div>
 
-        <div class="animate_top ud-mt-17">
+        <div class="wow fadeInUp ud-mt-17" data-wow-delay="0.1s">
           <img class="ud-mx-auto" src="./images/hero/hero.svg" alt="hero" />
         </div>
       </section>
@@ -159,7 +155,7 @@
       >
         <div class="ud-max-w-[1222px] ud-mx-auto ud-px-4 sm:ud-px-8 xl:ud-px-0">
           <!-- Section Title -->
-          <div class="animate_top ud-text-center">
+          <div class="wow fadeInUp ud-text-center">
             <span
               class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
             >
@@ -719,7 +715,7 @@
           </div>
 
           <!-- section title -->
-          <div class="animate_top ud-mb-17.5 -ud-mt-24 ud-text-center">
+          <div class="wow fadeInUp ud-mb-17.5 -ud-mt-24 ud-text-center ud-z-10 ud-relative">
             <span
               class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
             >
@@ -816,7 +812,7 @@
           >
             <!-- Pricing item -->
             <div
-              class="animate_top ud-rounded-3xl ud-bg-dark ud-relative ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-8 xl:ud-px-10 ud-pricing-item-border"
+              class="wow fadeInUp ud-rounded-3xl ud-bg-dark ud-relative ud-z-20 ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-8 xl:ud-px-10 ud-pricing-item-border"
             >
               <span class="ud-absolute ud-right-9 ud-top-9"
                 ><img src="./images/pricing/pricing-icon-01.svg" alt="icon"
@@ -908,7 +904,7 @@
 
             <!-- Pricing item -->
             <div
-              class="animate_top ud-rounded-3xl ud-bg-dark ud-relative ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-8 xl:ud-px-10 ud-pricing-item-border"
+              class="wow fadeInUp ud-rounded-3xl ud-bg-dark ud-relative ud-z-20 ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-8 xl:ud-px-10 ud-pricing-item-border"
             >
               <span class="ud-absolute ud-right-9 ud-top-9"
                 ><img src="./images/pricing/pricing-icon-02.svg" alt="icon"
@@ -1000,7 +996,7 @@
 
             <!-- Pricing item -->
             <div
-              class="animate_top ud-rounded-3xl ud-bg-dark ud-relative ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-8 xl:ud-px-10 ud-pricing-item-border"
+              class="wow fadeInUp ud-rounded-3xl ud-bg-dark ud-relative ud-z-20 ud-overflow-hidden ud-pt-12.5 ud-pb-10 ud-px-8 xl:ud-px-10 ud-pricing-item-border"
             >
               <span class="ud-absolute ud-right-9 ud-top-9"
                 ><img src="./images/pricing/pricing-icon-03.svg" alt="icon"
@@ -1101,7 +1097,7 @@
       >
         <div class="ud-max-w-[1170px] ud-mx-auto ud-px-4 sm:ud-px-8 xl:ud-px-0">
           <!-- section title -->
-          <div class="animate_top ud-mb-15 ud-text-center">
+          <div class="wow fadeInUp ud-mb-15 ud-text-center">
             <span
               class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
             >
@@ -2363,7 +2359,7 @@
 
             <!-- section title -->
             <div
-              class="animate_top ud-mb-16 ud-text-center ud-relative ud-z-999"
+              class="wow fadeInUp ud-mb-16 ud-text-center ud-relative ud-z-999"
             >
               <span
                 class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
@@ -2535,7 +2531,7 @@
       <section class="ud-py-20 lg:ud-py-25">
         <div class="ud-max-w-[1170px] ud-mx-auto ud-px-4 sm:ud-px-8 xl:ud-px-0">
           <!-- section title -->
-          <div class="animate_top ud-mb-16 ud-text-center">
+          <div class="wow fadeInUp ud-mb-16 ud-text-center">
             <span
               class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
             >
@@ -2631,7 +2627,7 @@
             class="ud-grid ud-grid-cols-1 sm:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-7.5"
           >
             <!-- blog item -->
-            <div class="animate_top ud-group">
+            <div class="wow fadeInUp ud-group">
               <div class="ud-mb-6 ud-overflow-hidden ud-rounded-xl">
                 <img
                   src="./images/blog/blog-01.png"
@@ -2718,7 +2714,7 @@
             </div>
 
             <!-- blog item -->
-            <div class="animate_top ud-group">
+            <div class="wow fadeInUp ud-group">
               <div class="ud-mb-6 ud-overflow-hidden ud-rounded-xl">
                 <img
                   src="./images/blog/blog-02.png"
@@ -2805,7 +2801,7 @@
             </div>
 
             <!-- blog item -->
-            <div class="animate_top ud-group">
+            <div class="wow fadeInUp ud-group">
               <div class="ud-mb-6 ud-overflow-hidden ud-rounded-xl">
                 <img
                   src="./images/blog/blog-03.png"
@@ -2923,7 +2919,7 @@
               <div class="stars2"></div>
             </div>
 
-            <div class="animate_top ud-text-center">
+            <div class="wow fadeInUp ud-text-center">
               <span
                 class="ud-hero-subtitle-gradient ud-relative ud-mb-4 ud-font-medium ud-text-sm ud-inline-flex ud-items-center ud-gap-2 ud-py-2 ud-px-4.5 ud-rounded-full"
               >

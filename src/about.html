@@ -9,10 +9,6 @@
 </head>
 
 <body x-data="{ page: 'about', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }">
-  <!-- ===== Preloader Start ===== -->
-  <include src="./partials/preloader.html"></include>
-  <!-- ===== Preloader End ===== -->
-
   <!-- ===== Header Start ===== -->
   <include src="./partials/header.html" />
   <!-- ===== Header End ===== -->
@@ -52,7 +48,7 @@
         <div class="absolute bottom-0 left-0 w-full h-[1px] about-divider-gradient"></div>
 
         <div class="flex gap-11 flex-wrap justify-between">
-          <div class="animate_left max-w-[570px] w-full">
+          <div class="wow fadeInLeft max-w-[570px] w-full">
             <span class="hero-subtitle-text font-semibold block mb-5">About Our App</span>
 
             <h2 class="text-white mb-5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
@@ -69,7 +65,7 @@
             </a>
           </div>
 
-          <div class="animate_right hidden xl:block">
+          <div class="wow fadeInRight hidden xl:block">
             <img src="./images/about/about.svg" alt="about" />
           </div>
         </div>
@@ -81,7 +77,7 @@
     <section class="overflow-hidden py-17.5 lg:py-22.5 xl:py-27.5">
       <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- Section Title -->
-        <div class="animate_top text-center">
+        <div class="wow fadeInUp text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -294,7 +290,7 @@
     <section class="overflow-hidden py-17.5 lg:py-22.5 xl:py-27.5">
       <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- section title -->
-        <div class="animate_top mb-17.5 text-center">
+        <div class="wow fadeInUp mb-17.5 text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,7 +348,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 lg:gap-17.5">
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-01.png" alt="team" />
@@ -406,7 +402,7 @@
           </div>
 
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-02.png" alt="team" />
@@ -460,7 +456,7 @@
           </div>
 
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-03.png" alt="team" />
@@ -514,7 +510,7 @@
           </div>
 
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-04.png" alt="team" />
@@ -568,7 +564,7 @@
           </div>
 
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-05.png" alt="team" />
@@ -622,7 +618,7 @@
           </div>
 
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-06.png" alt="team" />
@@ -676,7 +672,7 @@
           </div>
 
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-07.png" alt="team" />
@@ -730,7 +726,7 @@
           </div>
 
           <!-- team item -->
-          <div class="animate_top group text-center">
+          <div class="wow fadeInUp group text-center">
             <div
               class="team-img-gradient group-hover:before:gradient-3 max-w-50 mx-auto w-full h-50 rounded-full relative mb-7.5">
               <img src="./images/team/team-08.png" alt="team" />
@@ -791,7 +787,7 @@
     <section x-data="{ 'showContent': false, 'scrollContent': false, }" class="relative z-20 overflow-hidden pb-20">
       <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- section title -->
-        <div class="animate_top mb-15 text-center">
+        <div class="wow fadeInUp mb-15 text-center">
           <span
             class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1764,7 +1760,7 @@
             <div class="stars2"></div>
           </div>
 
-          <div class="animate_top text-center">
+          <div class="wow fadeInUp text-center">
             <span
               class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
               <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
