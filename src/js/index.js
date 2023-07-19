@@ -20,7 +20,6 @@ window.Alpine = Alpine
 Alpine.start()
 
 window.wow = new WOW.WOW({
-  live: false,
   mobile: false,
 })
 
