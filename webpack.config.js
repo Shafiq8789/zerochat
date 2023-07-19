@@ -67,7 +67,11 @@ module.exports = {
               postcssOptions: {
                 plugins: [
                   require('autoprefixer')({
-                    overrideBrowserslist: ['last 2 versions'],
+                    overrideBrowserslist: [
+                      'last 2 versions',
+                      'safari >= 12',
+                      'ie >= 11',
+                    ],
                   }),
                 ],
               },

@@ -13,7 +13,6 @@ import WOW from 'wowjs'
 import Swiper, { Autoplay } from 'swiper'
 
 // import fslightbox
-import fslightbox from 'fslightbox'
 
 Alpine.plugin(persist)
 window.Alpine = Alpine
@@ -22,6 +21,7 @@ Alpine.start()
 
 window.wow = new WOW.WOW({
   live: false,
+  mobile: false,
 })
 
 window.wow.init({

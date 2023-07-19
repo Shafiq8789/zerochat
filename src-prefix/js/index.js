@@ -22,6 +22,7 @@ Alpine.start();
 
 window.wow = new WOW.WOW({
   live: false,
+  mobile: false,
 })
 
 window.wow.init({

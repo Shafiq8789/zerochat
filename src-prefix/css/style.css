@@ -311,14 +311,8 @@
   }
   .ud-pricing-button-gradient:before {
     @apply ud-gradient-border ud-gradient-4 hover:ud-gradient-3;
-    /* background: linear-gradient(
-      0.02deg,
-      #e59cff 0.01%,
-      #ba9cff 50.01%,
-      #9cb2ff 100%
-    ); */
   }
-
+ 
   .ud-user-border-gradient:before {
     @apply ud-gradient-border -ud-z-1;
     background: linear-gradient(
