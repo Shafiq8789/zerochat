@@ -41,14 +41,14 @@ const scrollActive = () => {
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
         .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.add('!text-white')
+        .classList.add('text-white!')
       document
         .querySelector('.nav__menu a[href*=' + sectionId + ']')
         .classList.add('nav-gradient')
     } else {
       document
         .querySelector('.nav__menu a[href*=' + sectionId + ']')
-        .classList.remove('!text-white')
+        .classList.remove('text-white!')
       document
         .querySelector('.nav__menu a[href*=' + sectionId + ']')
         .classList.remove('nav-gradient')
