@@ -1,8 +1,10 @@
+
+
 <header class="fixed left-0 top-0 w-full z-9999 py-7 lg:py-0"
   :class="{ 'bg-dark/70 backdrop-blur-lg shadow-sm py-4! lg:py-0! transition duration-100 before:absolute before:w-full before:h-[1px] before:bottom-0 before:left-0 before:features-row-border' : stickyMenu }"
   @scroll.window="stickyMenu = (window.scrollY > 0) ? true : false">
   <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 lg:flex items-center justify-between relative">
-    <div class="w-full lg:w-1/4 flex items-center justify-between">
+    <div class=" s lg:w-1/4 flex items-center justify-between">
       <a href="index.html">
         <img src="./images/logo/logo.svg" alt="Logo" />
       </a>
@@ -41,82 +43,46 @@
           <li class="nav__menu lg:py-7" :class="{ 'lg:py-4!' : stickyMenu }">
             <a href="/#home"
               class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient"
-              :class="{'text-white! nav-gradient' :page === 'home'}">Home</a>
+              :class="{'text-white! nav-gradient' :page === 'home'}">Inicio</a>
           </li>
           <li class="nav__menu lg:py-7" :class="{ 'lg:py-4!' : stickyMenu }">
             <a href="/#features"
-              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">Features</a>
+              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">características</a>
           </li>
           <li class="nav__menu lg:py-7" :class="{ 'lg:py-4!' : stickyMenu }">
             <a href="/#pricing"
-              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">Pricing</a>
+              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">Fijación de precios</a>
           </li>
-          <li class="group relative lg:py-7" :class="{ 'lg:py-4!' : stickyMenu }" x-data="{ dropdown: false }">
-            <a href="#"
-              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient flex items-center justify-between gap-3"
-              @click.prevent="dropdown = !dropdown"
-              :class="{ 'text-white! nav-gradient': page === 'about' || page === 'pricing' || page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }">
-              Pages
-
-              <svg class="fill-current w-3 h-3 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-              </svg>
-            </a>
-
-            <!-- Dropdown Start -->
-            <ul class="dropdown" :class="{ 'flex': dropdown }">
-              <li>
-                <a href="about.html"
-                  class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                  :class="{ 'text-white! bg-white/5': page === 'about' }">About Us</a>
-              </li>
-              <li>
-                <a href="pricing.html"
-                  class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                  :class="{ 'text-white! bg-white/5': page === 'pricing' }">Pricing Table</a>
-              </li>
-              <li>
-                <a href="blog-grid.html"
-                  class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                  :class="{ 'text-white! bg-white/5': page === 'blog-grid' }">Blog Grid</a>
-              </li>
-              <li>
-                <a href="blog-single.html"
-                  class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                  :class="{ 'text-white! bg-white/5': page === 'blog-single' }">Blog Single</a>
-              </li>
-              <li>
-                <a href="signin.html"
-                  class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                  :class="{ 'text-white! bg-white/5': page === 'signin' }">Sign In</a>
-              </li>
-              <li>
-                <a href="signup.html"
-                  class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                  :class="{ 'text-white! bg-white/5': page === 'signup' }">Sign Up</a>
-              </li>
-              <li>
-                <a href="404.html"
-                  class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                  :class="{ 'text-white! bg-white/5': page === '404' }">Error Page</a>
-              </li>
-            </ul>
-            <!-- Dropdown End -->
-          </li>
+          
           <li class="nav__menu lg:py-7" :class="{ 'lg:py-4!' : stickyMenu }">
             <a href="/#support"
-              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">Support</a>
+              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">	Soporte</a>
           </li>
+          
         </ul>
       </nav>
+<!-- Language Flags -->
+<!-- <div class="flex items-center gap-2"> -->
+  <!-- Spanish Flag -->
+  <!-- <img 
+    src="https://flagcdn.com/es.svg" 
+    alt="Español" 
+    class="w-5 h-5 cursor-pointer hover:scale-110 transition" 
+    onclick="translateTo('es')" /> -->
 
+  <!-- English Flag -->
+  <!-- <img 
+    src="https://flagcdn.com/gb.svg" 
+    alt="English" 
+    class="w-5 h-5 cursor-pointer hover:scale-110 transition" 
+    onclick="translateTo('en')" />
+</div> --> <div id="google_translate_element"></div>
       <div class="flex items-center gap-6 mt-7 lg:mt-0">
-        <a href="signin.html" class="text-white text-sm hover:text-opacity-75">Sign in</a>
+        <a href="https://app.zerochats.com/es/sign-up"  class="text-white text-sm hover:text-opacity-75">Iniciar sesión</a>
 
-        <a href="signup.html"
+        <a href="https://app.zerochats.com/es/sign-up" 
           class="button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none">
-          Sign up
+          Registrarse
 
           <svg class="mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -124,7 +90,47 @@
               fill="white" />
           </svg>
         </a>
+        
       </div>
     </div>
   </div>
 </header>
+
+<style>
+  
+.s img {
+    width: 29% !important;
+}
+@media (max-width: 768px) {
+   ul.flex.lg\:items-center.flex-col.lg\:flex-row.gap-5.lg\:gap-2 {
+    
+    left: unset !important;
+}
+.s img {
+    width: 17% !important;
+}
+}
+
+
+<style>
+  .goog-logo-link,
+  .goog-te-gadget span {
+    display: none !important;
+  }
+
+  #google_translate_element {
+    color: white; /* or your theme color */
+  }div#\:0\.targetLanguage img {
+    display: none !important;
+}a.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    font-family: 'Plus Jakarta Sans' !important;
+    color: white;
+}div#\:0\.targetLanguage {
+    background: transparent;
+    border-radius: 13px;
+    padding: 6px 8px;
+    box-shadow: 1px 0px 8px 0px #118dfe !important;
+}
+</style>
+
+</style>

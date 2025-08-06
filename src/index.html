@@ -1,2656 +1,1476 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Tool - Tailwind CSS Template for AI Tools</title>
-  </head>
 
-  <body
-    x-data="{ page: 'home', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
-  >
-    <!-- ===== Header Start ===== -->
-    <include src="./partials/header.html" />
-    <!-- ===== Header End ===== -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usa ZeroChats </title>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <main>
-      <!-- ===== Hero Section Start ===== -->
-      <section
-        id="home"
-        class="relative z-10 overflow-hidden pt-35 md:pt-40 xl:pt-45"
-      >
-        <!-- Hero Bg Shapes -->
-        <div class="mx-auto max-w-7xl">
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+ 
+ 
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es', // Original page is in Spanish
+      includedLanguages: 'es,en', // Force both languages in dropdown
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+</head>
+
+<body x-data="{ page: 'home', 'loaded': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }">
+  <!-- ===== Header Start ===== -->
+  <include src="./partials/header.html" />
+  <!-- ===== Header End ===== -->
+
+  <main>
+    <!-- ===== Hero Section Start ===== -->
+    <section id="home" class="relative z-10 overflow-hidden pt-35 md:pt-40 xl:pt-45">
+      <!-- Hero Bg Shapes -->
+      <div class="mx-auto max-w-7xl">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -mx-28">
           <div
-            class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -mx-28"
-          >
-            <div
-              class="absolute -z-1 -top-[128%] sm:-top-[107%] xl:-top-[73%] left-1/2 -translate-x-1/2 -u-z-10 hero-circle-gradient w-full h-[1282px] rounded-full max-w-[1282px]"
-            ></div>
-            <div
-              class="absolute -z-1 -top-[112%] sm:-top-[93%] xl:-top-[62%] left-1/2 -translate-x-1/2 -u-z-10 hero-circle-gradient w-full h-[1046px] rounded-full max-w-[1046px]"
-            ></div>
-            <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
-              <img
-                src="./images/blur/blur-02.svg"
-                alt="blur-sm"
-                class="max-w-none"
-              />
-            </div>
-            <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
-              <img
-                src="./images/blur/blur-01.svg"
-                alt="blur-sm"
-                class="max-w-none"
-              />
-            </div>
+            class="absolute -z-1 -top-[128%] sm:-top-[107%] xl:-top-[73%] left-1/2 -translate-x-1/2 -u-z-10 hero-circle-gradient w-full h-[1282px] rounded-full max-w-[1282px]">
+          </div>
+          <div
+            class="absolute -z-1 -top-[112%] sm:-top-[93%] xl:-top-[62%] left-1/2 -translate-x-1/2 -u-z-10 hero-circle-gradient w-full h-[1046px] rounded-full max-w-[1046px]">
+          </div>
+          <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
+            <img src="./images/blur/blur-02.svg" alt="blur-sm" class="max-w-none" />
+          </div>
+          <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
+            <img src="./images/blur/blur-01.svg" alt="blur-sm" class="max-w-none" />
           </div>
         </div>
+      </div>
 
-        <!-- Hero Content -->
-        <div class="mx-auto max-w-[900px] px-4 sm:px-8 xl:px-0 relative z-1">
-          <div class="text-center">
-            <a
-              href="/#"
-              class="hero-subtitle-gradient hover:hero-subtitle-hover relative mb-5 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
 
-              <span class="hero-subtitle-text">
-                Your Ultimate Creative Companion!
-              </span>
-            </a>
-            <h1
-              class="mb-6 text-3xl font-extrabold text-white sm:text-5xl xl:text-heading-1"
-            >
-              Elevate Your Content with Our AI-Powered Writing Tool
-            </h1>
-            <p class="max-w-[500px] mx-auto mb-9 font-medium md:text-lg">
-              Highly customizable Tailwind CSS template for AI - Tool, Startup,
-              Software, App and Product Sites. Comes with everything you need -
-              pages, features, sections, components and more that you can easily
-              customize.
-            </p>
+      <!-- Hero Content -->
+      <div class="mx-auto max-w-[900px] px-4 sm:px-8 xl:px-0 relative z-1">
+        <div class="text-center">
+          <a href="/#"
+            class="hero-subtitle-gradient hover:hero-subtitle-hover relative mb-5 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
+            <img src="./images/hero/icon-title.svg" alt="icon" />
 
-            <a
-              href="#"
-              class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80"
-            >
-              Start Your Free Trial
-            </a>
-          </div>
-        </div>
-
-        <div class="mt-17" data-wow-delay="0.1s">
-          <img class="mx-auto" src="./images/hero/hero.svg" alt="hero" />
-        </div>
-      </section>
-      <!-- ===== Hero Section End ===== -->
-
-      <!-- ===== features grid Section Start ===== -->
-      <section
-        id="features"
-        class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17"
-      >
-        <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- Section Title -->
-          <div class="text-center wow fadeInUp">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Some of Main Features </span>
+            <span class="hero-subtitle-text">
+              Usa ZeroChats
             </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              Key Features of Our Tool
-            </h2>
-            <p class="max-w-[714px] mx-auto mb-5 font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
-            </p>
-          </div>
+          </a>
+          <h1 class="mb-6 text-[16px] font-extrabold text-white sm:text-5xl xl:text-heading-1">
+            ¿Quieres aumentar tus ventas desde Instagram?
+          </h1>
 
-          <div class="relative">
-            <div
-              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 left-1/2 -translate-y-1/2 lg:-translate-x-1/3 lg:left-1/4 hidden lg:block"
-            ></div>
-            <div
-              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 right-1/2 -translate-y-1/2 lg:right-[8.3%] hidden lg:block"
-            ></div>
-
-            <!--=== Features Row ===-->
-            <div class="flex flex-wrap justify-center">
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="./images/features/icon-01.svg" alt="icon" />
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Intelligent Writing Assistance
-                  </h4>
-                  <p class="font-medium">
-                    Our AI writing tool analyzes your content, suggests
-                    improvements,
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="./images/features/icon-02.svg" alt="icon" />
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Grammar and Spell Check
-                  </h4>
-                  <p class="font-medium">
-                    Say goodbye to embarrassing typos and grammar mistakes
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="./images/features/icon-03.svg" alt="icon" />
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Plagiarism Detection
-                  </h4>
-                  <p class="font-medium">
-                    Originality is key, and our AI writing tool helps you
-                    maintain it
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="features-row-border w-full h-[1px]"></div>
-
-            <!--=== Features Row ===-->
-            <div class="flex flex-wrap justify-center">
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="./images/features/icon-04.svg" alt="icon" />
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Voice to Text Conversion
-                  </h4>
-                  <p class="font-medium">
-                    Transform your spoken words into written text easily &
-                    effortlessly
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="./images/features/icon-05.svg" alt="icon" />
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Style and Tone Adaptation
-                  </h4>
-                  <p class="font-medium">
-                    Whether you need a professional, or positive tone it has
-                    everyone
-                  </p>
-                </div>
-              </div>
-
-              <!-- Features Item -->
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="./images/features/icon-06.svg" alt="icon" />
-                  </span>
-                  <h4 class="mb-4 text-lg font-semibold text-white">
-                    Content Generation
-                  </h4>
-                  <p class="font-medium">
-                    Need inspiration or assistance with generating content?
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <a href="#"
+            class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80">
+            Pruébalo Gratis Ahora
+          </a>
         </div>
-      </section>
-      <!-- ===== features grid Section End ===== -->
+      </div>
 
-      <!-- ===== features list Section Start ===== -->
-      <section class="pt-12.5">
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div class="grid sm:grid-cols-12 gap-7.5" data-highlighter>
-            <!-- features item -->
-            <div class="sm:col-span-12">
-              <div class="relative rounded-3xl features-box-border">
-                <div
-                  class="relative p-10 overflow-hidden rounded-3xl xl:p-15 box-hover"
-                >
-                  <div class="relative z-20 flex items-center justify-between">
-                    <div class="max-w-[477px] w-full">
-                      <span
-                        class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-                      >
-                        <img src="./images/hero/icon-title.svg" alt="icon" />
+      <div class="mt-17 mmg">
+        <img src="images/image__4_-removebg-preview.png" alt="">
+      </div>
+    </section>
+    <!-- ===== Hero Section End ===== -->
 
-                        <span class="hero-subtitle-text">
-                          AI-Powered Writing Tool
-                        </span>
-                      </span>
-                      <h3 class="text-white mb-4.5 font-bold text-heading-4">
-                        Intelligent Writing Assistance
-                      </h3>
-                      <p class="mb-10 font-medium">
-                        Our AI writing tool is designed to empower you with
-                        exceptional writing capabilities, making the writing
-                        process...
-                      </p>
-                      <a
-                        href="#"
-                        class="features-button-gradient relative inline-flex items-center gap-1.5 rounded-full py-3 px-6 text-white text-sm ease-in duration-300 hover:shadow-button"
-                      >
-                        Learn more
-                        <svg
-                          width="14"
-                          height="12"
-                          viewBox="0 0 14 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M13.3992 5.60002L8.22422 0.350024C7.99922 0.125024 7.64922 0.125024 7.42422 0.350024C7.19922 0.575024 7.19922 0.925025 7.42422 1.15002L11.6242 5.42503H0.999219C0.699219 5.42503 0.449219 5.67502 0.449219 5.97502C0.449219 6.27502 0.699219 6.55003 0.999219 6.55003H11.6742L7.42422 10.875C7.19922 11.1 7.19922 11.45 7.42422 11.675C7.52422 11.775 7.67422 11.825 7.82422 11.825C7.97422 11.825 8.12422 11.775 8.22422 11.65L13.3992 6.40002C13.6242 6.17502 13.6242 5.82502 13.3992 5.60002Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
+
+    <!-- ====== User Section End -->
+
+
+    <!-- ===== features grid Section Start ===== -->
+    <section id="features" class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17 ">
+      <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
+        <!-- Section Title -->
+        <div class="text-center wow fadeInUp">
+          <span
+            class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
+            <img src="./images/hero/icon-title.svg" alt="icon" />
+
+            <span class="hero-subtitle-text text-white"> Demo en Directo </span>
+          </span>
+          <h3 class="text-white mb-4.5 font-bold text-heading-4">
+            Prueba el Asistente en Acción
+          </h3>
+          <p class="max-w-[714px] mx-auto mb-5 font-medium">
+            Experimenta cómo ZeroChats transforma una conversación <br>en una oportunidad de venta.
+          </p>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+    <section class="  py-12">
+      <div class="max-w-2xl mx-auto px-4">
+
+
+        <div id="chatWindow"
+          class="bg-gray-900 rounded-lg p-4 h-96 overflow-y-auto space-y-4 mb-4  border button-border-gradient ">
+          <!-- Messages will appear here -->
+        </div>
+
+        <div class="flex gap-2">
+          <input id="chatInput" type="text" placeholder="Escribe tu mensaje..."
+            class="flex-1 p-3 rounded bg-gray-800 text-white focus:outline-none button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none" />
+          <button onclick="sendMessage()"
+            class="bg-[#118dfe] hover:bg-indigo-700 text-white px-4 rounded button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none">Enviar</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      const chatWindow = document.getElementById("chatWindow");
+      const chatInput = document.getElementById("chatInput");
+
+      const messages = [];
+
+      function renderMessage(role, text) {
+        const msg = document.createElement("div");
+        msg.className = "p-3 rounded max-w-[75%] " + (role === 0 ? "bg-indigo-700 text-white self-start" : "bg-gray-700 text-white self-end ml-auto");
+        msg.textContent = text;
+        chatWindow.appendChild(msg);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function sendMessage() {
+        const userMessage = chatInput.value.trim();
+        if (!userMessage) return;
+
+        // Push user message
+        messages.push({ text: userMessage, role: 1 }); // 1 = LEAD
+        renderMessage(1, userMessage);
+        chatInput.value = "";
+
+        // Send to API
+        fetch("https://app.zerochats.com/api/demo", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(messages)
+        })
+          .then(res => res.json())
+          .then(data => {
+            if (data.message) {
+              messages.push({ text: data.message, role: 0 }); // 0 = BUSINESS
+              renderMessage(0, data.message);
+            }
+          })
+          .catch(() => {
+            renderMessage(0, "❌ Error al conectar con el bot.");
+          });
+      }
+    </script>
+    <style>
+  #google_translate_element span[aria-hidden="true"] {
+    display: none !important;
+  }a.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    border: none !important;
+}body.VIpgJd-ZVi9od-ORHb {
+    display: none !important;
+    /* margin-bottom: -38px; */
+}
+</style>
+
+    <style>
+      
+      .shadow-button {
+    
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+}.accent-purple-500 {
+    accent-color: #118dfe !important;
+}a.button-border-gradient.relative.rounded-lg.text-white.text-sm.flex.items-center.gap-1\.5.py-3\.5.px-7.shadow-button.hover\:button-gradient-hover.hover\:shadow-none {
+    background: #118dfe !important;
+}a.mt-11.flex.items-center.justify-center.gap-1\.5.font-medium.text-white.p-3.rounded-lg.transition-all.ease-in-out.duration-300.relative.pricing-button-gradient.hover\:shadow-button {
+    background: #118dfe !important;
+}a.mt-11.flex.items-center.justify-center.gap-1\.5.font-medium.text-white.p-3.rounded-lg.transition-all.ease-in-out.duration-300.relative.pricing-button-gradient.hover\:shadow-button {
+    background: #118dfe !important;
+}.pricing-gradient-text {
+    background: -webkit-linear-gradient(0deg, #118dfe 0.01%, #118dfe 50.01%, #118dfe 100%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}span.hero-subtitle-gradient.relative.mb-4.font-medium.text-sm.inline-flex.items-center.gap-2.py-2.px-4\.5.rounded-full {
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+}.relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
+    border: 1px solid;
+    background: #030014;
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+}.wow.fadeInUp.rounded-3xl.bg-dark.relative.z-20.overflow-hidden.pt-12\.5.pb-10.px-8.xl\:px-10.pricing-item-border {
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+    margin-bottom: 13px;
+}.cta-box-gradient.bg-dark.rounded-\[30px\].relative.overflow-hidden.px-4.py-20.lg\:py-25.z-999 {
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+}.rounded-3xl.p-10.xl\:p-14.transition-all.duration-300.hover\:cursor-pointer.hover\:bg-gradient-to-r.hover\:from-\[\#482a7c\]\/40.hover\:to-\[\#1a152e\]\/40.bg-gradient-to-br.from-\[\#1a152e\].to-\[\#0e0b1f\].text-white.shadow-lg.relative.overflow-hidden {
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+}.grid.sm\:grid-cols-12.gap-7\.5 {
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+    border-radius: 28px;
+}.user-border-gradient.relative.overflow-hidden.px-8.py-9.rounded-\[19px\].b11.border.button-border-gradient {
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+}
+      div#chatWindow {
+        background: radial-gradient(180px circle at var(--mouse-x) var(--mouse-y), #030014, transparent) !important;
+        border: 1px solid;
+      }
+&::after {
+    content: var(--tw-content);
+    background: radial-gradient(180px circle at var(--mouse-x) var(--mouse-y)
+, #118DFE, transparent) !important;
+}
+      .mmg {
+        display: flex;
+        justify-content: center;
+      }
+
+      .bb2 {
+        display: flex;
+        gap: 27px;
+        
+      }
+.grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.gap-7\.5 {
+    position: relative;
+    /* top: 16px; */
+    background: #030014;
+}
+      .relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
+        border: 1px solid;
+      }
+    </style>
+    <!-- ====== User Section Start -->
+    <section x-data="{ 'showContent': false, 'scrollContent': false, }"
+      class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 2xl:pt-45 pb-20">
+      <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+        <!-- section title -->
+        <div class="text-center wow fadeInUp mb-15">
+
+          <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+            Lo que dicen nuestros Clientes de ZeroChats
+          </h2>
+          <p class="max-w-[714px] mx-auto font-medium">
+            Mira cómo nuestros usuarios están cerrando más ventas en menos tiempo.
+          </p>
+
+
+
+
+
+
+          <style>
+            .b11 {
+              width: 100%;
+            }
+
+            ul.space-y-3.font-medium li {
+              font-size: 14px;
+            }
+
+            h3.text-white.mb-4\.5.font-bold.text-heading-4 {
+              font-size: 30px;
+            }
+
+            h2.text-white.mb-4\.5.text-2xl.font-extrabold.sm\:text-4xl.xl\:text-heading-2 {
+              font-size: 30px;
+            }
+
+            .user-border-gradient.relative.overflow-hidden.px-8.py-9.rounded-\[19px\].b11.border.button-border-gradient {
+              height: 273px !important;
+            }
+
+            h5.text-sm.font-medium.text-white {
+              text-align: start !important;
+              font-size: 22px;
+            }
+
+            img.w-12.h-12.rounded-full {
+              width: 100px;
+              height: 100px;
+            }
+
+            .flex.items-center.gap-4\.5.mb-6 {
+              margin: 0;
+            }
+
+            .b11 p {
+              text-align: start !important;
+            }
+
+            span.max-w-\[128px\].w-full.h-\[37px\].block.inset-0.pointer-events-none.absolute.z-10.left-0.top-1\/2.-translate-y-1\/2.bg-linear-to-l.from-dark\/0.to-dark\/100 {
+              display: none !important;
+            }
+
+            span.max-w-\[128px\].w-full.h-\[37px\].block.inset-0.pointer-events-none.absolute.z-10.left-auto.top-1\/2.-translate-y-1\/2.bg-linear-to-r.from-dark\/0.to-dark\/100 {
+              display: none !important;
+            }
+          </style>
+
+
+
+          <!-- ====== Clients Section Start -->
+          <section class="py-19">
+            <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
+              <div class="relative z-10 overflow-hidden">
+                <span
+                  class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-0 top-1/2 -translate-y-1/2 bg-linear-to-l from-dark/0 to-dark/100"></span>
+                <span
+                  class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-auto top-1/2 -translate-y-1/2 bg-linear-to-r from-dark/0 to-dark/100"></span>
+                <div class="swiper clients-carousel">
+                  <div class="swiper-wrapper items-center select-none ease-linear!">
+                    <div class="swiper-slide  ">
+                      <div
+                        class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px] b11 w-[1300px] border button-border-gradient">
+                        <div class="flex items-center gap-4.5 mb-6">
+                          <img src="images/1.png" alt="user" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <h5 class="text-sm font-medium text-white"> Sergio Fuentes</h5>
+                            <p class="text-sm font-medium">Agencia de Marketing</p>
+                          </div>
+                        </div>
+                        <p>Esta muy bien, me ha triplicado mi porcentaje de conversión, con muchas ganas de que traigan
+                          actualizaciones para que sigan haciendo crecer las ventas de mis clientes</p>
+                      </div>
+
+                    </div>
+                    <div class="swiper-slide  b11  ">
+                      <div
+                        class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px] b11 border button-border-gradient ">
+                        <div class="flex items-center gap-4.5 mb-6">
+                          <img src="images/2.png" alt="user" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <h5 class="text-sm font-medium text-white">Al Con Cayetano</h5>
+                            <p class="text-sm font-medium">Marca Personal</p>
+                          </div>
+                        </div>
+                        <p>He probado multitud de plataformas tipo ‘Manychat’ y la verdad es que me ha sorprendido para
+                          bien como guía durante todo el proceso de venta hasta conseguir el cierre de una forma super
+                          natural y manteniendo los timings para que no parezca un robot.</p>
+                      </div>
+
+                    </div>
+                    <div class="swiper-slide   b11  ">
+                      <div
+                        class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px] b11 border button-border-gradient ">
+                        <div class="flex items-center gap-4.5 mb-6">
+                          <img src="images/3.png" alt="user" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <h5 class="text-sm font-medium text-white">Guillem y Joan</h5>
+                            <p class="text-sm font-medium">Agencia de Marketing</p>
+                          </div>
+                        </div>
+                        <p>Bro esto es muy top, ahora puedo prospectar y la IA se encarga de seguir la conversación,
+                          además ya no tengo que estar pendiente a los DM… es una locura lo bien que responde y cómo se
+                          adapta a cada lead.</p>
+                      </div>
+
+                    </div>
+                    <div class="swiper-slide   b11 ">
+                      <div
+                        class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px] b11 border button-border-gradient ">
+                        <div class="flex items-center gap-4.5 mb-6">
+                          <img src="images/4.png" alt="user" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <h5 class="text-sm font-medium text-white">Crece Con Jonás</h5>
+                            <p class="text-sm font-medium">Marca Personal e Infoproductos</p>
+                          </div>
+                        </div>
+                        <p>Hemos probado ya la demo y va de lujo, estamos también viendo como responde con muchas
+                          conversaciones a la vez, se lo implementará a mis clientes la verdad.</p>
+                      </div>
+
+                    </div>
+                    <div class="swiper-slide   b11   ">
+                      <div
+                        class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px] b11   border button-border-gradient">
+                        <div class="flex items-center gap-4.5 mb-6">
+                          <img src="images/5.png" alt="user" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <h5 class="text-sm font-medium text-white">Brenda Rojas</h5>
+                            <p class="text-sm font-medium">@zain</p>
+                          </div>
+                        </div>
+                        <p>Ahorita puedo centrarme en crear contenido y el Asistente Virtual se encarga de responder a
+                          mis fans, muy contenta por que me ahorra tiempo y me está haciendo facturar más.</p>
+                      </div>
+
+                    </div>
+                    <div class="swiper-slide   b11  ">
+                      <div
+                        class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px] b11 border button-border-gradient ">
+                        <div class="flex items-center gap-4.5 mb-6">
+                          <img src="images/6.png" alt="user" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <h5 class="text-sm font-medium text-white">Daniel Pueblo Wang</h5>
+                            <p class="text-sm font-medium">Infoproductor</p>
+                          </div>
+                        </div>
+                        <p>¿Qué pasa pisha? Ya lo tengo medio encaminado... me está quitando muchos dolores de cabeza a
+                          la hora de cualificar a mis leads, antes tenía que estar pendiente de los chats y la mayoría
+                          eran curiosos, ahora ya no me preocupo de esta parte de mi negocio y llevo a los leads de
+                          forma automatizada a la compra.</p>
+                      </div>
+
+                    </div>
+                    <div class="swiper-slide   b11   ">
+                      <div
+                        class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px] b11 border button-border-gradient">
+                        <div class="flex items-center gap-4.5 mb-6">
+                          <img src="images/7.png" alt="user" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <h5 class="text-sm font-medium text-white">Axel Arellano</h5>
+                            <p class="text-sm font-medium ">@zain</p>
+                          </div>
+                        </div>
+                        <p>Me ha hecho cerrar 4 clientes en menos de 1 semana, he ganado unos 550$, un golazo, habla
+                          re-bien, me gusta que tenga memoria para recordar a la gente los pagos.</p>
+                      </div>
+
                     </div>
 
-                    <div class="max-w-[428px] w-full hidden sm:block">
-                      <img src="./images/features/big-icon.svg" alt="icon" />
-                    </div>
-                  </div>
-
-                  <!-- bg shapes -->
-                  <div
-                    class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -mx-28"
-                  >
-                    <span class="absolute bottom-0 right-0"
-                      ><img src="./images/features/shape-01.png" alt="shape"
-                    /></span>
-                    <span class="absolute top-0 left-0"
-                      ><img src="./images/features/shape-02.svg" alt="shape"
-                    /></span>
-                    <span class="absolute bottom-0 -translate-x-1/2 left-1/2">
-                      <img
-                        src="./images/blur/blur-03.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute bottom-0 -translate-x-1/2 left-1/2">
-                      <img
-                        src="./images/blur/blur-04.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute bottom-0 -translate-x-1/2 left-1/2">
-                      <img
-                        src="./images/blur/blur-05.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/features/shape-03.svg"
-                        alt="shape"
-                        class="max-w-none"
-                      />
-                    </span>
                   </div>
                 </div>
               </div>
             </div>
+          </section>
+          <!-- ====== Client
 
-            <!-- features item -->
-            <div class="sm:col-span-7">
-              <div class="relative rounded-3xl features-box-border">
-                <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small"
-                >
-                  <div class="relative z-20">
+
+
+        <!-- ====== Clients Section Start -->
+
+          <script>
+            const swiper = new Swiper(".clients-carousel", {
+              slidesPerView: 2, // 👈 Show 3 slides in one line
+              spaceBetween: 0,
+              loop: true,
+              autoplay: {
+                delay: 100000,
+              },
+              breakpoints: {
+                320: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+
+              }
+            });
+          </script>
+
+
+
+
+
+
+
+
+
+
+          <!-- ===== features list Section Start ===== -->
+          <section class="pt-12.5">
+            <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+              <!-- ===== features list Section Start ===== -->
+              <section class="pt-12.5">
+                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <div class="grid sm:grid-cols-12 gap-7.5" data-highlighter>
+                    <!-- features item -->
+                    <div class="sm:col-span-12">
+                      <div class="relative rounded-3xl features-box-border">
+                        <div class="relative p-10 overflow-hidden rounded-3xl xl:p-15 box-hover">
+                          <div class="relative z-20 flex flex-col items-center text-center">
+                            <!-- Badge / subtitle -->
+                            <span
+                              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
+                              <img src="./images/hero/icon-title.svg" alt="icon" />
+                              <span class="hero-subtitle-text">
+                                ZeroChats Benefits
+                              </span>
+                            </span>
+
+                            <!-- Heading -->
+                            <h3 class="text-white mb-4.5 font-bold text-heading-4">
+                              Entiende por qué Necesitas ZeroChats
+                            </h3>
+
+                            <!-- Subtext -->
+
+
+                            <!-- Columns Start -->
+                            <div class="grid sm:grid-cols-2 gap-10 text-left text-white w-full max-w-[900px]">
+
+                              <!-- Sin ZeroChats -->
+                              <div>
+                                <h4 class="text-lg font-semibold text-red-400 mb-4">❌ Sin ZeroChats</h4>
+                                <ul class="space-y-3 font-medium">
+                                  <li>✖️ Pierdes ventas por responder tarde</li>
+                                  <li>✖️ Tienes muchas cuentas y no puedes responder bien a todas</li>
+                                  <li>✖️ Calificas leads manualmente y pierdes tiempo</li>
+                                  <li>✖️ Respondes a curiosos que no compran</li>
+                                  <li>✖️ Tu equipo comercial no da seguimiento</li>
+                                </ul>
+                              </div>
+
+                              <!-- Con ZeroChats -->
+                              <div>
+                                <h4 class="text-lg font-semibold text-green-400 mb-4">✅ Con ZeroChats</h4>
+                                <ul class="space-y-3 font-medium">
+                                  <li>✅ ZeroChats responde como un humano real</li>
+                                  <li>✅ Fácil de usar: como ChatGPT</li>
+                                  <li>✅ Trabaja 24/7 sin pausas ni vacaciones</li>
+                                  <li>✅ Integración segura y oficial con Meta</li>
+                                  <li>✅ Vende por ti como un comercial profesional</li>
+                                </ul>
+                              </div>
+
+                            </div>
+                            <!-- Columns End -->
+
+                          </div>
+
+                          <!-- bg shapes (unchanged) -->
+                           
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+
+              <!-- ===== features grid Section Start ===== -->
+              <section id="features" class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17">
+                <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <!-- Section Title -->
+                  <div class="text-center wow fadeInUp">
                     <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto"
-                    >
-                      <img src="./images/features/icon-05.svg" alt="icon" />
-                    </span>
+                      class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
+                      <img src="./images/hero/icon-title.svg" alt="icon" />
 
-                    <h3 class="text-white mb-4.5 font-semibold text-heading-6">
-                      Empowering Writing Excellence
-                    </h3>
-                    <p class="font-medium">
-                      Our AI writing tool is designed to empower you with
-                      exceptional writing capabilities, making the writing
-                      process...
+                      <span class="hero-subtitle-text"> Características</span>
+                    </span>
+                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+                      Todo lo que necesitas, en un solo lugar
+                    </h2>
+                    <p class="max-w-[714px] mx-auto mb-5 font-medium">
+                      Puedes automatizar ventas, calificar leads, y atender mensajes 24/7 — desde un solo panel.
                     </p>
                   </div>
 
-                  <!-- bg shapes -->
-                  <div
-                    class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                  >
-                    <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-06.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/blur/blur-07.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute right-[16%] top-[16%]"
-                      ><img src="./images/features/shape-04.svg" alt="shape"
-                    /></span>
-                    <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-08.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-09.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
-                    </span>
+                  <div class="relative">
+                    <div
+                      class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 left-1/2 -translate-y-1/2 lg:-translate-x-1/3 lg:left-1/4 hidden lg:block">
+                    </div>
+                    <div
+                      class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 right-1/2 -translate-y-1/2 lg:right-[8.3%] hidden lg:block">
+                    </div>
+
+                    <!--=== Features Row ===-->
+                    <div class="flex flex-wrap justify-center">
+                      <!-- Features Item -->
+                      <div class="w-full sm:w-1/2 lg:w-1/3">
+                        <div
+                          class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13">
+                          <span
+                            class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"></span>
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto">
+                            <img src="./images/features/icon-01.svg" alt="icon" />
+                          </span>
+                          <h4 class="mb-4 text-lg font-semibold text-white">
+                            IA Conversacional
+                          </h4>
+                          <p class="font-medium">
+                            Responde como humano, detecta intención y emoción.
+                          </p>
+                        </div>
+                      </div>
+
+
+
+                      <!-- Features Item -->
+                      <div class="w-full sm:w-1/2 lg:w-1/3">
+                        <div
+                          class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13">
+                          <span
+                            class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"></span>
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto">
+                            <img src="./images/features/icon-02.svg" alt="icon" />
+                          </span>
+                          <h4 class="mb-4 text-lg font-semibold text-white">
+                            Automatización de Mensajes
+                          </h4>
+                          <p class="font-medium">
+                            Contesta DMs 24/7 sin esfuerzo manual.
+
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Features Item -->
+                      <div class="w-full sm:w-1/2 lg:w-1/3">
+                        <div
+                          class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13">
+                          <span
+                            class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 features-bg -z-1"></span>
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto">
+                            <img src="./images/features/icon-03.svg" alt="icon" />
+                          </span>
+                          <h4 class="mb-4 text-lg font-semibold text-white">
+                            Calificación de Leads
+                          </h4>
+                          <p class="font-medium">
+                            Filtra y califica automáticamente.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="features-row-border w-full h-[1px]"></div>
+
+                    <!--=== Features Row ===-->
+                    <div class="flex flex-wrap justify-center">
+                      <!-- Features Item -->
+                      <div class="w-full sm:w-1/2 lg:w-1/3">
+                        <div
+                          class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13">
+                          <span
+                            class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"></span>
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto">
+                            <img src="./images/features/icon-04.svg" alt="icon" />
+                          </span>
+                          <h4 class="mb-4 text-lg font-semibold text-white">
+                            Integración con Meta
+                          </h4>
+                          <p class="font-medium">
+                            Conecta con Instagram de forma segura.
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Features Item -->
+                      <div class="w-full sm:w-1/2 lg:w-1/3">
+                        <div
+                          class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13">
+                          <span
+                            class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"></span>
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto">
+                            <img src="./images/features/icon-05.svg" alt="icon" />
+                          </span>
+                          <h4 class="mb-4 text-lg font-semibold text-white">
+                            Estadísticas en Tiempo Real
+                          </h4>
+                          <p class="font-medium">
+                            Mide conversión, interacción y tiempo de respuesta.
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Features Item -->
+                      <div class="w-full sm:w-1/2 lg:w-1/3">
+                        <div
+                          class="relative px-4 py-8 overflow-hidden text-center group sm:py-10 xl:py-15 lg:px-8 xl:px-13">
+                          <span
+                            class="absolute top-0 left-0 w-full h-full rotate-180 opacity-0 group-hover:opacity-100 features-bg -z-1"></span>
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto">
+                            <img src="./images/features/icon-06.svg" alt="icon" />
+                          </span>
+                          <h4 class="mb-4 text-lg font-semibold text-white">
+                            Todo en un solo lugar
+                          </h4>
+                          <p class="font-medium">
+                            No necesitas más herramientas — ZeroChats lo tiene todo.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </section>
 
-            <!-- features item -->
-            <div class="sm:col-span-5">
-              <div class="relative rounded-3xl features-box-border">
+
+              <!-- ====== Pricing Section Start -->
+              <section id="pricing" class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17">
+                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <!-- bg circles -->
+                  <div class="relative top-18">
+                    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -my-55">
+                      
+                    </div>
+                    <div
+                      class="max-w-[830px] w-full h-[830px] rounded-full bg-dark absolute left-1/2 -translate-x-1/2 top-0 pricing-circle">
+                    </div>
+
+                    <div
+                      class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -top-30 left-1/2 -translate-x-1/2">
+                      <div class="stars"></div>
+                      <div class="stars2"></div>
+                    </div>
+                  </div>
+
+                  <!-- grid row -->
+                  <div class="flex justify-center gap-7.5 relative -z-1">
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                  </div>
+
+                  <!-- section title -->
+                  <div class="wow fadeInUp mb-17.5 -mt-24 text-center z-10 relative">
+                     
+                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+                 Lo que están consiguiendo<br> Nuestros Clientes
+                    </h2>
+                    
+                  </div>
+
+                   <style>
+              .max-w-\[830px\].w-full.h-\[830px\].rounded-full.bg-dark.absolute.left-1\/2.-translate-x-1\/2.top-0.pricing-circle {
+    box-shadow: 8px 10px 45px 34px #118DFE;
+}
+                   </style>
+            <div class="bb2 flex items-center justify-center">
                 <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small"
-                >
+                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]">
                   <div class="relative z-20">
                     <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto"
-                    >
+                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
                       <img src="./images/features/icon-07.svg" alt="icon" />
                     </span>
 
-                    <h3 class="text-white mb-4.5 font-semibold text-heading-6">
-                      Grammar and Spell Check
+                    <h3 class="text-white mb-4.5 font-semibold   text-2xl">
+                      45.000
                     </h3>
                     <p class="font-medium">
-                      Our AI writing tool is designed to empower you with
-                      exceptional writing capabilities.
+                      Mensajes Enviados
                     </p>
                   </div>
 
                   <!-- bg shapes -->
-                  <div
-                    class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                  >
-                    <span class="absolute right-[14%] top-[17%]"
-                      ><img src="./images/features/shape-05.svg" alt="shape"
-                    /></span>
+                  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+                    <span class="absolute right-[14%] top-[17%]"><img src="./images/features/shape-05.svg"
+                        alt="shape" /></span>
                     <span class="absolute bottom-0 left-0">
-                      <img
-                        src="./images/blur/blur-10.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
+                      <img src="./images/blur/blur-10.svg" alt="blur-sm" class="max-w-none" />
                     </span>
                     <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/blur/blur-11.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
+                      <img src="./images/blur/blur-11.svg" alt="blur-sm" class="max-w-none" />
                     </span>
                     <span class="absolute top-0 right-0">
-                      <img
-                        src="./images/blur/blur-12.svg"
-                        alt="blur-sm"
-                        class="max-w-none"
-                      />
+                      <img src="./images/blur/blur-12.svg" alt="blur-sm" class="max-w-none" />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]">
+                  <div class="relative z-20">
+                    <span
+                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
+                      <img src="./images/features/icon-07.svg" alt="icon" />
+                    </span>
+
+                    <h3 class="text-white mb-4.5 font-semibold   text-2xl">
+                      700
+                    </h3>
+                    <p class="font-medium">
+                      Ventas Realizadas
+                    </p>
+                  </div>
+
+                  <!-- bg shapes -->
+                  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+                    <span class="absolute right-[14%] top-[17%]"><img src="./images/features/shape-05.svg"
+                        alt="shape" /></span>
+                    <span class="absolute bottom-0 left-0">
+                      <img src="./images/blur/blur-10.svg" alt="blur-sm" class="max-w-none" />
+                    </span>
+                    <span class="absolute top-0 right-0">
+                      <img src="./images/blur/blur-11.svg" alt="blur-sm" class="max-w-none" />
+                    </span>
+                    <span class="absolute top-0 right-0">
+                      <img src="./images/blur/blur-12.svg" alt="blur-sm" class="max-w-none" />
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]">
+                  <div class="relative z-20">
+                    <span
+                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
+                      <img src="./images/features/icon-07.svg" alt="icon" />
+                    </span>
+
+                    <h3 class="text-white mb-4.5 font-semibold   text-2xl">
+                      497
+                    </h3>
+                    <p class="font-medium">
+                      Clientes Satisfechos
+
+
+                    </p>
+                  </div>
+
+                  <!-- bg shapes -->
+                  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+                    <span class="absolute right-[14%] top-[17%]"><img src="./images/features/shape-05.svg"
+                        alt="shape" /></span>
+                    <span class="absolute bottom-0 left-0">
+                      <img src="./images/blur/blur-10.svg" alt="blur-sm" class="max-w-none" />
+                    </span>
+                    <span class="absolute top-0 right-0">
+                      <img src="./images/blur/blur-11.svg" alt="blur-sm" class="max-w-none" />
+                    </span>
+                    <span class="absolute top-0 right-0">
+                      <img src="./images/blur/blur-12.svg" alt="blur-sm" class="max-w-none" />
                     </span>
                   </div>
                 </div>
               </div>
-            </div>
+
+
+                </div>
+              </section>
+              <!-- ====== Pricing Section End -->
+
+
+
+
+
+
+
+
+
+
+ <!-- Calculator Styled Like ZeroChats -->
+  <section class="w-full max-w-6xl px-6 py-12">
+    <div class="rounded-3xl p-10 xl:p-14 transition-all duration-300 hover:cursor-pointer hover:bg-gradient-to-r hover:from-[#118DFE]/40 hover:to-[#1a152e]/40 bg-gradient-to-br from-[#1a152e] to-[#0e0b1f] text-white shadow-lg relative overflow-hidden">
+
+      <!-- Gradient blur shapes (optional) -->
+      <div class="absolute inset-0 -z-10 pointer-events-none">
+        <div class="absolute w-80 h-80 bg-purple-700 opacity-30 rounded-full blur-3xl top-0 left-0"></div>
+        <div class="absolute w-72 h-72 bg-blue-600 opacity-20 rounded-full blur-2xl bottom-0 right-0"></div>
+      </div>
+
+      <!-- Title -->
+      <div class="text-center mb-10">
+  
+        <h2 class="text-3xl font-bold mt-2">✨Calcula tu Ahorro Potencial
+</h2> <span class="text-sm font-medium text-white/70">Descubre cuánto tiempo y dinero puedes ahorrar automatizando tus conversaciones con ZeroChats.
+
+</span>
+      </div>
+
+      <!-- Calculator Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        
+        <!-- Sliders -->
+        <div class="space-y-10">
+          <div>
+            <h3 class="text-lg font-semibold text-center mb-2">Leads por mes</h3>
+            <div class="text-4xl font-bold text-center" id="leadsCount">933</div>
+            <input type="range" min="10" max="3000" value="933" id="leadsSlider" class="w-full accent-purple-500 mt-4">
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-center mb-2 text-green-400">Precio del producto</h3>
+            <div class="text-4xl font-bold text-center" id="priceValue">$10</div>
+            <input type="range" min="10" max="1000" value="10" id="priceSlider" class="w-full accent-purple-500 mt-4">
           </div>
         </div>
-      </section>
-      <!-- ===== features list Section End ===== -->
 
-      <!-- ====== Pricing Section Start -->
-      <section
-        id="pricing"
-        class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17"
-      >
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- bg circles -->
-          <div class="relative top-18">
-            <div
-              class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -my-55"
-            >
-              <div class="absolute top-0 -translate-x-1/2 left-1/2">
-                <img
-                  src="./images/blur/blur-13.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </div>
-              <div class="absolute top-0 -translate-x-1/2 left-1/2">
-                <img
-                  src="./images/blur/blur-14.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </div>
-              <div class="absolute top-0 -translate-x-1/2 left-1/2">
-                <img
-                  src="./images/blur/blur-15.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </div>
-            </div>
-            <div
-              class="max-w-[830px] w-full h-[830px] rounded-full bg-dark absolute left-1/2 -translate-x-1/2 top-0 pricing-circle"
-            ></div>
-
-            <div
-              class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -top-30 left-1/2 -translate-x-1/2"
-            >
-              <div class="stars"></div>
-              <div class="stars2"></div>
-            </div>
+        <!-- Results -->
+        <div class="space-y-6">
+          <div class="bg-[#1e1a36] p-5 rounded-xl shadow-inner">
+            <p class="text-sm text-gray-400">⏱️ Tiempo Ahorrado</p>
+            <p class="text-3xl font-bold mt-1" id="timeSaved">187h</p>
+            <p class="text-sm text-gray-400">por mes</p>
           </div>
-
-          <!-- grid row -->
-          <div class="flex justify-center gap-7.5 relative -z-1">
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-            <div
-              class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-            ></div>
-          </div>
-
-          <!-- section title -->
-          <div class="wow fadeInUp mb-17.5 -mt-24 text-center z-10 relative">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Get access </span>
-            </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              Our Pricing Plan
-            </h2>
-            <p class="max-w-[714px] mx-auto font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
-            <!-- Pricing item -->
-            <div
-              class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
-            >
-              <span class="absolute right-9 top-9"
-                ><img src="./images/pricing/pricing-icon-01.svg" alt="icon"
-              /></span>
-
-              <h3 class="font-semibold text-heading-6 text-white mb-5.5">
-                Starter
-              </h3>
-
-              <div class="flex items-center gap-3.5">
-                <h2 class="font-bold text-custom-1 pricing-gradient-text">
-                  $10
-                </h2>
-
-                <p class="font-medium">
-                  /month <br />
-                  (billed annually)
-                </p>
-              </div>
-
-              <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
-
-              <ul class="flex flex-col gap-4">
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Subscription with levels</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Advanced features included</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Shared workspaces & tools</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium"
-                    >Premium versions functionality</span
-                  >
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Customizing the outputs</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Priority customer support</span>
-                </li>
-              </ul>
-
-              <a
-                href="/#"
-                class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button"
-              >
-                Get the plan
-                <svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-
-              <p class="mt-4 text-sm text-center">No extra hidden charge</p>
-
-              <!-- bg shapes -->
-              <div
-                class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-              >
-                <span class="absolute bottom-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-16.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-                <span class="absolute top-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-17.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-              </div>
-            </div>
-
-            <!-- Pricing item -->
-            <div
-              class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
-            >
-              <span class="absolute right-9 top-9"
-                ><img src="./images/pricing/pricing-icon-02.svg" alt="icon"
-              /></span>
-
-              <h3 class="font-semibold text-heading-6 text-white mb-5.5">
-                Medium
-              </h3>
-
-              <div class="flex items-center gap-3.5">
-                <h2 class="font-bold text-custom-1 pricing-gradient-text">
-                  $59
-                </h2>
-
-                <p class="font-medium">
-                  /month <br />
-                  (billed annually)
-                </p>
-              </div>
-
-              <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
-
-              <ul class="flex flex-col gap-4">
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Subscription with levels</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Advanced features included</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Shared workspaces & tools</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium"
-                    >Premium versions functionality</span
-                  >
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Customizing the outputs</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Priority customer support</span>
-                </li>
-              </ul>
-
-              <a
-                href="/#"
-                class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button"
-              >
-                Get the plan
-                <svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-
-              <p class="mt-4 text-sm text-center">No extra hidden charge</p>
-
-              <!-- bg shapes -->
-              <div
-                class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-              >
-                <span class="absolute bottom-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-16.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-                <span class="absolute top-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-17.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-              </div>
-            </div>
-
-            <!-- Pricing item -->
-            <div
-              class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
-            >
-              <span class="absolute right-9 top-9"
-                ><img src="./images/pricing/pricing-icon-03.svg" alt="icon"
-              /></span>
-
-              <h3 class="font-semibold text-heading-6 text-white mb-5.5">
-                Business
-              </h3>
-
-              <div class="flex items-center gap-3.5">
-                <h2 class="font-bold text-custom-1 pricing-gradient-text">
-                  $289
-                </h2>
-
-                <p class="font-medium">
-                  /month <br />
-                  (billed annually)
-                </p>
-              </div>
-
-              <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
-
-              <ul class="flex flex-col gap-4">
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Subscription with levels</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Advanced features included</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Shared workspaces & tools</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium"
-                    >Premium versions functionality</span
-                  >
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Customizing the outputs</span>
-                </li>
-                <li class="flex items-center gap-5">
-                  <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                  <span class="font-medium">Priority customer support</span>
-                </li>
-              </ul>
-
-              <a
-                href="/#"
-                class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button"
-              >
-                Get the plan
-                <svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-
-              <p class="mt-4 text-sm text-center">No extra hidden charge</p>
-
-              <!-- bg shapes -->
-              <div
-                class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-              >
-                <span class="absolute bottom-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-16.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-                <span class="absolute top-0 left-0 -z-1">
-                  <img
-                    src="./images/blur/blur-17.svg"
-                    alt="blur-sm"
-                    class="max-w-none"
-                  />
-                </span>
-              </div>
-            </div>
+          <div class="bg-[#1e1a36] p-5 rounded-xl shadow-inner">
+            <p class="text-sm text-green-400">💲 Ingresos Extra</p>
+            <p class="text-3xl font-bold mt-1" id="extraIncome">$280</p>
+            <p class="text-sm text-gray-400">por mes</p>
           </div>
         </div>
-      </section>
-      <!-- ====== Pricing Section End -->
-
-      <!-- ====== User Section Start -->
-      <section
-        x-data="{ 'showContent': false, 'scrollContent': false, }"
-        class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 2xl:pt-45 pb-20"
-      >
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- section title -->
-          <div class="text-center wow fadeInUp mb-15">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Wall of love </span>
-            </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              What Our User Says
-            </h2>
-            <p class="max-w-[714px] mx-auto font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
-            </p>
-          </div>
-
-          <div
-            @scroll.window="scrollContent = (scrollY > $el.offsetTop - 500) ? true : false"
-            :class="{ 'max-h-[855px] overflow-hidden' :!showContent }"
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5"
-          >
-            <!-- user column -->
-            <div class="space-y-7.5">
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-01.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Machel Pildium
-                    </h5>
-                    <p class="text-sm font-medium">@machel</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-02.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Wilson Bator</h5>
-                    <p class="text-sm font-medium">@wilson</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-03.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Roger George</h5>
-                    <p class="text-sm font-medium">@roger</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-04.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Adison Dias</h5>
-                    <p class="text-sm font-medium">@adison</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-05.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Abram Lipshutz
-                    </h5>
-                    <p class="text-sm font-medium">@abram</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-06.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Jaylon Press</h5>
-                    <p class="text-sm font-medium">@jaylon</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-07.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Zain Franci</h5>
-                    <p class="text-sm font-medium">@zain</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-08.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Cristofer Carder
-                    </h5>
-                    <p class="text-sm font-medium">@cristofer</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-09.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Dulce Rosser</h5>
-                    <p class="text-sm font-medium">@dulce</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- user column -->
-            <div class="space-y-7.5 hidden sm:block">
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-04.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Adison Dias</h5>
-                    <p class="text-sm font-medium">@adison</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-05.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Abram Lipshutz
-                    </h5>
-                    <p class="text-sm font-medium">@abram</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-06.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Jaylon Press</h5>
-                    <p class="text-sm font-medium">@jaylon</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-07.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Zain Franci</h5>
-                    <p class="text-sm font-medium">@zain</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-08.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Cristofer Carder
-                    </h5>
-                    <p class="text-sm font-medium">@cristofer</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-09.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Dulce Rosser</h5>
-                    <p class="text-sm font-medium">@dulce</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-01.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Machel Pildium
-                    </h5>
-                    <p class="text-sm font-medium">@machel</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-02.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Wilson Bator</h5>
-                    <p class="text-sm font-medium">@wilson</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-03.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Roger George</h5>
-                    <p class="text-sm font-medium">@roger</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- user column -->
-            <div class="space-y-7.5 hidden lg:block">
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-07.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Zain Franci</h5>
-                    <p class="text-sm font-medium">@zain</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-08.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Cristofer Carder
-                    </h5>
-                    <p class="text-sm font-medium">@cristofer</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-09.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Dulce Rosser</h5>
-                    <p class="text-sm font-medium">@dulce</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-01.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Machel Pildium
-                    </h5>
-                    <p class="text-sm font-medium">@machel</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-02.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Wilson Bator</h5>
-                    <p class="text-sm font-medium">@wilson</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-03.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Roger George</h5>
-                    <p class="text-sm font-medium">@roger</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-04.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Adison Dias</h5>
-                    <p class="text-sm font-medium">@adison</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <p class="mt-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-05.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">
-                      Abram Lipshutz
-                    </h5>
-                    <p class="text-sm font-medium">@abram</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <!-- user item -->
-              <div
-                class="user-border-gradient relative overflow-hidden px-8 py-9 rounded-[19px]"
-              >
-                <div class="flex items-center gap-4.5">
-                  <div class="max-w-[48px] w-full h-12 rounded-full">
-                    <img src="./images/user/user-06.png" alt="user" />
-                  </div>
-                  <div>
-                    <h5 class="text-sm font-medium text-white">Jaylon Press</h5>
-                    <p class="text-sm font-medium">@jaylon</p>
-                  </div>
-                </div>
-
-                <div class="user-divider relative my-6 w-full h-[1px]"></div>
-
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's.
-                </p>
-
-                <!-- bg shapes -->
-                <div
-                  class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-                >
-                  <span class="absolute bottom-0 right-0 -z-1">
-                    <img
-                      src="./images/blur/blur-18.svg"
-                      alt="blur-sm"
-                      class="max-w-none"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            :class="[ showContent ? 'sticky -u-mt-52 transition-opacity duration-300 opacity-0' : '', scrollContent ? 'opacity-100!' : '' ]"
-            class="absolute inset-x-0 flex justify-center pt-32 pb-8 pointer-events-none bottom-20 bg-linear-to-t from-dark"
-          >
-            <button
-              :class="[ showContent ? 'transition-transform translate-y-4' : '', scrollContent ? 'translate-y-0' : '' ]"
-              @click="showContent = !showContent"
-              type="button"
-              class="button-border-gradient hover:button-gradient-hover relative top-20 text-sm text-white font-semibold px-4.5 py-3 rounded-lg pointer-events-auto flex mx-auto -mt-7.5 ease-in duration-300"
-            >
-              <span
-                x-text="showContent ? 'Okay, I get the point' : 'Show more...'"
-              ></span>
-            </button>
-          </div>
-        </div>
-      </section>
-      <!-- ====== User Section End -->
-
-      <!-- ====== Clients Section Start -->
-      <section class="py-19">
-        <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div class="relative z-10 overflow-hidden">
-            <span
-              class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-0 top-1/2 -translate-y-1/2 bg-linear-to-l from-dark/0 to-dark/100"
-            ></span>
-            <span
-              class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-auto top-1/2 -translate-y-1/2 bg-linear-to-r from-dark/0 to-dark/100"
-            ></span>
-            <div class="swiper clients-carousel">
-              <div class="swiper-wrapper items-center select-none ease-linear!">
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-01.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-02.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-03.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-04.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-05.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-06.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img
-                      class="mt-3"
-                      src="./images/clients/client-07.svg"
-                      alt="client"
-                    />
-                  </a>
-                </div>
-
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-01.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-02.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-03.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-04.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-05.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-06.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img
-                      class="mt-3"
-                      src="./images/clients/client-07.svg"
-                      alt="client"
-                    />
-                  </a>
-                </div>
-
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-01.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-02.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-03.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-04.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-05.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img src="./images/clients/client-06.svg" alt="client" />
-                  </a>
-                </div>
-                <div class="swiper-slide w-auto!">
-                  <a href="/#">
-                    <img
-                      class="mt-3"
-                      src="./images/clients/client-07.svg"
-                      alt="client"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Clients Section End -->
-
-      <!-- ====== Support Section Start -->
-      <section id="support" class="scroll-mt-17">
-        <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div
-            class="relative z-999 overflow-hidden rounded-[30px] bg-dark pt-25 px-4 sm:px-20 lg:px-27.5"
-          >
-            <!-- grid row -->
-            <div
-              class="flex justify-center gap-7.5 absolute left-1/2 -translate-x-1/2 -top-[16%] max-w-[690px] w-full -z-1 opacity-40"
-            >
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-12"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-7"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-3"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-2"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-5"
-              ></div>
-              <div
-                class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border bottom-8"
-              ></div>
-            </div>
-
-            <!-- stars -->
-            <div
-              class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -top-30 left-1/2 -translate-x-1/2"
-            >
-              <div class="stars"></div>
-              <div class="stars2"></div>
-            </div>
-
-            <!-- bg shapes -->
-            <div
-              class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-            >
-              <span class="absolute top-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-19.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute top-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-20.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute top-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-21.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-            </div>
-
-            <!-- section title -->
-            <div class="relative mb-16 text-center wow fadeInUp z-999">
-              <span
-                class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-              >
-                <img src="./images/hero/icon-title.svg" alt="icon" />
-
-                <span class="hero-subtitle-text"> Need Any Help? </span>
-              </span>
-              <h2
-                class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-              >
-                Contact With Us
-              </h2>
-              <p class="max-w-[714px] mx-auto font-medium">
-                Our AI writing tool is designed to empower you with exceptional
-                writing capabilities, making the writing process more efficient,
-                accurate, and enjoyable.
-              </p>
-            </div>
-
-            <!-- support form -->
-            <div
-              class="form-box-gradient relative overflow-hidden rounded-[25px] bg-dark p-6 sm:p-8 xl:p-15"
-            >
-              <form class="relative z-10">
-                <div class="flex flex-wrap -mx-4 xl:-mx-10">
-                  <div class="w-full px-4 xl:px-5 md:w-1/2">
-                    <div class="mb-9.5">
-                      <label
-                        for="name"
-                        class="text-white mb-2.5 block font-medium"
-                      >
-                        Name
-                      </label>
-                      <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        placeholder="Enter your Name"
-                        class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden"
-                      />
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const leadsSlider = document.getElementById('leadsSlider');
+    const priceSlider = document.getElementById('priceSlider');
+    const leadsCount = document.getElementById('leadsCount');
+    const priceValue = document.getElementById('priceValue');
+    const timeSaved = document.getElementById('timeSaved');
+    const extraIncome = document.getElementById('extraIncome');
+
+    function formatCurrency(value) {
+      return '$' + value.toLocaleString();
+    }
+
+    function updateValues() {
+      const leads = parseInt(leadsSlider.value);
+      const price = parseInt(priceSlider.value);
+
+      leadsCount.textContent = leads;
+      priceValue.textContent = '$' + price;
+
+      const savedHours = Math.round(leads * 0.2);
+      const monthlyIncome = Math.round(leads * price * 0.03);
+
+      timeSaved.textContent = savedHours + 'h';
+      extraIncome.textContent = formatCurrency(monthlyIncome);
+    }
+
+    leadsSlider.addEventListener('input', updateValues);
+    priceSlider.addEventListener('input', updateValues);
+
+    updateValues();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- ===== features list Section End ===== -->
+
+              <!-- ====== Pricing Section Start -->
+              <section id="pricing" class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17">
+                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <!-- bg circles -->
+                  <div class="relative top-18">
+                    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -my-55">
+                      
+                    </div>
+                    <div
+                      class="max-w-[830px] w-full h-[830px] rounded-full bg-dark absolute left-1/2 -translate-x-1/2 top-0 pricing-circle">
+                    </div>
+
+                    <div
+                      class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -top-30 left-1/2 -translate-x-1/2">
+                      <div class="stars"></div>
+                      <div class="stars2"></div>
                     </div>
                   </div>
-                  <div class="w-full px-4 xl:px-5 md:w-1/2">
-                    <div class="mb-9.5">
-                      <label
-                        for="email"
-                        class="text-white mb-2.5 block font-medium"
-                      >
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder="Enter your Email"
-                        class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden"
-                      />
+
+                  <!-- grid row -->
+                  <div class="flex justify-center gap-7.5 relative -z-1">
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
+                  </div>
+
+                  <!-- section title -->
+                  <div class="wow fadeInUp mb-17.5 -mt-24 text-center z-10 relative">
+                    <span
+                      class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
+                      <img src="./images/hero/icon-title.svg" alt="icon" />
+
+                      <span class="hero-subtitle-text"> Obtener acceso </span>
+                    </span>
+                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+                      Planes y Precios
+                    </h2>
+                    <p class="max-w-[714px] mx-auto font-medium">
+                      Elige el plan que se adapta a tu negocio.
+                    </p>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
+                    <!-- Pricing item -->
+                    <div
+                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+                      <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-01.svg"
+                          alt="icon" /></span>
+
+                      <h3 class="font-semibold text-heading-6 text-white mb-5.5">
+                        Gratis
+                      </h3>
+
+                      <div class="flex items-center gap-3.5">
+                        <h2 class="font-bold text-custom-1 pricing-gradient-text">
+                          €0
+                        </h2>
+
+                        <p class="font-medium">
+                          Para probar ZeroChats
+
+
+
+
+                        </p>
+                      </div>
+
+                      <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
+
+                      <ul class="flex flex-col gap-4">
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Prueba ZeroChats</span>
+                        </li>
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Sin compromiso</span>
+                        </li>
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium"> No necesitas tarjeta</span>
+                        </li>
+
+                      </ul>
+
+                      <a href="signup.html"
+                        class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button">
+                        Empezar Gratis
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+
+                      <p class="mt-4 text-sm text-center">Sin cargos adicionales ocultos</p>
+
+                      <!-- bg shapes -->
+                      <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+                        <span class="absolute bottom-0 left-0 -z-1">
+                          <img src="./images/blur/blur-16.svg" alt="blur-sm" class="max-w-none" />
+                        </span>
+                        <span class="absolute top-0 left-0 -z-1">
+                          <img src="./images/blur/blur-17.svg" alt="blur-sm" class="max-w-none" />
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Pricing item -->
+                    <div
+                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+                      <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-02.svg"
+                          alt="icon" /></span>
+
+                      <h3 class="font-semibold text-heading-6 text-white mb-5.5">
+                        PRO
+
+                      </h3>
+
+                      <div class="flex items-center gap-3.5">
+                        <h2 class="font-bold text-custom-1 pricing-gradient-text">
+                          €50
+                        </h2>
+
+                        <p class="font-medium">
+                          Para negocios en crecimiento
+
+
+                        </p>
+                      </div>
+
+                      <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
+
+                      <ul class="flex flex-col gap-4">
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Para freelancers o pequeñas marcas</span>
+                        </li>
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Mayor capacidad</span>
+                        </li>
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Más leads calificados</span>
+                        </li>
+
+                      </ul>
+
+                      <a href="signup.html"
+                        class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button">
+                        Elegir PRO
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+
+                      <p class="mt-4 text-sm text-center">Sin cargos adicionales ocultos</p>
+
+                      <!-- bg shapes -->
+                      <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+                        <span class="absolute bottom-0 left-0 -z-1">
+                          <img src="./images/blur/blur-16.svg" alt="blur-sm" class="max-w-none" />
+                        </span>
+                        <span class="absolute top-0 left-0 -z-1">
+                          <img src="./images/blur/blur-17.svg" alt="blur-sm" class="max-w-none" />
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Pricing item -->
+                    <div
+                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+                      <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-03.svg"
+                          alt="icon" /></span>
+
+                      <h3 class="font-semibold text-heading-6 text-white mb-5.5">
+                        Business
+                      </h3>
+
+                      <div class="flex items-center gap-3.5">
+                        <h2 class="font-bold text-custom-1 pricing-gradient-text">
+                          €2000
+                        </h2>
+
+                        <p class="font-medium">
+                          Para empresas grandes
+
+
+                        </p>
+                      </div>
+
+                      <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
+
+                      <ul class="flex flex-col gap-4">
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Para empresas grandes</span>
+                        </li>
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Automatización avanzada</span>
+                        </li>
+                        <li class="flex items-center gap-5">
+                          <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
+                          <span class="font-medium">Integración personalizada</span>
+                        </li>
+
+                      </ul>
+
+                      <a href="signup.html"
+                        class="mt-11 flex items-center justify-center gap-1.5 font-medium text-white p-3 rounded-lg transition-all ease-in-out duration-300 relative pricing-button-gradient hover:shadow-button">
+                        Contactar Ventas
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M14.8992 7.5999L9.72422 2.3499C9.49922 2.1249 9.14922 2.1249 8.92422 2.3499C8.69922 2.5749 8.69922 2.9249 8.92422 3.1499L13.1242 7.4249H2.49922C2.19922 7.4249 1.94922 7.6749 1.94922 7.9749C1.94922 8.2749 2.19922 8.5499 2.49922 8.5499H13.1742L8.92422 12.8749C8.69922 13.0999 8.69922 13.4499 8.92422 13.6749C9.02422 13.7749 9.17422 13.8249 9.32422 13.8249C9.47422 13.8249 9.62422 13.7749 9.72422 13.6499L14.8992 8.3999C15.1242 8.1749 15.1242 7.8249 14.8992 7.5999Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+
+                      <p class="mt-4 text-sm text-center">Sin cargos adicionales ocultos</p>
+
+                      <!-- bg shapes -->
+                      <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+                        <span class="absolute bottom-0 left-0 -z-1">
+                          <img src="./images/blur/blur-16.svg" alt="blur-sm" class="max-w-none" />
+                        </span>
+                        <span class="absolute top-0 left-0 -z-1">
+                          <img src="./images/blur/blur-17.svg" alt="blur-sm" class="max-w-none" />
+                        </span>
+                      </div>
                     </div>
                   </div>
-                  <div class="w-full px-4 xl:px-5">
-                    <div class="mb-10">
-                      <label
-                        for="message"
-                        class="text-white mb-2.5 block font-medium"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Type your message"
-                        rows="6"
-                        class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-5 px-6 outline-hidden"
-                      ></textarea>
+                </div>
+              </section>
+              <!-- ====== Pricing Section End -->
+
+
+              <!-- ====== Clients Section Start -->
+              <section class="py-19">
+                <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <div class="relative z-10 overflow-hidden">
+                    <span
+                      class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-0 top-1/2 -translate-y-1/2 bg-linear-to-l from-dark/0 to-dark/100"></span>
+                    <span
+                      class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-auto top-1/2 -translate-y-1/2 bg-linear-to-r from-dark/0 to-dark/100"></span>
+                    <div class="swiper clients-carousel">
+                      <div class="swiper-wrapper items-center select-none ease-linear!">
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img class="mt-3" src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img class="mt-3" src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img src="./images/clients/trust.png" alt="client" />
+                          </a>
+                        </div>
+                        <div class="swiper-slide w-auto!">
+                          <a href="/#">
+                            <img class="mt-3" src="./images/clients/t.png" alt="client" />
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="w-full px-4 xl:px-5">
-                    <div class="text-center">
-                      <a
-                        href="#"
-                        class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80"
-                      >
-                        Send Message
+                </div>
+              </section>
+              <!-- ====== Clients Section End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Style>
+                h1.mb-6.text-\[16px\].font-extrabold.text-white.sm\:text-5xl.xl\:text-heading-1 {
+                  font-size: 45px !important;
+                }
+.relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
+    border: 1px solid;
+    background: #030014;
+}.hero-button-gradient {
+   
+    background: #118DFE !important;
+}
+                .b11 {
+                  /* border: 1px; */
+                  padding: 8px 22px 22px 17px !important;
+                  width: 95%;
+
+                }
+
+                span.icon-border.relative.max-w-\[80px\].w-full.h-20.rounded-full.inline-flex.items-center.justify-center.mb-13\.5.mx-auto {
+                  margin: 0 !important;
+                  margin-bottom: 31px !important;
+                }
+
+                h3.font-semibold.text-heading-6.text-white.mb-5\.5 {
+                  text-align: start !important;
+                  font-size: 23px !important;
+                }
+              </Style>
+              <!-- support form -->
+              
+
+              <!-- ====== Support Section End -->
+
+
+              <!-- ====== CTA Section Start -->
+              <section>
+                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <div
+                    class="cta-box-gradient bg-dark rounded-[30px] relative overflow-hidden px-4 py-20 lg:py-25 z-999">
+                    <!-- bg shapes -->
+                    <span class="absolute bottom-0 left-0 -z-1"><img src="./images/cta/grid.svg" alt="grid" /></span>
+                     
+
+                    <!-- stars -->
+                    <div
+                      class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -bottom-25 left-1/2 -translate-x-1/2">
+                      <div class="stars"></div>
+                      <div class="stars2"></div>
+                    </div>
+
+                    <div class="text-center wow fadeInUp">
+                      <span
+                        class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
+                        <img src="./images/hero/icon-title.svg" alt="icon" />
+
+                        <span class="hero-subtitle-text"> Pruebe nuestra herramienta gratis </span>
+                      </span>
+                      <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+                        ¿Que estas esperando?
+                      </h2>
+                      <p class="max-w-[714px] mx-auto font-medium mb-9">
+                       Nuestra herramienta de escritura con inteligencia artificial está diseñada para brindarte capacidades de escritura excepcionales, haciendo que el proceso de escritura sea más eficiente, preciso y agradable.
+                      </p>
+
+                      <a href="#"
+                        class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80">
+                        Get Started for Free
                       </a>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Support Section End -->
+              </section>
+              <!-- ====== CTA Section End -->
 
-      <!-- ====== Blog Section Start -->
-      <section class="py-20 lg:py-25">
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <!-- section title -->
-          <div class="mb-16 text-center wow fadeInUp">
-            <span
-              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-            >
-              <img src="./images/hero/icon-title.svg" alt="icon" />
-
-              <span class="hero-subtitle-text"> Read Our Latest Blogs </span>
-            </span>
-            <h2
-              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-            >
-              Latest Blogs & News
-            </h2>
-            <p class="max-w-[714px] mx-auto font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
-            <!-- blog item -->
-            <div class="wow fadeInUp group">
-              <div class="mb-6 overflow-hidden rounded-xl">
-                <img
-                  src="./images/blog/blog-01.png"
-                  alt="image"
-                  class="w-full duration-500 ease-linear scale-100 group-hover:scale-125"
-                />
-              </div>
-
-              <div class="flex flex-wrap gap-2.5 items-center mb-4.5">
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Design
-                </span>
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Engineering
-                </span>
-              </div>
-
-              <h4>
-                <a
-                  href="blog-single.html"
-                  class="text-xl font-semibold text-white duration-300 ease-in hover:opacity-80"
-                >
-                  Revolution in Content Creation and Communication
-                </a>
-              </h4>
-              <p class="mt-4 font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna oliumosd
-                aliqua...
-              </p>
-
-              <div class="flex items-center gap-4.5 flex-wrap mt-6">
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
-                      fill=""
-                    />
-                    <path
-                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">Alex Demo</span>
-                </div>
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">25 Mar, 2025</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- blog item -->
-            <div class="wow fadeInUp group">
-              <div class="mb-6 overflow-hidden rounded-xl">
-                <img
-                  src="./images/blog/blog-02.png"
-                  alt="image"
-                  class="w-full duration-500 ease-linear scale-100 group-hover:scale-125"
-                />
-              </div>
-
-              <div class="flex flex-wrap gap-2.5 items-center mb-4.5">
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Development
-                </span>
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Security
-                </span>
-              </div>
-
-              <h4>
-                <a
-                  href="blog-single.html"
-                  class="text-xl font-semibold text-white duration-300 ease-in hover:opacity-80"
-                >
-                  How AI Writing Tools Empower Writers to Speed up there Writing
-                </a>
-              </h4>
-              <p class="mt-4 font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna oliumosd
-                aliqua...
-              </p>
-
-              <div class="flex items-center gap-4.5 flex-wrap mt-6">
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
-                      fill=""
-                    />
-                    <path
-                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">Hendary Jonson</span>
-                </div>
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">12 Feb, 2025</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- blog item -->
-            <div class="wow fadeInUp group">
-              <div class="mb-6 overflow-hidden rounded-xl">
-                <img
-                  src="./images/blog/blog-03.png"
-                  alt="image"
-                  class="w-full duration-500 ease-linear scale-100 group-hover:scale-125"
-                />
-              </div>
-
-              <div class="flex flex-wrap gap-2.5 items-center mb-4.5">
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Products
-                </span>
-                <span
-                  class="font-medium text-xs hover:text-white cursor-pointer py-[3px] px-2.5 rounded-full bg-white/[0.07] border border-white/10 hover:border-white/25 ease-out duration-300"
-                >
-                  Blog and articles
-                </span>
-              </div>
-
-              <h4>
-                <a
-                  href="blog-single.html"
-                  class="text-xl font-semibold text-white duration-300 ease-in hover:opacity-80"
-                >
-                  Revolution in Content Creation and Communication
-                </a>
-              </h4>
-              <p class="mt-4 font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipisc elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna oliumosd
-                aliqua...
-              </p>
-
-              <div class="flex items-center gap-4.5 flex-wrap mt-6">
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10 8.75C7.65625 8.75 5.78125 6.90625 5.78125 4.65625C5.78125 2.40625 7.65625 0.5625 10 0.5625C12.3438 0.5625 14.2188 2.40625 14.2188 4.65625C14.2188 6.90625 12.3438 8.75 10 8.75ZM10 1.96875C8.4375 1.96875 7.1875 3.1875 7.1875 4.65625C7.1875 6.125 8.4375 7.34375 10 7.34375C11.5625 7.34375 12.8125 6.125 12.8125 4.65625C12.8125 3.1875 11.5625 1.96875 10 1.96875Z"
-                      fill=""
-                    />
-                    <path
-                      d="M16.5938 19.4688C16.2188 19.4688 15.875 19.1562 15.875 18.75V17.8438C15.875 14.5938 13.25 11.9688 10 11.9688C6.75 11.9688 4.125 14.5938 4.125 17.8438V18.75C4.125 19.125 3.8125 19.4688 3.40625 19.4688C3 19.4688 2.6875 19.1562 2.6875 18.75V17.8438C2.6875 13.8125 5.96875 10.5625 9.96875 10.5625C13.9688 10.5625 17.25 13.8437 17.25 17.8438V18.75C17.2813 19.125 16.9688 19.4688 16.5938 19.4688Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">Piter Mecraow</span>
-                </div>
-                <div
-                  class="flex flex-wrap items-center gap-2 duration-300 ease-in cursor-pointer hover:text-white"
-                >
-                  <svg
-                    class="fill-current"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.5 3.3125H15.875V2.625C15.875 2.25 15.5625 1.90625 15.1562 1.90625C14.75 1.90625 14.4375 2.21875 14.4375 2.625V3.3125H5.53125V2.625C5.53125 2.25 5.21875 1.90625 4.8125 1.90625C4.40625 1.90625 4.09375 2.21875 4.09375 2.625V3.3125H2.5C1.4375 3.3125 0.53125 4.1875 0.53125 5.28125V16.1563C0.53125 17.2188 1.40625 18.125 2.5 18.125H17.5C18.5625 18.125 19.4687 17.25 19.4687 16.1563V5.25C19.4687 4.1875 18.5625 3.3125 17.5 3.3125ZM1.96875 9.125H4.625V12.2188H1.96875V9.125ZM6.03125 9.125H9.3125V12.2188H6.03125V9.125ZM9.3125 13.625V16.6875H6.03125V13.625H9.3125ZM10.7187 13.625H14V16.6875H10.7187V13.625ZM10.7187 12.2188V9.125H14V12.2188H10.7187ZM15.375 9.125H18.0312V12.2188H15.375V9.125ZM2.5 4.71875H4.125V5.375C4.125 5.75 4.4375 6.09375 4.84375 6.09375C5.25 6.09375 5.5625 5.78125 5.5625 5.375V4.71875H14.5V5.375C14.5 5.75 14.8125 6.09375 15.2187 6.09375C15.625 6.09375 15.9375 5.78125 15.9375 5.375V4.71875H17.5C17.8125 4.71875 18.0625 4.96875 18.0625 5.28125V7.71875H1.96875V5.28125C1.96875 4.96875 2.1875 4.71875 2.5 4.71875ZM1.96875 16.125V13.5938H4.625V16.6563H2.5C2.1875 16.6875 1.96875 16.4375 1.96875 16.125ZM17.5 16.6875H15.375V13.625H18.0312V16.1563C18.0625 16.4375 17.8125 16.6875 17.5 16.6875Z"
-                      fill=""
-                    />
-                  </svg>
-
-                  <span class="text-sm font-medium">10 Jan, 2025</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Blog Section End -->
-
-      <!-- ====== CTA Section Start -->
-      <section>
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div
-            class="cta-box-gradient bg-dark rounded-[30px] relative overflow-hidden px-4 py-20 lg:py-25 z-999"
-          >
-            <!-- bg shapes -->
-            <span class="absolute bottom-0 left-0 -z-1"
-              ><img src="./images/cta/grid.svg" alt="grid"
-            /></span>
-            <div
-              class="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-            >
-              <span class="absolute bottom-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-22.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute bottom-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-23.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-              <span class="absolute bottom-0 -translate-x-1/2 left-1/2 -z-1">
-                <img
-                  src="./images/blur/blur-24.svg"
-                  alt="blur-sm"
-                  class="max-w-none"
-                />
-              </span>
-            </div>
-
-            <!-- stars -->
-            <div
-              class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -bottom-25 left-1/2 -translate-x-1/2"
-            >
-              <div class="stars"></div>
-              <div class="stars2"></div>
-            </div>
-
-            <div class="text-center wow fadeInUp">
-              <span
-                class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
-              >
-                <img src="./images/hero/icon-title.svg" alt="icon" />
-
-                <span class="hero-subtitle-text"> Try our tool for Free </span>
-              </span>
-              <h2
-                class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
-              >
-                What are you waiting for?
-              </h2>
-              <p class="max-w-[714px] mx-auto font-medium mb-9">
-                Our AI writing tool is designed to empower you with exceptional
-                writing capabilities, making the writing process more efficient,
-                accurate, and enjoyable.
-              </p>
-
-              <a
-                href="#"
-                class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80"
-              >
-                Get Started for Free
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== CTA Section End -->
-
-      <!-- ====== Newsletter Section Start -->
-      <section class="pt-17.5 sm:pt-22.5 xl:pt-27.5 pb-11">
-        <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-          <div class="flex flex-wrap items-center justify-between gap-10">
-            <div class="max-w-[352px] w-full">
-              <h3 class="mb-2 font-semibold text-white text-heading-5">
-                News & Update
-              </h3>
-              <p class="font-medium">
-                Keep up to date with everything about our tool
-              </p>
-            </div>
-            <div class="max-w-[534px] w-full">
-              <form>
-                <div class="flex items-center gap-4">
-                  <div class="max-w-[395px] w-full">
-                    <input
-                      id="email"
-                      type="email"
-                      name="email"
-                      placeholder="Enter your Email"
-                      class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden"
-                    />
+              <!-- ====== Newsletter Section Start -->
+              <section class="pt-17.5 sm:pt-22.5 xl:pt-27.5 pb-11">
+                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <div class="flex flex-wrap items-center justify-between gap-10">
+                    <div class="max-w-[352px] w-full">
+                      <h3 class="mb-2 font-semibold text-white text-heading-5">
+                        News & Update
+                      </h3>
+                      <p class="font-medium">
+                        Keep up to date with everything about our tool
+                      </p>
+                    </div>
+                    <div class="max-w-[534px] w-full">
+                      <form>
+                        <div class="flex items-center gap-4">
+                          <div class="max-w-[395px] w-full">
+                            <input id="email" type="email" name="email" placeholder="Enter your Email"
+                              class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden" />
+                          </div>
+                          <a href="/#"
+                            class="button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-3.5 px-7 shadow-button hover:button-gradient-hover hover:shadow-none">
+                            Subscribe
+                          </a>
+                        </div>
+                      </form>
+                    </div>
                   </div>
-                  <a
-                    href="/#"
-                    class="button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-3.5 px-7 shadow-button hover:button-gradient-hover hover:shadow-none"
-                  >
-                    Subscribe
-                  </a>
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ====== Newsletter Section End -->
-    </main>
-    <!-- ===== Footer Start ===== -->
-    <include src="./partials/footer.html" />
-    <!-- ===== Footer End ===== -->
+              </section>
+              <!-- ====== Newsletter Section End -->
+  </main>
+  <!-- ===== Footer Start ===== -->
+  <include src="./partials/footer.html" />
+  <!-- ===== Footer End ===== -->
 
-    <!-- ====== Back To Top Start ===== -->
-    <include src="./partials/scrolltop.html" />
-    <!-- ====== Back To Top End ===== -->
-  </body>
+  <!-- ====== Back To Top Start ===== -->
+  <include src="./partials/scrolltop.html" />
+  <!-- ====== Back To Top End ===== -->
+</body>
+
 </html>
