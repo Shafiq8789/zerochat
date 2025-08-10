@@ -506,6 +506,8 @@ layer(base);
 
   #supportCheckbox:checked ~ div span {
     @apply opacity-100;
+  }.display-unset {
+    display: unset !important;
   }
 }
 

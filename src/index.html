@@ -15,20 +15,23 @@
 
 
 
- 
- 
 
 <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'es', // Original page is in Spanish
-      includedLanguages: 'es,en', // Force both languages in dropdown
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+      pageLanguage: 'en', // Default page language
+      includedLanguages: 'en,es', // Sirf English & Spanish
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
-  }
+}
 </script>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" 
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+  </script>
+
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 
@@ -52,12 +55,12 @@
           <div
             class="absolute -z-1 -top-[112%] sm:-top-[93%] xl:-top-[62%] left-1/2 -translate-x-1/2 -u-z-10 hero-circle-gradient w-full h-[1046px] rounded-full max-w-[1046px]">
           </div>
-          <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
+          <div class="absolute top-[-10px] -translate-x-1/2 left-1/2 -u-z-10">
             <img src="./images/blur/blur-02.svg" alt="blur-sm" class="max-w-none" />
           </div>
-          <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
+          <!-- <div class="absolute top-0 -translate-x-1/2 left-1/2 -u-z-10">
             <img src="./images/blur/blur-01.svg" alt="blur-sm" class="max-w-none" />
-          </div>
+          </div>npm -->
         </div>
       </div>
 
@@ -73,19 +76,116 @@
               Usa ZeroChats
             </span>
           </a>
-          <h1 class="mb-6 text-[16px] font-extrabold text-white sm:text-5xl xl:text-heading-1">
-            ¿Quieres aumentar tus ventas desde Instagram?
+          <!-- AOS CSS -->
+          <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+          <h1 data-aos="fade-down" class="mb-6 text-[16px] font-extrabold sm:text-5xl xl:text-heading-1">
+            <span class="text-white text-[45px]">¿Quieres aumentar tus </span><br>
+            <span id="typewriter"
+              class="bg-gradient-to-r from-[#118DFE] via-[#4db8ff] to-[#00e0ff] bg-clip-text text-transparent text-[35px]">
+
+            </span>
+            <span class="cursor"></span>
           </h1>
 
-          <a href="#"
-            class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80">
+          <!-- AOS JS -->
+          <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+          <script>
+            AOS.init({
+              duration: 800, // Animation speed in ms
+              easing: 'ease-in-out',
+              once: true // Animation runs only once
+            });
+          </script>
+
+
+          <style>
+            .cursor {
+              display: inline-block;
+              width: 2px;
+              height: 2em;
+              background-color: #00e0ff;
+              /* cursor ka color */
+              margin-left: 3px;
+              animation: blink 0.8s infinite;
+            }
+div#\:0\.targetLanguage img {
+    display: none;
+}.goog-te-gadget-simple {
+    background-color: #030014 !important;
+    /* border-left: 1px solid #D5D5D5; */
+    /* border-top: 1px solid #9B9B9B; */
+    /* border-bottom: 1px solid #E8E8E8; */
+    /* border-right: 1px solid #D5D5D5; */
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    /* padding-bottom: 2px; */
+    cursor: pointer;
+    border: 1px solid;
+    padding: 6px 7px;
+    box-shadow: 1px 0px 4px 2px #118dfe !important;
+    border-radius: 12px;
+}a.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    color: white;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 500;
+}body.VIpgJd-ZVi9od-ORHb {
+    background: transparent !important;
+    border: none !important;
+    display: none !important;
+}
+            .p-3.rounded.max-w-\[75\%\].bg-gray-700.text-white.self-end.ml-auto {
+              border-radius: 100px;
+              box-shadow: 3px 3px 15px 1px #118DFE;
+              border: 1px solid;
+            }
+
+            .p-3.rounded.max-w-\[75\%\].bg-indigo-700.text-white.self-start {
+              border-radius: 104px;
+              border: 1px solid;
+              box-shadow: 0px 2px 11px 2px #fff;
+              position: relative;
+              top: 14px;
+            }
+
+            @keyframes blink {
+
+              0%,
+              50% {
+                opacity: 1;
+              }
+
+              50.01%,
+              100% {
+                opacity: 0;
+              }
+            }
+          </style>
+
+          <script>
+            const text = "ventas desde Instagram?";
+            let index = 0;
+            function typeWriter() {
+              if (index < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // typing speed
+              }
+            }
+            typeWriter();
+          </script>
+
+
+          <a href="#" data-aos="fade-down"
+            class=" inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80">
             Pruébalo Gratis Ahora
           </a>
         </div>
       </div>
 
       <div class="mt-17 mmg">
-        <img src="images/image__4_-removebg-preview.png" alt="">
+        <img src="images/g.gif" alt="">
       </div>
     </section>
     <!-- ===== Hero Section End ===== -->
@@ -105,12 +205,10 @@
 
             <span class="hero-subtitle-text text-white"> Demo en Directo </span>
           </span>
-          <h3 class="text-white mb-4.5 font-bold text-heading-4">
-            Prueba el Asistente en Acción
+          <h3 class="text-white mb-4.5 font-bold text-heading-4 flex items-center gap-4" data-aos="fade-up">
+            <span><img src="images/instagram-svgrepo-com.svg" alt=""></span> Prueba el Asistente Virtual en Acción
           </h3>
-          <p class="max-w-[714px] mx-auto mb-5 font-medium">
-            Experimenta cómo ZeroChats transforma una conversación <br>en una oportunidad de venta.
-          </p>
+
         </div>
 
 
@@ -132,8 +230,9 @@
         <div class="flex gap-2">
           <input id="chatInput" type="text" placeholder="Escribe tu mensaje..."
             class="flex-1 p-3 rounded bg-gray-800 text-white focus:outline-none button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none" />
-          <button onclick="sendMessage()"
-            class="bg-[#118dfe] hover:bg-indigo-700 text-white px-4 rounded button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none">Enviar</button>
+          <button onclick="sendMessage()" class="   hover:shadow-none">
+            <div class="cs"><img src="images/send.006d060e.svg" alt=""></div>
+          </button>
         </div>
       </div>
     </section>
@@ -179,61 +278,105 @@
       }
     </script>
     <style>
-  #google_translate_element span[aria-hidden="true"] {
-    display: none !important;
-  }a.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
-    border: none !important;
-}body.VIpgJd-ZVi9od-ORHb {
-    display: none !important;
-    /* margin-bottom: -38px; */
-}
-</style>
+      .cs img {
+        width: 37px;
+        margin-left: 14px;
+        cursor: pointer;
+      }
+
+      h3.text-white.mb-4\.5.font-bold.text-heading-4.flex.items-center.gap-4 {
+        display: flex;
+        justify-content: center;
+      }
+
+      h3.text-white.mb-4\.5.font-bold.text-heading-4.flex img {
+        width: 31px;
+      }
+
+      #google_translate_element span[aria-hidden="true"] {
+        display: none !important;
+      }
+
+      a.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+        border: none !important;
+      }
+
+      body.VIpgJd-ZVi9od-ORHb {
+        display: none !important;
+        /* margin-bottom: -38px; */
+      }
+    </style>
 
     <style>
-      
       .shadow-button {
-    
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-}.accent-purple-500 {
-    accent-color: #118dfe !important;
-}a.button-border-gradient.relative.rounded-lg.text-white.text-sm.flex.items-center.gap-1\.5.py-3\.5.px-7.shadow-button.hover\:button-gradient-hover.hover\:shadow-none {
-    background: #118dfe !important;
-}a.mt-11.flex.items-center.justify-center.gap-1\.5.font-medium.text-white.p-3.rounded-lg.transition-all.ease-in-out.duration-300.relative.pricing-button-gradient.hover\:shadow-button {
-    background: #118dfe !important;
-}a.mt-11.flex.items-center.justify-center.gap-1\.5.font-medium.text-white.p-3.rounded-lg.transition-all.ease-in-out.duration-300.relative.pricing-button-gradient.hover\:shadow-button {
-    background: #118dfe !important;
-}.pricing-gradient-text {
-    background: -webkit-linear-gradient(0deg, #118dfe 0.01%, #118dfe 50.01%, #118dfe 100%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}span.hero-subtitle-gradient.relative.mb-4.font-medium.text-sm.inline-flex.items-center.gap-2.py-2.px-4\.5.rounded-full {
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-}.relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
-    border: 1px solid;
-    background: #030014;
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-}.wow.fadeInUp.rounded-3xl.bg-dark.relative.z-20.overflow-hidden.pt-12\.5.pb-10.px-8.xl\:px-10.pricing-item-border {
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-    margin-bottom: 13px;
-}.cta-box-gradient.bg-dark.rounded-\[30px\].relative.overflow-hidden.px-4.py-20.lg\:py-25.z-999 {
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-}.rounded-3xl.p-10.xl\:p-14.transition-all.duration-300.hover\:cursor-pointer.hover\:bg-gradient-to-r.hover\:from-\[\#482a7c\]\/40.hover\:to-\[\#1a152e\]\/40.bg-gradient-to-br.from-\[\#1a152e\].to-\[\#0e0b1f\].text-white.shadow-lg.relative.overflow-hidden {
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-}.grid.sm\:grid-cols-12.gap-7\.5 {
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-    border-radius: 28px;
-}.user-border-gradient.relative.overflow-hidden.px-8.py-9.rounded-\[19px\].b11.border.button-border-gradient {
-    box-shadow: 1px 0px 4px 2px #118dfe !important;
-}
+
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+      }
+
+      .accent-purple-500 {
+        accent-color: #118dfe !important;
+      }
+
+      a.button-border-gradient.relative.rounded-lg.text-white.text-sm.flex.items-center.gap-1\.5.py-3\.5.px-7.shadow-button.hover\:button-gradient-hover.hover\:shadow-none {
+        background: #118dfe !important;
+      }
+
+      a.mt-11.flex.items-center.justify-center.gap-1\.5.font-medium.text-white.p-3.rounded-lg.transition-all.ease-in-out.duration-300.relative.pricing-button-gradient.hover\:shadow-button {
+        background: #118dfe !important;
+      }
+
+      a.mt-11.flex.items-center.justify-center.gap-1\.5.font-medium.text-white.p-3.rounded-lg.transition-all.ease-in-out.duration-300.relative.pricing-button-gradient.hover\:shadow-button {
+        background: #118dfe !important;
+      }
+
+      .pricing-gradient-text {
+        background: -webkit-linear-gradient(0deg, #118dfe 0.01%, #118dfe 50.01%, #118dfe 100%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      span.hero-subtitle-gradient.relative.mb-4.font-medium.text-sm.inline-flex.items-center.gap-2.py-2.px-4\.5.rounded-full {
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+      }
+
+      .relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
+        border: 1px solid;
+        background: #030014;
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+      }
+
+      .wow.fadeInUp.rounded-3xl.bg-dark.relative.z-20.overflow-hidden.pt-12\.5.pb-10.px-8.xl\:px-10.pricing-item-border {
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+        margin-bottom: 13px;
+      }
+
+      .cta-box-gradient.bg-dark.rounded-\[30px\].relative.overflow-hidden.px-4.py-20.lg\:py-25.z-999 {
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+      }
+
+      .rounded-3xl.p-10.xl\:p-14.transition-all.duration-300.hover\:cursor-pointer.hover\:bg-gradient-to-r.hover\:from-\[\#482a7c\]\/40.hover\:to-\[\#1a152e\]\/40.bg-gradient-to-br.from-\[\#1a152e\].to-\[\#0e0b1f\].text-white.shadow-lg.relative.overflow-hidden {
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+      }
+
+      .grid.sm\:grid-cols-12.gap-7\.5 {
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+        border-radius: 28px;
+      }
+
+      .user-border-gradient.relative.overflow-hidden.px-8.py-9.rounded-\[19px\].b11.border.button-border-gradient {
+        box-shadow: 1px 0px 4px 2px #118dfe !important;
+      }
+
       div#chatWindow {
         background: radial-gradient(180px circle at var(--mouse-x) var(--mouse-y), #030014, transparent) !important;
         border: 1px solid;
       }
-&::after {
-    content: var(--tw-content);
-    background: radial-gradient(180px circle at var(--mouse-x) var(--mouse-y)
-, #118DFE, transparent) !important;
-}
+
+      &::after {
+        content: var(--tw-content);
+        background: radial-gradient(180px circle at var(--mouse-x) var(--mouse-y), #118DFE, transparent) !important;
+      }
+
       .mmg {
         display: flex;
         justify-content: center;
@@ -242,20 +385,22 @@
       .bb2 {
         display: flex;
         gap: 27px;
-        
+
       }
-.grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.gap-7\.5 {
-    position: relative;
-    /* top: 16px; */
-    background: #030014;
-}
+
+      .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3.gap-7\.5 {
+        position: relative;
+        /* top: 16px; */
+        background: #030014;
+      }
+
       .relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
         border: 1px solid;
       }
     </style>
     <!-- ====== User Section Start -->
     <section x-data="{ 'showContent': false, 'scrollContent': false, }"
-      class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 2xl:pt-45 pb-20">
+      class="relative z-20 overflow-hidden pt-[10px] lg:pt-27.5 xl:pt-32.5 2xl:pt-45 pb-20">
       <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
         <!-- section title -->
         <div class="text-center wow fadeInUp mb-15">
@@ -290,7 +435,7 @@
             }
 
             .user-border-gradient.relative.overflow-hidden.px-8.py-9.rounded-\[19px\].b11.border.button-border-gradient {
-              height: 273px !important;
+              height: 273px;
             }
 
             h5.text-sm.font-medium.text-white {
@@ -323,7 +468,7 @@
 
 
           <!-- ====== Clients Section Start -->
-          <section class="py-19">
+          <section class="py-6">
             <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
               <div class="relative z-10 overflow-hidden">
                 <span
@@ -483,72 +628,76 @@
 
 
           <!-- ===== features list Section Start ===== -->
-          <section class="pt-12.5">
+          <section class="pt-[30px]">
             <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
               <!-- ===== features list Section Start ===== -->
               <section class="pt-12.5">
-                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-                  <div class="grid sm:grid-cols-12 gap-7.5" data-highlighter>
-                    <!-- features item -->
-                    <div class="sm:col-span-12">
-                      <div class="relative rounded-3xl features-box-border">
-                        <div class="relative p-10 overflow-hidden rounded-3xl xl:p-15 box-hover">
-                          <div class="relative z-20 flex flex-col items-center text-center">
-                            <!-- Badge / subtitle -->
-                            <span
-                              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
-                              <img src="./images/hero/icon-title.svg" alt="icon" />
-                              <span class="hero-subtitle-text">
-                                ZeroChats Benefits
-                              </span>
-                            </span>
-
-                            <!-- Heading -->
-                            <h3 class="text-white mb-4.5 font-bold text-heading-4">
-                              Entiende por qué Necesitas ZeroChats
-                            </h3>
-
-                            <!-- Subtext -->
 
 
-                            <!-- Columns Start -->
-                            <div class="grid sm:grid-cols-2 gap-10 text-left text-white w-full max-w-[900px]">
+                <!-- features item -->
+                <div class="sm:col-span-12">
+                  <div class="relative   ">
 
-                              <!-- Sin ZeroChats -->
-                              <div>
-                                <h4 class="text-lg font-semibold text-red-400 mb-4">❌ Sin ZeroChats</h4>
-                                <ul class="space-y-3 font-medium">
-                                  <li>✖️ Pierdes ventas por responder tarde</li>
-                                  <li>✖️ Tienes muchas cuentas y no puedes responder bien a todas</li>
-                                  <li>✖️ Calificas leads manualmente y pierdes tiempo</li>
-                                  <li>✖️ Respondes a curiosos que no compran</li>
-                                  <li>✖️ Tu equipo comercial no da seguimiento</li>
-                                </ul>
-                              </div>
 
-                              <!-- Con ZeroChats -->
-                              <div>
-                                <h4 class="text-lg font-semibold text-green-400 mb-4">✅ Con ZeroChats</h4>
-                                <ul class="space-y-3 font-medium">
-                                  <li>✅ ZeroChats responde como un humano real</li>
-                                  <li>✅ Fácil de usar: como ChatGPT</li>
-                                  <li>✅ Trabaja 24/7 sin pausas ni vacaciones</li>
-                                  <li>✅ Integración segura y oficial con Meta</li>
-                                  <li>✅ Vende por ti como un comercial profesional</li>
-                                </ul>
-                              </div>
+                    <!-- Badge / subtitle -->
+                    <span
+                      class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
+                      <img src="./images/hero/icon-title.svg" alt="icon" />
+                      <span class="hero-subtitle-text" data-aos="fade-up">
+                        ZeroChats Benefits
+                      </span>
+                    </span>
 
-                            </div>
-                            <!-- Columns End -->
+                    <!-- Heading -->
+                    <h3 class="text-white mb-4.5 font-bold text-heading-4" data-aos="fade-up">
+                      ¿Por qué necesitas ZeroChats?
 
-                          </div>
+                    </h3>
 
-                          <!-- bg shapes (unchanged) -->
-                           
+                    <!-- Subtext -->
+
+
+                    <!-- Columns Start -->
+                    <div class=" p-0 rounded-2xl w-full max-w-[100%] text-white text-center mt-[30px]">
+
+
+                      <div class="grid sm:grid-cols-2 gap-8 text-left">
+
+                        <!-- Sin ZeroChats -->
+                        <div class="border border-red-500 rounded-xl p-6 shadow-lg " data-aos="fade-right">
+                          <h4 class="text-lg font-semibold text-red-400 mb-4">❌ Sin ZeroChats</h4>
+                          <ul class="space-y-3 font-medium text-gray-300">
+                            <li>✖️ Pierdes ventas por responder tarde</li>
+                            <li>✖️ Tienes muchas cuentas y no puedes responder bien a todas</li>
+                            <li>✖️ Calificas leads manualmente y pierdes tiempo</li>
+                            <li>✖️ Respondes a curiosos que no compran</li>
+                            <li>✖️ Tu equipo comercial no da seguimiento</li>
+                          </ul>
                         </div>
+
+                        <!-- Con ZeroChats -->
+                        <div class="border border-green-500 rounded-xl p-6 shadow-lg" data-aos="fade-left">
+                          <h4 class="text-lg font-semibold text-green-400 mb-4">✅ Con ZeroChats</h4>
+                          <ul class="space-y-3 font-medium text-gray-300">
+                            <li>✅ ZeroChats responde como un humano real</li>
+                            <li>✅ Fácil de usar: como ChatGPT</li>
+                            <li>✅ Trabaja 24/7 sin pausas ni vacaciones</li>
+                            <li>✅ Integración segura y oficial con Meta</li>
+                            <li>✅ Vende por ti como un comercial profesional</li>
+                          </ul>
+                        </div>
+
                       </div>
                     </div>
+
+                    <!-- Columns End -->
+
                   </div>
+
+                  <!-- bg shapes (unchanged) -->
+
+
+
               </section>
 
               <!-- ===== features grid Section Start ===== -->
@@ -560,14 +709,13 @@
                       class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full">
                       <img src="./images/hero/icon-title.svg" alt="icon" />
 
-                      <span class="hero-subtitle-text"> Características</span>
+                      <span class="hero-subtitle-text" data-aos="fade-up"> Características</span>
                     </span>
-                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2 "
+                      data-aos="fade-up">
                       Todo lo que necesitas, en un solo lugar
                     </h2>
-                    <p class="max-w-[714px] mx-auto mb-5 font-medium">
-                      Puedes automatizar ventas, calificar leads, y atender mensajes 24/7 — desde un solo panel.
-                    </p>
+
                   </div>
 
                   <div class="relative">
@@ -707,252 +855,216 @@
               </section>
 
 
-              <!-- ====== Pricing Section Start -->
-              <section id="pricing" class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17">
-                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-                  <!-- bg circles -->
-                  <div class="relative top-18">
-                    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -my-55">
-                      
-                    </div>
-                    <div
-                      class="max-w-[830px] w-full h-[830px] rounded-full bg-dark absolute left-1/2 -translate-x-1/2 top-0 pricing-circle">
-                    </div>
 
-                    <div
-                      class="max-w-[482px] w-full h-60 overflow-hidden absolute -z-1 -top-30 left-1/2 -translate-x-1/2">
-                      <div class="stars"></div>
-                      <div class="stars2"></div>
-                    </div>
-                  </div>
 
-                  <!-- grid row -->
-                  <div class="flex justify-center gap-7.5 relative -z-1">
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                    <div class="max-w-[50px] w-full h-[250px] relative pricing-grid pricing-grid-border"></div>
-                  </div>
 
-                  <!-- section title -->
-                  <div class="wow fadeInUp mb-17.5 -mt-24 text-center z-10 relative">
-                     
-                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
-                 Lo que están consiguiendo<br> Nuestros Clientes
-                    </h2>
-                    
-                  </div>
 
-                   <style>
-              .max-w-\[830px\].w-full.h-\[830px\].rounded-full.bg-dark.absolute.left-1\/2.-translate-x-1\/2.top-0.pricing-circle {
-    box-shadow: 8px 10px 45px 34px #118DFE;
-}
-                   </style>
-            <div class="bb2 flex items-center justify-center">
+
+
+
+
+
+
+
+              <!-- Calculator Styled Like ZeroChats -->
+              <section class="w-full max-w-6xl px-0 py-12">
                 <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]">
-                  <div class="relative z-20">
-                    <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
-                      <img src="./images/features/icon-07.svg" alt="icon" />
-                    </span>
+                  class="rounded-3xl p-10 xl:p-14 transition-all duration-300 hover:cursor-pointer hover:bg-gradient-to-r hover:from-[#118DFE]/40 hover:to-[#1a152e]/40 bg-gradient-to-br from-[#1a152e] to-[#0e0b1f] text-white shadow-lg relative overflow-hidden">
 
-                    <h3 class="text-white mb-4.5 font-semibold   text-2xl">
-                      45.000
-                    </h3>
-                    <p class="font-medium">
-                      Mensajes Enviados
-                    </p>
+                  <!-- Gradient blur shapes (optional) -->
+                  <div class="absolute inset-0 -z-10 pointer-events-none">
+                    <div class="absolute w-80 h-80 bg-purple-700 opacity-30 rounded-full blur-3xl top-0 left-0"></div>
+                    <div class="absolute w-72 h-72 bg-blue-600 opacity-20 rounded-full blur-2xl bottom-0 right-0"></div>
                   </div>
 
-                  <!-- bg shapes -->
-                  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-                    <span class="absolute right-[14%] top-[17%]"><img src="./images/features/shape-05.svg"
-                        alt="shape" /></span>
-                    <span class="absolute bottom-0 left-0">
-                      <img src="./images/blur/blur-10.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img src="./images/blur/blur-11.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img src="./images/blur/blur-12.svg" alt="blur-sm" class="max-w-none" />
+                  <!-- Title -->
+                  <div class="text-center mb-10">
+
+                    <h2 class="text-3xl font-bold mt-2" data-aos="fade-up">Ahorro y Ganancia Potencial
+
+                    </h2> <span class="text-sm font-medium text-white/70" data-aos="fade-up">Descubre cuánto tiempo y
+                      dinero puedes ahorrar
+                      automatizando tus conversaciones con ZeroChats.
+
                     </span>
                   </div>
-                </div>
-                <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]">
-                  <div class="relative z-20">
-                    <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
-                      <img src="./images/features/icon-07.svg" alt="icon" />
-                    </span>
 
-                    <h3 class="text-white mb-4.5 font-semibold   text-2xl">
-                      700
-                    </h3>
-                    <p class="font-medium">
-                      Ventas Realizadas
-                    </p>
+                  <!-- Calculator Grid -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+                    <!-- Sliders -->
+                    <div class="space-y-10">
+                      <div>
+                        <h3 class="text-lg font-semibold text-center mb-2">Leads por mes</h3>
+                        <div class="text-4xl font-bold text-center" id="leadsCount">933</div>
+                        <input type="range" min="10" max="3000" value="933" id="leadsSlider"
+                          class="w-full accent-purple-500 mt-4">
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-semibold text-center mb-2 text-green-400">Precio del producto</h3>
+                        <div class="text-4xl font-bold text-center" id="priceValue">$10</div>
+                        <input type="range" min="10" max="1000" value="10" id="priceSlider"
+                          class="w-full accent-purple-500 mt-4">
+                      </div>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="space-y-6">
+                      <div class="bg-[#1e1a36] p-5 rounded-xl shadow-inner">
+                        <p class="text-sm text-gray-400">⏱️ Tiempo Ahorrado</p>
+                        <p class="text-3xl font-bold mt-1" id="timeSaved">187h</p>
+                        <p class="text-sm text-gray-400">por mes</p>
+                      </div>
+                      <div class="bg-[#1e1a36] p-5 rounded-xl shadow-inner">
+                        <p class="text-sm text-green-400">💲 Ingresos Extra</p>
+                        <p class="text-3xl font-bold mt-1" id="extraIncome">$280</p>
+                        <p class="text-sm text-gray-400">por mes</p>
+                      </div>
+                    </div>
+
                   </div>
-
-                  <!-- bg shapes -->
-                  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-                    <span class="absolute right-[14%] top-[17%]"><img src="./images/features/shape-05.svg"
-                        alt="shape" /></span>
-                    <span class="absolute bottom-0 left-0">
-                      <img src="./images/blur/blur-10.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img src="./images/blur/blur-11.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img src="./images/blur/blur-12.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]">
-                  <div class="relative z-20">
-                    <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
-                      <img src="./images/features/icon-07.svg" alt="icon" />
-                    </span>
-
-                    <h3 class="text-white mb-4.5 font-semibold   text-2xl">
-                      497
-                    </h3>
-                    <p class="font-medium">
-                      Clientes Satisfechos
-
-
-                    </p>
-                  </div>
-
-                  <!-- bg shapes -->
-                  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-                    <span class="absolute right-[14%] top-[17%]"><img src="./images/features/shape-05.svg"
-                        alt="shape" /></span>
-                    <span class="absolute bottom-0 left-0">
-                      <img src="./images/blur/blur-10.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img src="./images/blur/blur-11.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img src="./images/blur/blur-12.svg" alt="blur-sm" class="max-w-none" />
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-
                 </div>
               </section>
+
+              <script>
+                const leadsSlider = document.getElementById('leadsSlider');
+                const priceSlider = document.getElementById('priceSlider');
+                const leadsCount = document.getElementById('leadsCount');
+                const priceValue = document.getElementById('priceValue');
+                const timeSaved = document.getElementById('timeSaved');
+                const extraIncome = document.getElementById('extraIncome');
+
+                function formatCurrency(value) {
+                  return '$' + value.toLocaleString();
+                }
+
+                function updateValues() {
+                  const leads = parseInt(leadsSlider.value);
+                  const price = parseInt(priceSlider.value);
+
+                  leadsCount.textContent = leads;
+                  priceValue.textContent = '$' + price;
+
+                  const savedHours = Math.round(leads * 0.2);
+                  const monthlyIncome = Math.round(leads * price * 0.23);
+
+                  timeSaved.textContent = savedHours + 'h';
+                  extraIncome.textContent = formatCurrency(monthlyIncome);
+                }
+
+                leadsSlider.addEventListener('input', updateValues);
+                priceSlider.addEventListener('input', updateValues);
+
+                updateValues();
+              </script>
+
+
+
+              <!-- ====== Pricing Section Start -->
+              <section class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17">
+                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+                  <!-- bg circles -->
+                   
+
+
+
+                    <!-- section title -->
+                    <div class="wow fadeInUp mb-17.5 -mt-24 text-center z-10 relative">
+
+                      <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+                        Lo que están consiguiendo<br> Nuestros Clientes
+                      </h2>
+
+                    </div>
+
+                    <style>
+                      .max-w-\[830px\].w-full.h-\[830px\].rounded-full.bg-dark.absolute.left-1\/2.-translate-x-1\/2.top-0.pricing-circle {
+                        box-shadow: 8px 10px 45px 34px #118DFE;
+                      }
+
+                      @media only screen and (max-width: 767px) {
+                        h3.text-white.mb-4\.5.font-bold.text-heading-4 {
+                          font-size: 18px;
+                        }
+
+                        .user-border-gradient.relative.overflow-hidden.px-8.py-9.rounded-\[19px\].b11.border.button-border-gradient {
+                          height: 373px !important;
+                        }
+
+
+                      }
+                    </style>
+                    <div class="bb2 flex flex-col md:flex-row items-center justify-center gap-4">
+                      <!-- Mensajes Enviados -->
+                      <div
+                        class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]"
+                        data-aos="fade-up">
+                        <div class="relative z-20">
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
+                            <img src="./images/features/icon-07.svg" alt="icon" />
+                          </span>
+                          <h3 class="text-white mb-4.5 font-semibold text-[35px] counter" data-target="120000">0</h3>
+                          <p class="font-medium">Mensajes enviados</p>
+                        </div>
+                      </div>
+
+                      <!-- Ventas -->
+                      <div
+                        class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]"
+                        data-aos="fade-up">
+                        <div class="relative z-20">
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
+                            <img src="./images/features/icon-07.svg" alt="icon" />
+                          </span>
+                          <h3 class="text-white mb-4.5 font-semibold text-[35px] counter" data-target="2500">0</h3>
+                          <p class="font-medium">Ventas</p>
+                        </div>
+                      </div>
+
+                      <!-- Clientes Satisfechos -->
+                      <div
+                        class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small w-[314px]"
+                        data-aos="fade-up">
+                        <div class="relative z-20">
+                          <span
+                            class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto">
+                            <img src="./images/features/icon-07.svg" alt="icon" />
+                          </span>
+                          <h3 class="text-white mb-4.5 font-semibold text-[35px] counter" data-target="80">0</h3>
+                          <p class="font-medium">Clientes satisfechos</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <script>
+                      const counters = document.querySelectorAll(".counter");
+                      const speed = 200; // lower = faster
+
+                      counters.forEach(counter => {
+                        const updateCount = () => {
+                          const target = +counter.getAttribute("data-target");
+                          const count = +counter.innerText;
+                          const increment = target / speed;
+
+                          if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 20);
+                          } else {
+                            counter.innerText = target.toLocaleString();
+                          }
+                        };
+
+                        updateCount();
+                      });
+                    </script>
+
+
+
+                  
+              </section>
               <!-- ====== Pricing Section End -->
-
-
-
-
-
-
-
-
-
-
- <!-- Calculator Styled Like ZeroChats -->
-  <section class="w-full max-w-6xl px-6 py-12">
-    <div class="rounded-3xl p-10 xl:p-14 transition-all duration-300 hover:cursor-pointer hover:bg-gradient-to-r hover:from-[#118DFE]/40 hover:to-[#1a152e]/40 bg-gradient-to-br from-[#1a152e] to-[#0e0b1f] text-white shadow-lg relative overflow-hidden">
-
-      <!-- Gradient blur shapes (optional) -->
-      <div class="absolute inset-0 -z-10 pointer-events-none">
-        <div class="absolute w-80 h-80 bg-purple-700 opacity-30 rounded-full blur-3xl top-0 left-0"></div>
-        <div class="absolute w-72 h-72 bg-blue-600 opacity-20 rounded-full blur-2xl bottom-0 right-0"></div>
-      </div>
-
-      <!-- Title -->
-      <div class="text-center mb-10">
-  
-        <h2 class="text-3xl font-bold mt-2">✨Calcula tu Ahorro Potencial
-</h2> <span class="text-sm font-medium text-white/70">Descubre cuánto tiempo y dinero puedes ahorrar automatizando tus conversaciones con ZeroChats.
-
-</span>
-      </div>
-
-      <!-- Calculator Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        
-        <!-- Sliders -->
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-lg font-semibold text-center mb-2">Leads por mes</h3>
-            <div class="text-4xl font-bold text-center" id="leadsCount">933</div>
-            <input type="range" min="10" max="3000" value="933" id="leadsSlider" class="w-full accent-purple-500 mt-4">
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-center mb-2 text-green-400">Precio del producto</h3>
-            <div class="text-4xl font-bold text-center" id="priceValue">$10</div>
-            <input type="range" min="10" max="1000" value="10" id="priceSlider" class="w-full accent-purple-500 mt-4">
-          </div>
-        </div>
-
-        <!-- Results -->
-        <div class="space-y-6">
-          <div class="bg-[#1e1a36] p-5 rounded-xl shadow-inner">
-            <p class="text-sm text-gray-400">⏱️ Tiempo Ahorrado</p>
-            <p class="text-3xl font-bold mt-1" id="timeSaved">187h</p>
-            <p class="text-sm text-gray-400">por mes</p>
-          </div>
-          <div class="bg-[#1e1a36] p-5 rounded-xl shadow-inner">
-            <p class="text-sm text-green-400">💲 Ingresos Extra</p>
-            <p class="text-3xl font-bold mt-1" id="extraIncome">$280</p>
-            <p class="text-sm text-gray-400">por mes</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <script>
-    const leadsSlider = document.getElementById('leadsSlider');
-    const priceSlider = document.getElementById('priceSlider');
-    const leadsCount = document.getElementById('leadsCount');
-    const priceValue = document.getElementById('priceValue');
-    const timeSaved = document.getElementById('timeSaved');
-    const extraIncome = document.getElementById('extraIncome');
-
-    function formatCurrency(value) {
-      return '$' + value.toLocaleString();
-    }
-
-    function updateValues() {
-      const leads = parseInt(leadsSlider.value);
-      const price = parseInt(priceSlider.value);
-
-      leadsCount.textContent = leads;
-      priceValue.textContent = '$' + price;
-
-      const savedHours = Math.round(leads * 0.2);
-      const monthlyIncome = Math.round(leads * price * 0.03);
-
-      timeSaved.textContent = savedHours + 'h';
-      extraIncome.textContent = formatCurrency(monthlyIncome);
-    }
-
-    leadsSlider.addEventListener('input', updateValues);
-    priceSlider.addEventListener('input', updateValues);
-
-    updateValues();
-  </script>
-
-
-
-
 
 
 
@@ -976,12 +1088,12 @@
               <!-- ===== features list Section End ===== -->
 
               <!-- ====== Pricing Section Start -->
-              <section id="pricing" class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17">
+              <section id="pricing" class="relative z-20 overflow-hidden pt-12 lg:pt-27.5 xl:pt-32.5 scroll-mt-17">
                 <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
                   <!-- bg circles -->
                   <div class="relative top-18">
                     <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10 -my-55">
-                      
+
                     </div>
                     <div
                       class="max-w-[830px] w-full h-[830px] rounded-full bg-dark absolute left-1/2 -translate-x-1/2 top-0 pricing-circle">
@@ -1014,10 +1126,11 @@
 
                       <span class="hero-subtitle-text"> Obtener acceso </span>
                     </span>
-                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2">
+                    <h2 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
+                      data-aos="fade-up">
                       Planes y Precios
                     </h2>
-                    <p class="max-w-[714px] mx-auto font-medium">
+                    <p class="max-w-[714px] mx-auto font-medium" data-aos="fade-up">
                       Elige el plan que se adapta a tu negocio.
                     </p>
                   </div>
@@ -1025,7 +1138,8 @@
                   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
                     <!-- Pricing item -->
                     <div
-                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
+                      data-aos="fade-up">
                       <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-01.svg"
                           alt="icon" /></span>
 
@@ -1089,8 +1203,8 @@
                     </div>
 
                     <!-- Pricing item -->
-                    <div
-                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+                    <div class="w-full   bg-gray-900 text-white rounded-xl border-4 border-blue-500 p-8   "
+                      data-aos="fade-up">
                       <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-02.svg"
                           alt="icon" /></span>
 
@@ -1114,9 +1228,9 @@
                       <div class="my-10 w-full h-[1px] pricing-gradient-divider"></div>
 
                       <ul class="flex flex-col gap-4">
-                        <li class="flex items-center gap-5">
+                        <li class="flex  gap-5">
                           <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
-                          <span class="font-medium">Para freelancers o pequeñas marcas</span>
+                          <span class="font-medium text-start">Para freelancers o pequeñas marcas</span>
                         </li>
                         <li class="flex items-center gap-5">
                           <img src="./images/pricing/pricing-icon-04.svg" alt="icon" />
@@ -1154,7 +1268,8 @@
 
                     <!-- Pricing item -->
                     <div
-                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border">
+                      class="wow fadeInUp rounded-3xl bg-dark relative z-20 overflow-hidden pt-12.5 pb-10 px-8 xl:px-10 pricing-item-border"
+                      data-aos="fade-up">
                       <span class="absolute right-9 top-9"><img src="./images/pricing/pricing-icon-03.svg"
                           alt="icon" /></span>
 
@@ -1220,132 +1335,6 @@
               <!-- ====== Pricing Section End -->
 
 
-              <!-- ====== Clients Section Start -->
-              <section class="py-19">
-                <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
-                  <div class="relative z-10 overflow-hidden">
-                    <span
-                      class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-0 top-1/2 -translate-y-1/2 bg-linear-to-l from-dark/0 to-dark/100"></span>
-                    <span
-                      class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-auto top-1/2 -translate-y-1/2 bg-linear-to-r from-dark/0 to-dark/100"></span>
-                    <div class="swiper clients-carousel">
-                      <div class="swiper-wrapper items-center select-none ease-linear!">
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img class="mt-3" src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img class="mt-3" src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img src="./images/clients/trust.png" alt="client" />
-                          </a>
-                        </div>
-                        <div class="swiper-slide w-auto!">
-                          <a href="/#">
-                            <img class="mt-3" src="./images/clients/t.png" alt="client" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- ====== Clients Section End -->
-
-
-
 
 
 
@@ -1362,14 +1351,30 @@
               <Style>
                 h1.mb-6.text-\[16px\].font-extrabold.text-white.sm\:text-5xl.xl\:text-heading-1 {
                   font-size: 45px !important;
-                }
-.relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
-    border: 1px solid;
-    background: #030014;
-}.hero-button-gradient {
-   
-    background: #118DFE !important;
+                }.flex.items-center.gap-4\.5.mb-6 {
+    gap: 0;
+}.b11 h5 {
+    font-size: 17px !important;
+    font-weight: 800;
 }
+                .b11 p{
+                  font-style: italic;
+                  font-weight: 800 !important;
+                }
+                .w-full.bg-gray-900.text-white.rounded-xl.border-4.border-blue-500.p-8 {
+                  box-shadow: 1px 10px 33px 3px #49A8FE;
+                }
+
+                .relative.overflow-hidden.rounded-3xl.px-11.pt-12\.5.pb-14.box-hover.box-hover-small {
+                  border: 1px solid;
+                  background: #030014;
+                }
+
+                .hero-button-gradient {
+
+                  background: #118DFE !important;
+                }
+
                 .b11 {
                   /* border: 1px; */
                   padding: 8px 22px 22px 17px !important;
@@ -1388,19 +1393,19 @@
                 }
               </Style>
               <!-- support form -->
-              
+
 
               <!-- ====== Support Section End -->
 
 
               <!-- ====== CTA Section Start -->
               <section>
-                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
+                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 mt-[55px]">
                   <div
                     class="cta-box-gradient bg-dark rounded-[30px] relative overflow-hidden px-4 py-20 lg:py-25 z-999">
                     <!-- bg shapes -->
                     <span class="absolute bottom-0 left-0 -z-1"><img src="./images/cta/grid.svg" alt="grid" /></span>
-                     
+
 
                     <!-- stars -->
                     <div
@@ -1420,12 +1425,14 @@
                         ¿Que estas esperando?
                       </h2>
                       <p class="max-w-[714px] mx-auto font-medium mb-9">
-                       Nuestra herramienta de escritura con inteligencia artificial está diseñada para brindarte capacidades de escritura excepcionales, haciendo que el proceso de escritura sea más eficiente, preciso y agradable.
+                        Nuestra herramienta de escritura con inteligencia artificial está diseñada para brindarte
+                        capacidades de escritura excepcionales, haciendo que el proceso de escritura sea más eficiente,
+                        preciso y agradable.
                       </p>
 
                       <a href="#"
                         class="inline-flex py-3 font-medium text-white duration-300 ease-in rounded-lg hero-button-gradient px-7 hover:opacity-80">
-                        Get Started for Free
+                        Prueba ZeroChats Ahora
                       </a>
                     </div>
                   </div>
@@ -1433,36 +1440,7 @@
               </section>
               <!-- ====== CTA Section End -->
 
-              <!-- ====== Newsletter Section Start -->
-              <section class="pt-17.5 sm:pt-22.5 xl:pt-27.5 pb-11">
-                <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
-                  <div class="flex flex-wrap items-center justify-between gap-10">
-                    <div class="max-w-[352px] w-full">
-                      <h3 class="mb-2 font-semibold text-white text-heading-5">
-                        News & Update
-                      </h3>
-                      <p class="font-medium">
-                        Keep up to date with everything about our tool
-                      </p>
-                    </div>
-                    <div class="max-w-[534px] w-full">
-                      <form>
-                        <div class="flex items-center gap-4">
-                          <div class="max-w-[395px] w-full">
-                            <input id="email" type="email" name="email" placeholder="Enter your Email"
-                              class="rounded-lg border border-white/[0.12] bg-white/[0.05] focus:border-purple w-full py-3 px-6 outline-hidden" />
-                          </div>
-                          <a href="/#"
-                            class="button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-3.5 px-7 shadow-button hover:button-gradient-hover hover:shadow-none">
-                            Subscribe
-                          </a>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <!-- ====== Newsletter Section End -->
+
   </main>
   <!-- ===== Footer Start ===== -->
   <include src="./partials/footer.html" />

@@ -8,6 +8,25 @@
       <a href="index.html">
         <img src="./images/logo/logo.svg" alt="Logo" />
       </a>
+<style>
+  /* Desktop hide, mobile show */
+  @media (min-width: 767px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+</style>
+
+<a href="https://app.zerochats.com/es/sign-up" 
+   class="mobile-only button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none">
+  Acceso
+  <svg class="mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none"
+       xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M14.4002 7.60002L9.2252 2.35002C9.0002 2.12502 8.6502 2.12502 8.4252 2.35002C8.2002 2.57502 8.2002 2.92502 8.4252 3.15002L12.6252 7.42502H2.0002C1.7002 7.42502 1.4502 7.67502 1.4502 7.97502C1.4502 8.27502 1.7002 8.55003 2.0002 8.55003H12.6752L8.4252 12.875C8.2002 13.1 8.2002 13.45 8.4252 13.675C8.5252 13.775 8.6752 13.825 8.8252 13.825C8.9752 13.825 9.1252 13.775 9.2252 13.65L14.4002 8.40002C14.6252 8.17502 14.6252 7.82503 14.4002 7.60002Z"
+      fill="white" />
+  </svg>
+</a>
 
       <!-- Hamburger Toggle BTN -->
       <button class="lg:hidden block" @click="navigationOpen = !navigationOpen">
@@ -35,11 +54,13 @@
       </button>
       <!-- Hamburger Toggle BTN -->
     </div>
-
+    
     <div class="w-full lg:w-3/4 h-0 lg:h-auto invisible lg:visible lg:flex items-center justify-between"
+    
       :class="{ 'visible! bg-dark shadow-lgrelative h-auto! max-h-[400px] overflow-y-scroll rounded-md mt-4 p-7.5': navigationOpen }">
+     
       <nav>
-        <ul class="flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2">
+        <ul class="flex lg:items-center flex-col lg:flex-row gap-5 lg:gap-2 cccs">
           <li class="nav__menu lg:py-7" :class="{ 'lg:py-4!' : stickyMenu }">
             <a href="/#home"
               class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient"
@@ -53,11 +74,7 @@
             <a href="/#pricing"
               class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">Fijación de precios</a>
           </li>
-          
-          <li class="nav__menu lg:py-7" :class="{ 'lg:py-4!' : stickyMenu }">
-            <a href="/#support"
-              class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient">	Soporte</a>
-          </li>
+         
           
         </ul>
       </nav>
@@ -76,20 +93,18 @@
     alt="English" 
     class="w-5 h-5 cursor-pointer hover:scale-110 transition" 
     onclick="translateTo('en')" />
-</div> --> <div id="google_translate_element"></div>
-      <div class="flex items-center gap-6 mt-7 lg:mt-0">
-        <a href="https://app.zerochats.com/es/sign-up"  class="text-white text-sm hover:text-opacity-75">Iniciar sesión</a>
+</div> --> 
+      <div class="flex items-center gap-6 mt-7 lg:mt-0 ">
+      <div id="google_translate_element" class="hidden md:flex"></div>
 
-        <a href="https://app.zerochats.com/es/sign-up" 
-          class="button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none">
-          Registrarse
+    <a href="https://app.zerochats.com/es/sign-up" 
+   class="hidden md:flex button-border-gradient relative rounded-lg text-white text-sm items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none">
+    Acceso
+    <svg class="mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.4002 7.60002L9.2252 2.35002C9.0002 2.12502 8.6502 2.12502 8.4252 2.35002C8.2002 2.57502 8.2002 2.92502 8.4252 3.15002L12.6252 7.42502H2.0002C1.7002 7.42502 1.4502 7.67502 1.4502 7.97502C1.4502 8.27502 1.7002 8.55003 2.0002 8.55003H12.6752L8.4252 12.875C8.2002 13.1 8.2002 13.45 8.4252 13.675C8.5252 13.775 8.6752 13.825 8.8252 13.825C8.9752 13.825 9.1252 13.775 9.2252 13.65L14.4002 8.40002C14.6252 8.17502 14.6252 7.82503 14.4002 7.60002Z" fill="white"></path>
+    </svg>
+</a>
 
-          <svg class="mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M14.4002 7.60002L9.2252 2.35002C9.0002 2.12502 8.6502 2.12502 8.4252 2.35002C8.2002 2.57502 8.2002 2.92502 8.4252 3.15002L12.6252 7.42502H2.0002C1.7002 7.42502 1.4502 7.67502 1.4502 7.97502C1.4502 8.27502 1.7002 8.55003 2.0002 8.55003H12.6752L8.4252 12.875C8.2002 13.1 8.2002 13.45 8.4252 13.675C8.5252 13.775 8.6752 13.825 8.8252 13.825C8.9752 13.825 9.1252 13.775 9.2252 13.65L14.4002 8.40002C14.6252 8.17502 14.6252 7.82503 14.4002 7.60002Z"
-              fill="white" />
-          </svg>
-        </a>
         
       </div>
     </div>
@@ -97,7 +112,13 @@
 </header>
 
 <style>
-  
+  .cccs {
+    position: relative;
+    left: 65px !important;
+}a.button-border-gradient.relative.rounded-lg.text-white.text-sm.flex.items-center.gap-1\.5.py-2.px-4\.5.shadow-button.hover\:button-gradient-hover.hover\:shadow-none {
+    position: relative;
+    left: -21px !important;
+}
 .s img {
     width: 29% !important;
 }
@@ -107,30 +128,12 @@
     left: unset !important;
 }
 .s img {
-    width: 17% !important;
+    width: 22% !important;
 }
 }
 
 
-<style>
-  .goog-logo-link,
-  .goog-te-gadget span {
-    display: none !important;
-  }
-
-  #google_translate_element {
-    color: white; /* or your theme color */
-  }div#\:0\.targetLanguage img {
-    display: none !important;
-}a.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
-    font-family: 'Plus Jakarta Sans' !important;
-    color: white;
-}div#\:0\.targetLanguage {
-    background: transparent;
-    border-radius: 13px;
-    padding: 6px 8px;
-    box-shadow: 1px 0px 8px 0px #118dfe !important;
-}
+  
 </style>
 
-</style>
+ 
